@@ -1,0 +1,1021 @@
+# ULTIMATE MASTER PROMPT
+## Reference Image-Based Premium Admin Panel Reconstruction, Full-Stack Integration, Database Reliability & Production-Level Quality Assurance
+
+---
+
+# 1. YOUR ROLE AND ENGINEERING RESPONSIBILITIES
+
+Act as a multidisciplinary senior engineering team operating at Principal Engineer and Production Software Architect standards.
+
+Your responsibilities include:
+
+- Principal Full-Stack Software Engineer
+- Senior Frontend Architect
+- Senior Backend Engineer
+- Database Architect
+- Premium UI/UX Designer
+- Design System Specialist
+- API Integration Engineer
+- Application Security Engineer
+- Quality Assurance Engineer
+- Software Testing Engineer
+- Production Reliability Engineer
+
+Your mission is to thoroughly inspect the existing project and transform its entire Admin Panel into a premium, professional, production-ready administrative experience.
+
+I will provide a reference image of the Admin Panel design.
+
+**The uploaded reference image is the primary visual authority for the Admin Panel redesign.**
+
+Your task is to reproduce its visual design as closely as technically possible while adapting its content, functionality, data, and business logic to the actual existing project.
+
+This is NOT a frontend-only redesign.
+
+This is a complete design reconstruction and full-stack functionality improvement task.
+
+---
+
+# 2. PRIMARY OBJECTIVE — REFERENCE IMAGE FIDELITY
+
+Study the uploaded reference image carefully before making any modifications.
+
+Analyze every visible design element, including:
+
+- Overall dashboard composition
+- Sidebar structure and dimensions
+- Header and navigation placement
+- Main content positioning
+- Background colors
+- Color combinations
+- Typography hierarchy
+- Font sizes and weights
+- Border radius
+- Shadows and elevation
+- Card layouts
+- Dashboard statistics
+- Chart placement
+- Table layouts
+- Button designs
+- Icons
+- Badges and status indicators
+- Input fields
+- Search components
+- Dropdown menus
+- Spacing and padding
+- Margins and alignment
+- Responsive proportions
+- Visual hierarchy
+- Content density
+- Component relationships
+
+Reconstruct the design using the uploaded image as your visual reference.
+
+## CRITICAL DESIGN REQUIREMENT
+
+I do not want an independently invented dashboard design.
+
+I want my Admin Panel to visually resemble the uploaded reference image as closely as reasonably achievable.
+
+Do not replace the reference design with a generic SaaS dashboard template.
+
+Do not randomly change the layout, colors, component positioning, or visual hierarchy.
+
+Do not unnecessarily simplify the design.
+
+Preserve the reference image's distinctive visual identity.
+
+However, reproduce the design using actual reusable frontend components rather than placing the image itself as a background.
+
+The resulting interface must be fully interactive, responsive, accessible, and functional.
+
+## IMPORTANT DISTINCTION
+
+The reference image controls the VISUAL DESIGN.
+
+The existing project controls the FUNCTIONALITY, CONTENT, BUSINESS LOGIC, DATA STRUCTURE, AND BACKEND ARCHITECTURE.
+
+Never copy irrelevant placeholder text, fake statistics, unrelated product names, or sample business information from the reference image.
+
+Replace them with actual project-specific information.
+
+---
+
+# 3. MANDATORY EXISTING PROJECT AUDIT — BEFORE IMPLEMENTATION
+
+Before changing anything, inspect the entire existing project.
+
+Do not immediately start rewriting components.
+
+First understand the current architecture.
+
+Inspect:
+
+### Frontend
+- Project structure
+- Existing Admin Panel pages
+- React components or equivalent framework components
+- Routing configuration
+- Layout components
+- Sidebar implementation
+- Header implementation
+- Existing design system
+- Tailwind/CSS configuration
+- State management
+- Forms and validation
+- API integration
+- Authentication state
+- Authorization handling
+- Existing dashboard components
+
+### Backend
+- Server architecture
+- API routes
+- Controllers
+- Services
+- Middleware
+- Authentication
+- Authorization
+- Role-based access control
+- Request validation
+- Business logic
+- Error handling
+- Existing integrations
+
+### Database
+- Database technology
+- Existing schemas
+- Models
+- Collections or tables
+- Relationships
+- Indexes
+- Data validation
+- Existing CRUD operations
+- Database connection configuration
+
+### Testing
+- Existing unit tests
+- Integration tests
+- End-to-end tests
+- Build configuration
+- Lint configuration
+- Existing known issues
+
+Identify:
+
+1. What currently works.
+2. What is partially implemented.
+3. What is broken.
+4. What is missing.
+5. What needs improvement.
+6. What must remain unchanged.
+
+Do not assume the project's technology stack.
+
+Discover the actual stack from the repository.
+
+Do not invent routes, API endpoints, environment variables, database models, or existing functionality.
+
+Preserve all working functionality.
+
+---
+
+# 4. ADMIN PANEL VISUAL RECONSTRUCTION
+
+Rebuild the complete Admin Panel based on the uploaded reference image.
+
+The visual reconstruction must include every relevant section visible in the reference.
+
+## 4.1 Sidebar
+
+Recreate the sidebar as closely as possible.
+
+Consider:
+
+- Sidebar width
+- Logo placement
+- Brand identity
+- Navigation spacing
+- Menu typography
+- Icons
+- Active navigation state
+- Hover states
+- Expandable menu groups
+- Submenu indentation
+- Dividers
+- Background
+- Borders
+- Collapsed state
+
+Use actual project navigation routes.
+
+Every navigation item must lead to its correct page.
+
+Do not create decorative navigation items without functionality.
+
+## 4.2 Header / Top Navigation
+
+Reproduce the reference header.
+
+Depending on the reference design, implement:
+
+- Page title
+- Breadcrumbs
+- Search
+- Notifications
+- User profile
+- Avatar
+- Account dropdown
+- Settings shortcut
+- Theme controls, if appropriate
+
+Every interactive element must work.
+
+## 4.3 Dashboard Overview
+
+Recreate the dashboard overview according to the reference.
+
+Use actual available project data.
+
+Possible dashboard information includes:
+
+- Total Users
+- Total Products
+- Total Orders
+- Total Revenue
+- Pending Orders
+- Completed Orders
+- Active Products
+- Total Visitors
+- Customer Statistics
+- Recent Activities
+- Recent Orders
+- Sales Analytics
+
+Only display metrics relevant to the actual project.
+
+Do not invent business metrics or fabricate database records.
+
+## 4.4 Charts and Analytics
+
+If the reference contains charts, reproduce their visual appearance and placement.
+
+Charts must use actual backend data.
+
+Requirements:
+
+- Correct API integration
+- Accurate calculations
+- Correct date ranges
+- Dynamic filtering
+- Loading states
+- Empty states
+- Error states
+- Responsive rendering
+
+Never use randomly generated production statistics.
+
+If historical analytics are unavailable, clearly handle the missing data instead of pretending it exists.
+
+## 4.5 Tables and Data Management
+
+Reproduce the reference table styling.
+
+Implement:
+
+- Search
+- Sorting
+- Pagination
+- Filtering
+- Status badges
+- Row actions
+- View details
+- Edit
+- Delete
+- Bulk actions where appropriate
+- Empty states
+- Loading states
+- Error states
+
+Use actual database records.
+
+Ensure the table refreshes correctly after successful modifications.
+
+---
+
+# 5. PROJECT-SPECIFIC CONTENT ADAPTATION
+
+The reference image may contain completely different business information.
+
+Do not blindly copy it.
+
+First discover what kind of application this project actually is.
+
+For example:
+
+If the project is an e-commerce application, use relevant sections such as:
+
+- Dashboard
+- Users
+- Products
+- Categories
+- Orders
+- Inventory
+- Payments
+- Customers
+- Reviews
+- Coupons
+- Analytics
+- Reports
+- Settings
+
+If it is another type of application, discover its actual administrative requirements.
+
+Only implement relevant sections.
+
+Do not add unrelated modules simply because they appear in the reference image.
+
+Maintain the reference design's visual structure while adapting the actual content.
+
+---
+
+# 6. COMPLETE FRONTEND FUNCTIONALITY
+
+A beautiful interface without functional behavior is unacceptable.
+
+Every visible interactive component must perform its intended action.
+
+Implement and verify:
+
+- Buttons
+- Navigation links
+- Forms
+- Input fields
+- Dropdowns
+- Search
+- Filters
+- Sorting
+- Pagination
+- Tabs
+- Modals
+- Confirmation dialogs
+- Notifications
+- Data tables
+- Charts
+- Date pickers
+- File uploads, where required
+- Profile controls
+- Settings controls
+
+## Form Requirements
+
+Every form must include:
+
+- Appropriate input types
+- Required-field validation
+- Correct validation rules
+- Meaningful error messages
+- Loading states
+- Submission protection
+- Success feedback
+- Server-side error handling
+
+Prevent duplicate submissions.
+
+Do not display a successful save message before the backend confirms that the operation succeeded.
+
+## Modal Requirements
+
+Implement accessible and reliable modals.
+
+Support:
+
+- Open
+- Close
+- Cancel
+- Confirm
+- Escape key
+- Appropriate focus handling
+- Form validation
+- Loading states
+- Error feedback
+
+Avoid browser-native alert, confirm, and prompt dialogs.
+
+Use the project's existing notification and modal systems when available.
+
+---
+
+# 7. COMPLETE BACKEND INTEGRATION
+
+This section is mandatory.
+
+Do not treat the Admin Panel as a frontend-only application.
+
+Every administrative operation must connect to the actual backend.
+
+Inspect existing APIs before creating or modifying endpoints.
+
+Reuse existing working APIs wherever possible.
+
+If an API is missing, implement it following the existing backend architecture.
+
+Implement appropriate:
+
+- API routes
+- Controllers
+- Services
+- Request validation
+- Authentication middleware
+- Authorization middleware
+- Database operations
+- Error handling
+- Response structures
+
+Maintain consistency with existing project conventions.
+
+## Backend Requirements
+
+All administrative operations must be processed by the server.
+
+The frontend must never independently pretend that a database operation succeeded.
+
+Implement appropriate server-side validation and authorization for every sensitive administrative operation.
+
+Never trust frontend-only role checks.
+
+Never expose privileged operations to unauthorized users.
+
+---
+
+# 8. COMPLETE DATABASE CRUD OPERATIONS
+
+Every relevant administrative module must support its actual required database operations.
+
+## CREATE
+
+Verify that:
+
+- New records can be created.
+- Required fields are validated.
+- Invalid records are rejected.
+- Duplicate records are handled correctly.
+- Data is actually saved to the database.
+- The created record can subsequently be retrieved.
+
+## READ
+
+Verify that:
+
+- Existing records load correctly.
+- Database queries return the correct data.
+- Pagination works.
+- Search works.
+- Filters work.
+- Sorting works.
+- Unauthorized users cannot access restricted records.
+
+## UPDATE
+
+Verify that:
+
+- Existing records can be modified.
+- Only authorized fields can be updated.
+- Validation runs before saving.
+- Changes persist in the database.
+- Updated information appears correctly in the interface.
+
+## DELETE
+
+Verify that:
+
+- Deletion requires appropriate authorization.
+- Confirmation is requested where appropriate.
+- The correct record is deleted.
+- Related records and dependencies are handled safely.
+- The interface updates after successful deletion.
+
+Use soft deletion when required by the existing business logic.
+
+Do not permanently delete important records without considering existing dependencies.
+
+## SAVE AND MODIFY
+
+All Save, Update, Edit, and Modify operations must persist actual changes.
+
+Never use:
+
+- Fake success responses
+- Dummy CRUD handlers
+- Frontend-only persistence
+- Hardcoded database records
+- Mock APIs as production functionality
+- LocalStorage as a replacement for backend persistence
+- In-memory data as a replacement for the production database
+
+Use the actual existing database.
+
+---
+
+# 9. SECURITY AND ADMINISTRATIVE ACCESS CONTROL
+
+Admin functionality must be protected properly.
+
+Implement or preserve:
+
+- Authentication
+- Server-side authorization
+- Role-based access control
+- Permission checks
+- Ownership checks where applicable
+- Input validation
+- Safe database queries
+- Secure error handling
+- Protection against unauthorized modifications
+
+Never rely exclusively on hidden frontend buttons for security.
+
+A user who does not have administrative permissions must not be able to access administrative operations by directly calling the API.
+
+Preserve the existing authentication architecture.
+
+Do not break login, logout, registration, session handling, or existing user permissions.
+
+Never expose secrets, private API keys, database credentials, or privileged tokens to the frontend.
+
+---
+
+# 10. RESPONSIVE DESIGN
+
+The reference image may represent a desktop interface.
+
+However, the complete Admin Panel must work across different screen sizes.
+
+Support:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+Adapt the layout without unnecessarily changing the reference design's identity.
+
+Implement:
+
+- Responsive sidebar
+- Mobile navigation
+- Collapsible menus
+- Responsive tables
+- Appropriate card stacking
+- Responsive charts
+- Touch-friendly controls
+- Proper modal sizing
+- Overflow management
+
+Avoid:
+
+- Horizontal page overflow
+- Overlapping components
+- Broken navigation
+- Text clipping
+- Unusable mobile tables
+- Inaccessible buttons
+
+Desktop should remain as close to the reference image as possible.
+
+Mobile adaptations should preserve the same design language.
+
+---
+
+# 11. DESIGN QUALITY AND VISUAL CONSISTENCY
+
+The complete Admin Panel must look like one professionally designed product.
+
+Maintain consistent:
+
+- Typography
+- Colors
+- Spacing
+- Border radius
+- Shadows
+- Icon styles
+- Button hierarchy
+- Input styles
+- Card structures
+- Table styles
+- Modal appearance
+- Status indicators
+
+Do not mix unrelated design systems.
+
+Avoid unnecessary visual decorations.
+
+Do not introduce excessive gradients, random colors, oversized typography, or inconsistent shadows unless they are part of the reference.
+
+Use reusable components and a consistent design system.
+
+Do not use the uploaded reference image as a static screenshot.
+
+Reconstruct its actual interface.
+
+---
+
+# 12. PRESERVE EXISTING PROJECT FUNCTIONALITY
+
+This is a critical requirement.
+
+Your redesign must not damage the existing project.
+
+Before making modifications, identify the components, routes, APIs, schemas, and integrations that must be preserved.
+
+Strictly avoid:
+
+- Rewriting the entire application unnecessarily.
+- Replacing working backend services without justification.
+- Changing database schemas unnecessarily.
+- Removing existing working features.
+- Breaking existing routes.
+- Changing API contracts without checking their consumers.
+- Removing authentication functionality.
+- Introducing duplicate components.
+- Introducing conflicting dependencies.
+- Replacing real functionality with demonstrations.
+- Making unrelated refactors.
+
+Prefer minimal, targeted, backward-compatible changes.
+
+If a change requires modifying an existing API or database schema, inspect all dependent functionality before proceeding.
+
+Preserve existing data.
+
+Never perform destructive database migrations or delete production data as part of this redesign.
+
+---
+
+# 13. ERROR HANDLING AND RELIABILITY
+
+Implement proper error handling across the entire Admin Panel.
+
+Handle:
+
+- API failures
+- Database failures
+- Network interruptions
+- Validation errors
+- Authentication failures
+- Authorization failures
+- Missing records
+- Duplicate records
+- File upload failures
+- Unexpected server responses
+
+Provide clear user feedback.
+
+Never silently swallow errors.
+
+Never display success messages when operations fail.
+
+Ensure loading indicators do not remain permanently active after failed requests.
+
+Use appropriate retry behavior only where safe.
+
+Prevent duplicate submissions and accidental repeated destructive operations.
+
+---
+
+# 14. COMPREHENSIVE TESTING AND QUALITY ASSURANCE
+
+After implementation, thoroughly test the entire Admin Panel.
+
+Do not stop after making the interface look correct.
+
+## 14.1 Frontend Testing
+
+Test:
+
+- Sidebar navigation
+- Active menu states
+- Header controls
+- Dashboard rendering
+- Forms
+- Input validation
+- Search
+- Filters
+- Sorting
+- Pagination
+- Modals
+- Dropdowns
+- Notifications
+- Responsive layouts
+- Loading states
+- Empty states
+- Error states
+
+## 14.2 Backend Testing
+
+Test:
+
+- API connectivity
+- Authentication
+- Authorization
+- Request validation
+- Controller behavior
+- Database integration
+- Error handling
+- Correct HTTP responses
+
+## 14.3 Database Testing
+
+For every relevant CRUD module, verify:
+
+| Operation | Required Verification |
+|---|---|
+| Create | Record is actually saved |
+| Read | Correct record is retrieved |
+| Update | Changes persist |
+| Delete | Correct record is deleted or safely archived |
+| Search | Correct results are returned |
+| Filter | Results match selected filters |
+| Pagination | Correct page data is returned |
+| Validation | Invalid data is rejected |
+| Authorization | Unauthorized access is blocked |
+
+Where appropriate, verify persistence after refreshing the application or retrieving the record again from the database.
+
+## 14.4 Regression Testing
+
+Check that the redesign has not broken existing functionality.
+
+Test:
+
+- Existing authentication
+- Existing user workflows
+- Existing APIs
+- Existing routes
+- Existing database operations
+- Existing business logic
+- Existing integrations
+
+## 14.5 Build and Code Quality
+
+Run the project's actual available commands.
+
+Examples, only if supported by the existing project:
+
+- TypeScript type checking
+- ESLint
+- Unit tests
+- Integration tests
+- Production build
+- End-to-end tests
+
+Fix errors introduced by your changes.
+
+Do not claim that a test passed unless you actually executed it and verified its result.
+
+Do not hide existing failures.
+
+Clearly distinguish pre-existing failures from newly introduced failures.
+
+---
+
+# 15. VISUAL VERIFICATION AGAINST THE REFERENCE IMAGE
+
+Do not rely exclusively on your interpretation of the reference image.
+
+After implementation:
+
+1. Run the application.
+2. Open the actual Admin Panel.
+3. Capture screenshots at relevant viewport sizes if browser tools are available.
+4. Compare the implemented interface with the uploaded reference.
+5. Identify visual differences.
+6. Correct unnecessary deviations.
+7. Repeat the comparison.
+
+Prioritize:
+
+- Layout accuracy
+- Component positioning
+- Sidebar proportions
+- Header proportions
+- Card arrangement
+- Typography
+- Colors
+- Spacing
+- Visual hierarchy
+- Table appearance
+- Chart appearance
+
+The objective is maximum practical visual fidelity without sacrificing actual functionality.
+
+If browser automation or screenshot capabilities are unavailable, do not pretend visual verification was completed.
+
+---
+
+# 16. PERFORMANCE AND MAINTAINABILITY
+
+The resulting Admin Panel must be maintainable and production-oriented.
+
+Requirements:
+
+- Reusable components
+- Clean architecture
+- Efficient API requests
+- Avoid unnecessary re-renders
+- Proper state management
+- Appropriate pagination
+- Efficient database queries
+- Proper loading strategies
+- Consistent error handling
+- Type safety
+- Accessible interfaces
+
+Avoid unnecessary dependencies.
+
+Do not introduce `any`, `@ts-ignore`, or `@ts-nocheck` to bypass TypeScript problems.
+
+Do not use unsafe shortcuts to make the interface appear functional.
+
+---
+
+# 17. IMPLEMENTATION WORKFLOW
+
+Follow this sequence.
+
+### PHASE 1 — PROJECT DISCOVERY
+
+Inspect the complete project.
+
+Understand the frontend, backend, database, authentication, routing, and existing functionality.
+
+### PHASE 2 — REFERENCE IMAGE ANALYSIS
+
+Analyze the uploaded image.
+
+Identify its design system, layout, colors, spacing, typography, components, and visual hierarchy.
+
+### PHASE 3 — GAP ANALYSIS
+
+Compare the existing Admin Panel against the reference image.
+
+Identify missing features, broken functionality, visual differences, and architectural risks.
+
+### PHASE 4 — IMPLEMENTATION
+
+Implement the redesigned Admin Panel using the existing project's architecture.
+
+Connect every relevant interface to actual backend functionality.
+
+### PHASE 5 — DATABASE INTEGRATION
+
+Verify all required CRUD operations and ensure changes persist correctly.
+
+### PHASE 6 — SECURITY VERIFICATION
+
+Verify authentication, authorization, permissions, and server-side validation.
+
+### PHASE 7 — FUNCTIONAL TESTING
+
+Test every relevant administrative operation.
+
+### PHASE 8 — VISUAL TESTING
+
+Compare the actual interface against the reference image and refine the design.
+
+### PHASE 9 — REGRESSION TESTING
+
+Verify that existing project functionality remains intact.
+
+### PHASE 10 — FINAL PRODUCTION READINESS REVIEW
+
+Review the implementation for correctness, reliability, maintainability, and completeness.
+
+Do not skip phases simply to finish faster.
+
+---
+
+# 18. STRICT PROHIBITIONS
+
+The following are unacceptable:
+
+1. Creating a static dashboard that only looks attractive.
+2. Implementing buttons without real functionality.
+3. Using fake API responses.
+4. Using randomly generated production statistics.
+5. Pretending database operations succeeded.
+6. Implementing frontend-only CRUD.
+7. Creating duplicate API endpoints unnecessarily.
+8. Bypassing authentication.
+9. Weakening existing authorization.
+10. Breaking existing application features.
+11. Replacing the database with mock data.
+12. Using browser alerts as the primary notification system.
+13. Ignoring responsive behavior.
+14. Skipping testing.
+15. Claiming unverified functionality works.
+16. Making unnecessary architectural changes.
+17. Deleting existing project data.
+18. Ignoring the reference image and producing a generic dashboard.
+
+---
+
+# 19. FINAL DELIVERY REPORT
+
+After completing the work, provide a clear engineering report.
+
+Include:
+
+### A. Reference Design Implementation
+- Which design elements were reconstructed?
+- How closely does the implementation match the reference?
+- Which visual differences remain?
+
+### B. Frontend Implementation
+- Which components were created or modified?
+- Which pages were updated?
+- Which interactions were implemented?
+
+### C. Backend Integration
+- Which existing APIs were reused?
+- Which APIs were modified or created?
+- Which administrative operations are functional?
+
+### D. Database Verification
+- Which CRUD operations were tested?
+- Were changes persisted successfully?
+- Were any database issues discovered?
+
+### E. Security Verification
+- Was server-side authorization verified?
+- Were administrative permissions tested?
+
+### F. Testing Results
+
+Provide an honest table:
+
+| Test | Result |
+|---|---|
+| Frontend functionality | PASS / FAIL / BLOCKED |
+| Backend integration | PASS / FAIL / BLOCKED |
+| Database CRUD | PASS / FAIL / BLOCKED |
+| Authentication | PASS / FAIL / BLOCKED |
+| Authorization | PASS / FAIL / BLOCKED |
+| Responsive design | PASS / FAIL / BLOCKED |
+| Production build | PASS / FAIL / BLOCKED |
+| Regression tests | PASS / FAIL / BLOCKED |
+| Visual comparison | PASS / FAIL / BLOCKED |
+
+Only report PASS when the corresponding verification was actually completed.
+
+### G. Modified Files
+List the important files created, updated, or removed.
+
+Explain why each important change was necessary.
+
+### H. Remaining Issues
+Clearly identify:
+
+- Unresolved bugs
+- Missing integrations
+- Unavailable environment configurations
+- Failed tests
+- External dependencies
+- Anything requiring manual configuration
+
+Do not conceal incomplete work.
+
+---
+
+# 20. FINAL EXECUTION INSTRUCTION
+
+I am providing an Admin Panel reference image.
+
+Your responsibility is to reconstruct my existing project's complete Admin Panel based on that reference.
+
+**Follow the reference image for the design. Follow the actual project for everything else.**
+
+The final result must be:
+
+- Visually faithful to the reference image.
+- Premium and professionally polished.
+- Fully responsive.
+- Functionally complete.
+- Properly connected to the existing backend.
+- Properly integrated with the actual database.
+- Securely protected by server-side authorization.
+- Free from fake production functionality.
+- Thoroughly tested.
+- Compatible with existing project functionality.
+- Maintainable and production-oriented.
+
+Do not merely provide suggestions, a design plan, or sample components.
+
+After completing the required inspection and analysis, execute the implementation in the actual project.
+
+If you encounter missing credentials, unavailable external services, inaccessible environments, or other genuine blockers, explain them accurately and complete all independently achievable work.
+
+Do not invent successful test results.
+
+Do not stop after creating the visual interface.
+
+**The task is complete only when the reference-based Admin Panel has been implemented, integrated, and verified to the maximum extent supported by the available project environment.**

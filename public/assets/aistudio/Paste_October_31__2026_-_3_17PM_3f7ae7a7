@@ -1,0 +1,1145 @@
+# ULTIMATE MASTER PROMPT
+## PRINCIPAL-LEVEL FULL-STACK ADMIN PANEL AUDIT, BACKEND & DATABASE INTEGRITY VERIFICATION, COMPLETE CRUD IMPLEMENTATION, RESPONSIVE ENGINEERING & PRODUCTION READINESS
+
+---
+
+# 1. YOUR ROLE — PRINCIPAL ENGINEERING TEAM
+
+Act as a multidisciplinary Principal-Level Software Engineering Team.
+
+Operate with the combined expertise of:
+
+- Principal Full-Stack Software Engineer
+- Senior Frontend Architect
+- Senior Backend Architect
+- Database Architect
+- API Integration Engineer
+- Software Security Engineer
+- Application Performance Engineer
+- Responsive UI/UX Engineer
+- DevOps Engineer
+- Quality Assurance Engineer
+- Test Automation Engineer
+- Production Reliability Engineer
+
+Your responsibility is to perform a complete technical audit of the existing project's entire Admin Panel and ensure that every administrative feature works correctly across the complete application stack.
+
+This is a comprehensive engineering and verification task.
+
+It is NOT a simple frontend review.
+
+It is NOT a visual redesign task.
+
+It is NOT sufficient to make buttons appear functional.
+
+Your mission is to verify and repair the actual implementation across:
+
+**Frontend → API → Backend → Middleware → Controller → Service → Database → Response → Frontend State Synchronization.**
+
+Every relevant administrative operation must work through the real application architecture.
+
+---
+
+# 2. PRIMARY MISSION
+
+Thoroughly inspect the entire existing Admin Panel.
+
+Determine whether its features are:
+
+1. Fully implemented.
+2. Only visually implemented.
+3. Connected to actual backend APIs.
+4. Persisting data in the real database.
+5. Using hardcoded or mock data.
+6. Updating only frontend state.
+7. Partially connected to backend services.
+8. Failing during database operations.
+9. Insecurely accessible.
+10. Incomplete or architecturally incorrect.
+
+If any feature is only implemented on the frontend, complete its actual backend and database integration.
+
+If an operation appears successful in the interface but does not persist in the database, identify the root cause and fix it.
+
+If a feature has no backend implementation, implement it using the existing project architecture.
+
+If everything is already implemented correctly, do not rewrite it unnecessarily.
+
+**Your goal is correctness, reliability, scalability, and production readiness—not unnecessary code changes.**
+
+---
+
+# 3. PHASE ONE — COMPLETE PROJECT ARCHITECTURE DISCOVERY
+
+Before changing any source code, inspect the entire project.
+
+Do not assume the architecture.
+
+Discover the actual technology stack, folder structure, dependencies, database, and deployment configuration.
+
+## 3.1 Frontend Architecture Inspection
+
+Inspect:
+
+- Application entry points
+- Admin Panel layout
+- Dashboard
+- Sidebar
+- Header
+- All administrative pages
+- Components
+- Hooks
+- Context providers
+- State management
+- API service layer
+- Routing
+- Forms
+- Validation
+- Data tables
+- Search components
+- Filters
+- Pagination
+- Modals
+- Notification systems
+- Loading states
+- Error handling
+- Responsive styles
+
+Identify unnecessary duplication and broken integrations.
+
+## 3.2 Backend Architecture Inspection
+
+Inspect the complete backend.
+
+Pay special attention to:
+
+- Server entry points
+- Module folders
+- Feature modules
+- Routes
+- Controllers
+- Services
+- Models
+- Middleware
+- Validators
+- Utilities
+- Configuration
+- Authentication
+- Authorization
+- Error handlers
+- Database connection
+- File upload services
+- External integrations
+
+Verify that the existing folder structure is logically organized.
+
+Check whether responsibilities are separated correctly.
+
+For example:
+
+- Routes should define endpoint mappings.
+- Controllers should handle HTTP-level concerns.
+- Services should contain reusable business logic where appropriate.
+- Models should define database structures.
+- Middleware should handle shared request processing.
+- Validators should enforce input rules.
+
+Follow the existing architecture where it is sound.
+
+Do not force an entirely new architecture onto a working project.
+
+## 3.3 Database Architecture Inspection
+
+Inspect:
+
+- Database connection
+- Models
+- Schemas
+- Collections or tables
+- Relationships
+- Indexes
+- Validation
+- Query logic
+- Transactions, where applicable
+- Data consistency
+- Existing records
+- Soft deletion, if applicable
+
+Identify whether the Admin Panel uses the real database or temporary frontend data.
+
+## 3.4 Architecture Audit Report
+
+Before implementation, internally establish:
+
+- Confirmed working features
+- Broken features
+- Frontend-only implementations
+- Missing backend implementations
+- Missing database operations
+- Duplicate implementations
+- Security weaknesses
+- Performance problems
+- Scalability risks
+- Existing regression risks
+
+Do not invent missing files, routes, models, or configurations.
+
+---
+
+# 4. COMPLETE ADMIN PANEL MODULE AUDIT
+
+Inspect every administrative module that actually exists in the project.
+
+Do not audit only the Dashboard.
+
+Depending on the project, this may include:
+
+- Dashboard
+- Users
+- Products
+- Categories
+- Orders
+- Payments
+- Inventory
+- Hero Sliders
+- Banners
+- Advertisements
+- Visitors
+- Analytics
+- Reviews
+- Coupons
+- Content Management
+- Settings
+- Notifications
+- Other existing modules
+
+For every module, inspect its complete functionality.
+
+## Required Verification
+
+- Page loading
+- Data retrieval
+- API connectivity
+- Database connectivity
+- Create
+- Read
+- Update
+- Delete
+- Search
+- Filtering
+- Sorting
+- Pagination
+- Status changes
+- Enable/Disable
+- Save
+- Modify
+- Bulk actions, where implemented
+- Form validation
+- Error handling
+- Authorization
+- Responsive behavior
+
+Create an internal module-to-API-to-database mapping.
+
+Every administrative module must have a clear connection to its actual data source.
+
+Do not leave any module dependent on hardcoded production data.
+
+---
+
+# 5. COMPLETE FRONTEND-TO-BACKEND FUNCTIONALITY VERIFICATION
+
+This is one of the most important requirements.
+
+Inspect every interactive element in the Admin Panel.
+
+Every button must be evaluated individually.
+
+Examples:
+
+- Add
+- Create
+- Save
+- Update
+- Edit
+- Delete
+- View
+- Search
+- Filter
+- Export
+- Import
+- Publish
+- Unpublish
+- Enable
+- Disable
+- Approve
+- Reject
+- Cancel
+- Confirm
+- Reset
+- Upload
+- Download
+- Refresh
+
+For every button, determine:
+
+1. What is its intended behavior?
+2. Is an event handler connected?
+3. Does it call the correct function?
+4. Does it send the correct API request?
+5. Does the backend implement the operation?
+6. Does the backend validate the request?
+7. Does the database operation execute?
+8. Does the frontend receive the correct response?
+9. Does the interface update correctly?
+10. Does the change persist after refreshing?
+
+A button that only changes local React state is not sufficient when the operation requires server-side persistence.
+
+A success toast is not proof of successful database persistence.
+
+Verify the complete operation.
+
+---
+
+# 6. COMPLETE CRUD AND DATABASE PERSISTENCE AUDIT
+
+For every relevant module, verify the complete CRUD lifecycle.
+
+## 6.1 CREATE
+
+Verify:
+
+- Form submission
+- Required fields
+- Input validation
+- Backend request
+- Authorization
+- Database insertion
+- Correct response
+- Updated frontend data
+
+Test whether the newly created record can be retrieved again from the database.
+
+## 6.2 READ
+
+Verify:
+
+- Data retrieval
+- Correct API endpoint
+- Database query accuracy
+- Search
+- Filtering
+- Sorting
+- Pagination
+- Empty results
+- Unauthorized access protection
+
+Do not use static arrays when the page is expected to display actual database records.
+
+## 6.3 UPDATE
+
+Verify:
+
+- Correct record selection
+- Existing values loaded into the form
+- Input validation
+- Backend update operation
+- Database persistence
+- Updated response
+- UI synchronization
+
+After refreshing, the modified values must still be present.
+
+## 6.4 DELETE
+
+Verify:
+
+- Correct record identification
+- Authorization
+- Confirmation
+- Backend deletion
+- Database modification
+- Relationship handling
+- UI synchronization
+
+Consider soft deletion where required by the existing business logic.
+
+Never delete unrelated records.
+
+Never perform destructive database cleanup simply to make the tests pass.
+
+## 6.5 ADDITIONAL OPERATIONS
+
+Verify any other relevant operations:
+
+- Publish/Unpublish
+- Active/Inactive
+- Approve/Reject
+- Status modification
+- Bulk update
+- Bulk deletion
+- File replacement
+- Configuration saving
+
+Every operation must be connected to its actual backend implementation.
+
+---
+
+# 7. ELIMINATE FRONTEND-ONLY AND FAKE FUNCTIONALITY
+
+Search the Admin Panel for implementations that create the appearance of functionality without actual persistence.
+
+Investigate:
+
+- Hardcoded dashboard statistics
+- Static user lists
+- Mock API responses
+- Fake success messages
+- LocalStorage-based production records
+- SessionStorage-based production records
+- In-memory mock databases
+- Temporary arrays
+- Placeholder event handlers
+- Buttons without operations
+- Forms that do not submit to the backend
+- Frontend-only deletion
+- Frontend-only updates
+- Fake analytics
+- Simulated online users
+
+Do not automatically remove legitimate UI state or caching.
+
+For example, LocalStorage may be appropriate for non-sensitive interface preferences.
+
+However, it must not replace the actual backend database for persistent administrative business data.
+
+Replace fake production functionality with real server-backed implementations.
+
+Preserve valid development and testing mocks when they are properly isolated from production.
+
+---
+
+# 8. BACKEND MODULE AND FOLDER STRUCTURE AUDIT
+
+Inspect the backend module structure carefully.
+
+Check whether:
+
+- Routes are correctly registered.
+- Controllers exist and are connected.
+- Services are implemented correctly.
+- Models match the actual database.
+- Middleware is applied appropriately.
+- Validators are active.
+- Error handlers work.
+- API responses are consistent.
+- Database operations are awaited correctly.
+- Async errors are handled.
+- Authentication is enforced.
+- Authorization is enforced.
+
+Look for:
+
+- Missing controller methods
+- Empty service methods
+- Duplicate route definitions
+- Incorrect route ordering
+- Unused backend modules
+- Incorrect imports
+- Circular dependencies
+- Incorrect model references
+- Broken database queries
+- Inconsistent response structures
+- Unhandled exceptions
+
+Do not create unnecessary folders or files just to make the architecture look more sophisticated.
+
+Use a consistent, maintainable structure.
+
+---
+
+# 9. API CONTRACT AND INTEGRATION VERIFICATION
+
+Verify every Admin Panel API integration.
+
+Check:
+
+- HTTP methods
+- Endpoint paths
+- Request parameters
+- Request body
+- Authentication headers or cookies
+- Response structure
+- HTTP status codes
+- Validation errors
+- Server errors
+- Pagination metadata
+
+Ensure the frontend and backend agree on the same API contract.
+
+Identify:
+
+- Incorrect endpoint URLs
+- Wrong HTTP methods
+- Missing request fields
+- Incorrect response parsing
+- Object ID mismatches
+- Incorrect data types
+- Missing authorization
+- Inconsistent error formats
+
+Do not invent endpoints without inspecting the existing API structure.
+
+If changes are necessary, update the relevant frontend and backend consumers consistently.
+
+Preserve backward compatibility wherever possible.
+
+---
+
+# 10. DYNAMIC DASHBOARD AND REAL DATA VERIFICATION
+
+The Admin Dashboard must display real project data.
+
+Audit all dashboard statistics.
+
+Examples, where relevant:
+
+- Total Users
+- New Registrations
+- Active Users
+- Total Products
+- Total Orders
+- Pending Orders
+- Completed Orders
+- Total Revenue
+- Total Visitors
+- Online Users
+- Recent Activities
+- Sales Statistics
+- Growth Analytics
+
+Every metric must have a clear source and correct calculation.
+
+Verify:
+
+- Data comes from actual backend queries.
+- Counts match the database.
+- Date ranges work.
+- Filters work.
+- Charts use actual data.
+- Updates appear after relevant operations.
+- Empty data is handled correctly.
+- Failed API requests are displayed honestly.
+
+Do not fabricate dynamic values.
+
+Do not label historical data as real-time data.
+
+If a metric depends on tracking that does not exist, implement an appropriate tracking mechanism only when justified by the actual product requirements.
+
+Clearly distinguish:
+
+- Registered Users
+- Active Users
+- Online Users
+- Unique Visitors
+- Page Views
+
+Do not confuse these metrics.
+
+---
+
+# 11. RESPONSIVE ENGINEERING — ALL DEVICES
+
+The entire Admin Panel must be fully responsive.
+
+Test and optimize the interface for:
+
+## Desktop
+- Large monitors
+- Standard desktop screens
+- Different browser widths
+
+## Laptop
+- Standard laptop screens
+- Smaller laptop screens
+
+## Tablet
+- Portrait
+- Landscape
+
+## Mobile
+- Small mobile screens
+- Standard mobile screens
+- Large mobile screens
+
+## Responsive Requirements
+
+Verify:
+
+- Sidebar responsiveness
+- Mobile menu
+- Header layout
+- Dashboard cards
+- Tables
+- Forms
+- Modals
+- Dropdowns
+- Charts
+- Search
+- Pagination
+- Notifications
+- Content overflow
+- Image sizing
+- Touch interactions
+
+Prevent:
+
+- Horizontal page overflow
+- Overlapping elements
+- Clipped text
+- Broken tables
+- Invisible controls
+- Unusable forms
+- Modal overflow
+- Broken sidebar navigation
+
+Use responsive patterns appropriate to the existing design.
+
+Do not unnecessarily redesign the desktop interface.
+
+Maintain visual consistency across all breakpoints.
+
+---
+
+# 12. SCALABILITY AND PERFORMANCE ENGINEERING
+
+The Admin Panel must remain maintainable and efficient as the application grows.
+
+Inspect:
+
+- Component architecture
+- API request patterns
+- Database queries
+- Pagination
+- Filtering
+- Search implementation
+- State management
+- Rendering performance
+- Asset loading
+- Memory usage
+- Duplicate requests
+
+Implement improvements where justified.
+
+## Frontend Performance
+
+Avoid:
+
+- Unnecessary re-renders
+- Duplicate API requests
+- Excessive component complexity
+- Unnecessary dependencies
+- Large duplicated components
+- Uncontrolled state synchronization
+- Memory leaks
+
+Use appropriate techniques such as:
+
+- Reusable components
+- Efficient state management
+- Lazy loading where appropriate
+- Debounced search where appropriate
+- Proper cleanup
+- Optimized assets
+
+## Backend Performance
+
+Avoid:
+
+- Unbounded database queries
+- Fetching every record unnecessarily
+- N+1 query problems
+- Duplicate database operations
+- Inefficient aggregation
+- Missing indexes for frequently queried fields
+- Excessive synchronous processing
+
+Use appropriate:
+
+- Pagination
+- Database indexes
+- Query optimization
+- Efficient aggregation
+- Request validation
+- Caching where justified
+
+Do not add caching where it risks serving incorrect administrative data.
+
+Ensure updates invalidate relevant cached data.
+
+## Scalability
+
+Keep the architecture modular and extensible.
+
+New administrative modules should be implementable without rewriting unrelated systems.
+
+Do not overengineer.
+
+Do not introduce unnecessary abstractions, microservices, dependencies, or infrastructure.
+
+---
+
+# 13. SECURITY AND DATA INTEGRITY
+
+Inspect the complete administrative security model.
+
+Verify:
+
+- Admin authentication
+- Role-based access control
+- Server-side authorization
+- Permission checks
+- Input validation
+- Secure database operations
+- File upload restrictions
+- Protected API routes
+- Safe error handling
+- Sensitive information protection
+
+Frontend route protection is not sufficient.
+
+A normal user must not be able to execute administrative operations by directly calling an API.
+
+Verify unauthorized requests are rejected by the backend.
+
+Protect:
+
+- User records
+- Administrative settings
+- Business records
+- Financial information
+- Uploaded assets
+- Sensitive configuration
+
+Do not expose credentials or privileged secrets to the frontend.
+
+Never bypass authorization to make an operation work.
+
+Maintain existing business rules.
+
+---
+
+# 14. DATA CONSISTENCY AND STATE SYNCHRONIZATION
+
+Ensure the frontend accurately reflects backend and database state.
+
+For every successful mutation:
+
+1. Backend must confirm the operation.
+2. Database must persist the change.
+3. Frontend must update its state correctly.
+4. Relevant tables must refresh or synchronize.
+5. Related dashboard statistics must update where appropriate.
+6. Public-facing components must receive updated content where applicable.
+
+Handle:
+
+- Stale data
+- Failed mutations
+- Duplicate submissions
+- Concurrent updates
+- Deleted records
+- Missing records
+- Invalid responses
+- Network interruptions
+
+If an operation fails, do not leave the frontend showing an incorrect successful state.
+
+Use safe optimistic updates only when rollback is implemented correctly.
+
+---
+
+# 15. ERROR HANDLING AND RECOVERY
+
+Test and repair errors across the entire stack.
+
+Examples:
+
+- Network errors
+- API failures
+- Database connection errors
+- Validation failures
+- Unauthorized requests
+- Forbidden requests
+- Missing records
+- Duplicate records
+- File upload failures
+- Unexpected server responses
+
+Implement consistent error handling.
+
+Ensure:
+
+- Errors are logged appropriately on the server.
+- Sensitive internal details are not exposed to users.
+- Frontend receives meaningful error messages.
+- Loading states are cleared after failures.
+- Failed mutations do not corrupt UI state.
+- Retry mechanisms are used only where safe.
+
+Never hide errors with empty catch blocks.
+
+Never display false success messages.
+
+---
+
+# 16. TESTING — COMPLETE FUNCTIONAL AND INTEGRATION VERIFICATION
+
+Perform actual testing.
+
+Do not simply inspect source code and assume the feature works.
+
+## 16.1 Frontend Tests
+
+Verify:
+
+- Every administrative page
+- Every interactive button
+- Every form
+- Every modal
+- Every navigation route
+- Search
+- Filters
+- Sorting
+- Pagination
+- Loading states
+- Error states
+- Responsive behavior
+
+## 16.2 Backend Tests
+
+Verify:
+
+- API routes
+- Controllers
+- Services
+- Middleware
+- Validation
+- Authentication
+- Authorization
+- Database operations
+- Error handling
+
+## 16.3 Database Tests
+
+For every relevant module:
+
+- Create a record.
+- Retrieve the record.
+- Update the record.
+- Retrieve it again.
+- Verify the modified values.
+- Delete or safely archive the record.
+- Verify the resulting database state.
+
+Use isolated test records and safe test environments.
+
+Do not corrupt real production data.
+
+## 16.4 Integration Tests
+
+Test the complete frontend-to-database workflow.
+
+Example:
+
+Admin creates a record → backend receives request → database saves record → frontend displays record → browser refresh → record remains available.
+
+Repeat this for every relevant CRUD module.
+
+## 16.5 Regression Tests
+
+Verify that existing features continue working.
+
+Pay particular attention to:
+
+- Authentication
+- User workflows
+- Public Homepage
+- Existing APIs
+- Existing database operations
+- Uploads
+- Admin permissions
+- Existing integrations
+
+## 16.6 Code Quality
+
+Run the actual available commands:
+
+- TypeScript type checking
+- ESLint
+- Unit tests
+- Integration tests
+- Production build
+- End-to-end tests
+
+Use the project's existing scripts.
+
+Do not invent commands.
+
+Do not introduce `any`, `@ts-ignore`, or `@ts-nocheck` to bypass errors.
+
+Fix issues introduced by your changes.
+
+---
+
+# 17. SAFE IMPLEMENTATION AND REGRESSION PREVENTION
+
+Before every significant modification:
+
+1. Understand the existing implementation.
+2. Identify dependent components.
+3. Identify affected APIs.
+4. Identify database dependencies.
+5. Determine possible regressions.
+6. Make the smallest justified change.
+7. Verify the modified functionality.
+8. Run relevant regression tests.
+
+Strictly avoid:
+
+- Unnecessary full-project rewrites
+- Unnecessary database schema changes
+- Destructive migrations
+- Removing existing working features
+- Breaking API contracts
+- Duplicate backend services
+- Duplicate database models
+- Unnecessary dependencies
+- Fake production data
+- Frontend-only persistence
+- Unverified architectural changes
+
+Preserve existing user data and business logic.
+
+Do not modify unrelated project functionality.
+
+If a required change introduces a migration, make it safe, documented, and backward-compatible wherever possible.
+
+---
+
+# 18. IMPLEMENTATION WORKFLOW
+
+Execute the task in this order.
+
+### PHASE 1 — FULL PROJECT DISCOVERY
+Inspect the actual project structure and technology stack.
+
+### PHASE 2 — ADMIN PANEL AUDIT
+Inspect every administrative page and module.
+
+### PHASE 3 — FRONTEND FUNCTIONALITY AUDIT
+Check every button, form, interaction, and state update.
+
+### PHASE 4 — BACKEND ARCHITECTURE AUDIT
+Inspect routes, controllers, services, middleware, validators, and models.
+
+### PHASE 5 — DATABASE INTEGRITY AUDIT
+Verify actual persistence and query behavior.
+
+### PHASE 6 — FRONTEND-ONLY FUNCTIONALITY DETECTION
+Identify fake, hardcoded, incomplete, and non-persistent operations.
+
+### PHASE 7 — ROOT CAUSE ANALYSIS
+Determine why each broken feature is failing.
+
+### PHASE 8 — TARGETED IMPLEMENTATION
+Repair the relevant frontend, backend, API, and database integrations.
+
+### PHASE 9 — SECURITY VERIFICATION
+Verify authentication, authorization, and data protection.
+
+### PHASE 10 — RESPONSIVE OPTIMIZATION
+Test and correct all relevant device layouts.
+
+### PHASE 11 — PERFORMANCE AND SCALABILITY
+Optimize actual bottlenecks without overengineering.
+
+### PHASE 12 — COMPLETE CRUD TESTING
+Verify real database operations.
+
+### PHASE 13 — INTEGRATION AND REGRESSION TESTING
+Verify complete workflows and preserve existing functionality.
+
+### PHASE 14 — PRODUCTION READINESS REVIEW
+Run build, type checking, linting, and available automated tests.
+
+Do not skip any phase.
+
+---
+
+# 19. FINAL ENGINEERING REPORT
+
+After completing the task, provide a factual report.
+
+## A. Overall Project Audit
+
+Explain:
+
+- Existing architecture
+- Main problems discovered
+- Frontend-only functionality found
+- Backend issues found
+- Database issues found
+- Security problems found
+
+## B. Admin Panel Module Status
+
+| Module | Frontend | Backend | Database | CRUD | Final Status |
+|---|---|---|---|---|---|
+| Dashboard | | | | | |
+| Users | | | | | |
+| Products | | | | | |
+| Categories | | | | | |
+| Orders | | | | | |
+| Banners | | | | | |
+| Hero Sliders | | | | | |
+| Advertisements | | | | | |
+| Analytics | | | | | |
+| Settings | | | | | |
+
+Only include modules that exist or are relevant to the actual project.
+
+## C. Backend Architecture Report
+
+List:
+
+- Important backend modules inspected
+- Controllers verified
+- Services verified
+- Routes verified
+- Middleware verified
+- Models verified
+- Files created or modified
+- Architectural issues corrected
+
+## D. Database Integrity Report
+
+Explain:
+
+- Database connection status
+- Models and schemas inspected
+- CRUD operations verified
+- Data persistence results
+- Query optimization changes
+- Index changes, if any
+- Remaining database issues
+
+## E. Frontend Functionality Report
+
+Explain:
+
+- Buttons verified
+- Forms verified
+- API integrations
+- State synchronization
+- Loading and error handling
+- Responsive improvements
+
+## F. Responsive Verification
+
+| Device | Layout | Navigation | Tables | Forms | Status |
+|---|---|---|---|---|---|
+| Desktop | | | | | |
+| Laptop | | | | | |
+| Tablet | | | | | |
+| Mobile | | | | | |
+
+Only mark verified when actual viewport testing was performed.
+
+## G. Security Verification
+
+Report:
+
+- Authentication
+- Authorization
+- Role permissions
+- Input validation
+- Protected endpoints
+- Unauthorized request testing
+
+## H. Testing Results
+
+| Category | Result |
+|---|---|
+| Frontend functionality | PASS / FAIL / BLOCKED |
+| Backend integration | PASS / FAIL / BLOCKED |
+| Database persistence | PASS / FAIL / BLOCKED |
+| Create operations | PASS / FAIL / BLOCKED |
+| Read operations | PASS / FAIL / BLOCKED |
+| Update operations | PASS / FAIL / BLOCKED |
+| Delete operations | PASS / FAIL / BLOCKED |
+| API integration | PASS / FAIL / BLOCKED |
+| Authentication | PASS / FAIL / BLOCKED |
+| Authorization | PASS / FAIL / BLOCKED |
+| Responsive design | PASS / FAIL / BLOCKED |
+| Performance | PASS / FAIL / BLOCKED |
+| Production build | PASS / FAIL / BLOCKED |
+| Regression testing | PASS / FAIL / BLOCKED |
+
+## I. Remaining Issues
+
+Clearly identify:
+
+- Unresolved bugs
+- Missing functionality
+- External service limitations
+- Missing environment variables
+- Database access limitations
+- Tests that could not run
+- Manual configuration requirements
+
+Do not hide incomplete work.
+
+---
+
+# 20. FINAL NON-NEGOTIABLE EXECUTION INSTRUCTION
+
+Now inspect the entire existing project and perform the complete Admin Panel engineering audit.
+
+Do not assume that a frontend interaction means the backend operation is working.
+
+Do not assume that a success notification means data has been saved.
+
+Do not assume that a dashboard statistic is dynamic simply because it changes visually.
+
+Verify the actual data flow.
+
+**Frontend → API → Backend → Server-Side Validation → Database → Persistent Result → Frontend Synchronization.**
+
+If an operation is frontend-only, implement the missing backend and database functionality.
+
+If a backend module is incomplete, repair it.
+
+If a database operation is incorrect, fix it.
+
+If a button does not perform its intended operation, connect it properly.
+
+If a responsive layout breaks on a device, correct it.
+
+If a module is unnecessarily complicated or duplicated, simplify it only when a safe, justified improvement exists.
+
+Preserve all working functionality.
+
+Do not create new problems while fixing existing ones.
+
+Do not make unrelated changes.
+
+Do not replace real functionality with mocks.
+
+Do not claim verification without actual test evidence.
+
+**FINAL GOAL: Deliver a fully functional, database-persistent, secure, responsive, scalable, maintainable, and production-oriented Admin Panel—not merely a visually functional frontend.**
+
+Start by understanding the complete existing project, then audit, repair, implement, test, and report.

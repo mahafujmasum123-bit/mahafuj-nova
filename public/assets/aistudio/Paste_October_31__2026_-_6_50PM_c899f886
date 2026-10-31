@@ -1,0 +1,994 @@
+# ULTIMATE MASTER ENGINEERING PROMPT
+## Premium About Page, Blog System, Contact Management, Navigation Optimization & Full-Stack Integration
+
+You are acting as a Principal Full-Stack Software Engineer, Senior UI/UX Designer, Frontend Architect, Backend Architect, Database Engineer, Security Engineer, and Quality Assurance Engineer.
+
+Your mission is to comprehensively redesign and implement the About, Blog, and Contact experiences of my EXISTING E-commerce application.
+
+Additionally, fix the existing navigation behavior, remove unnecessary navigation elements, improve the cart indicator, and implement a fully functional admin-managed contact message system.
+
+THIS IS NOT A SIMPLE UI REDESIGN TASK.
+
+You must investigate the existing codebase, understand the application's architecture, identify the root causes of existing problems, and implement a complete, integrated, production-quality solution.
+
+The application uses:
+
+Frontend:
+- React
+- TypeScript
+- Tailwind CSS
+
+Backend:
+- Node.js
+- Express.js
+
+Database:
+- MongoDB
+
+You MUST preserve the existing architecture and integrate all functionality into the actual application.
+
+==================================================
+1. FIRST: COMPLETE PROJECT INVESTIGATION
+==================================================
+
+Before modifying any files, thoroughly inspect the existing project.
+
+Investigate:
+
+- Frontend project structure.
+- Backend project structure.
+- Existing navigation components.
+- Routing configuration.
+- Homepage design and styling.
+- Existing About section or page.
+- Existing Contact section or page.
+- Existing Blog functionality.
+- Authentication system.
+- Account dropdown or account popup.
+- Admin dashboard architecture.
+- Admin authorization and RBAC.
+- Existing contact-related models.
+- Existing message management functionality.
+- MongoDB schemas.
+- API routes and controllers.
+- Existing cart implementation.
+- Existing notification system.
+- Responsive design system.
+
+IMPORTANT:
+
+The About, Blog, and Contact navigation links currently appear to display the same content.
+
+Do not simply change their labels or styling.
+
+Investigate the actual routing and component-rendering problem.
+
+Identify why these navigation links render identical content.
+
+Fix the underlying routing or component-mapping problem.
+
+Do not create duplicate routes that point to the same page.
+
+Do not assume that any backend endpoint or database model exists without verifying it.
+
+==================================================
+2. NAVIGATION BAR CORRECTIONS
+==================================================
+
+Redesign and optimize the existing navigation bar without unnecessarily changing its overall identity.
+
+Preserve the existing homepage branding, logo, typography, colors, spacing, and visual language.
+
+A. REMOVE THE DEFAULT ADMIN NAVIGATION LINK
+
+The Admin navigation link must NOT appear as a default navigation menu item.
+
+The application already provides an Account popup/dropdown.
+
+The Admin Dashboard entry is already available inside that Account popup.
+
+Therefore:
+
+- Remove the redundant Admin link from the main navigation menu.
+- Preserve the existing Admin Dashboard entry inside the Account popup.
+- Preserve its existing functionality.
+- Ensure only authorized administrators can access the actual Admin Dashboard.
+- Do not remove or break admin routes.
+- Do not weaken backend authorization.
+
+The navigation bar should remain clean and professional.
+
+B. CART INDICATOR REDESIGN
+
+The current navigation cart indicator displays the cart's monetary amount.
+
+Remove the monetary amount from the navigation cart indicator.
+
+The cart navigation element should display ONLY:
+
+- Cart icon.
+- Cart item count badge.
+
+For example:
+
+Shopping Cart Icon + 3
+
+The number must represent the actual number of cart items or total units according to the existing cart-counting convention.
+
+Requirements:
+
+- Remove the displayed cart monetary amount.
+- Preserve the existing cart functionality.
+- Update the count when products are added.
+- Update the count when quantities change.
+- Update the count when products are removed.
+- Keep the count synchronized with the actual cart state.
+- Support authenticated users and existing guest-cart functionality.
+- Prevent stale or incorrect counts.
+- Ensure the cart icon remains responsive.
+
+IMPORTANT:
+
+Do not modify the cart page or checkout business logic unnecessarily.
+
+Only change the navigation cart presentation and the necessary state synchronization.
+
+==================================================
+3. PREMIUM ABOUT PAGE
+==================================================
+
+Create a completely separate, dedicated About Page.
+
+Suggested route:
+
+/about
+
+The About navigation link must navigate to this actual page.
+
+Do not display the homepage or generic content when users visit /about.
+
+DESIGN REQUIREMENTS:
+
+Create a premium, visually impressive, modern E-commerce About Page.
+
+The design must match the existing website's homepage.
+
+Study the homepage before designing the About Page.
+
+Reuse the existing:
+
+- Brand identity.
+- Color palette.
+- Typography.
+- Button styles.
+- Border treatments.
+- Spacing system.
+- Visual language.
+- Header and footer.
+
+Do not introduce an unrelated design system.
+
+The About Page should feel like a natural extension of the existing website.
+
+PREFERRED PAGE STRUCTURE:
+
+A. Premium About Hero Section
+
+Create an impressive hero section containing:
+
+- Professional headline.
+- Meaningful brand introduction.
+- Supporting description.
+- High-quality visual presentation.
+- Appropriate CTA buttons where relevant.
+
+B. Our Story
+
+Explain the brand's background, purpose, and journey.
+
+Use the actual business information available in the existing project.
+
+Do not invent company history, founding dates, awards, or achievements.
+
+C. Our Mission and Vision
+
+Present the actual business mission and vision.
+
+If exact information is unavailable, create editable, clearly identified brand content without fabricating factual claims.
+
+D. Why Choose Us
+
+Create visually attractive sections highlighting relevant e-commerce value propositions.
+
+Examples:
+
+- Quality Products.
+- Customer Satisfaction.
+- Reliable Delivery.
+- Secure Shopping.
+- Customer Support.
+
+Only make claims consistent with the actual business.
+
+E. Our Values
+
+Create a premium visual section communicating the brand's values.
+
+F. Customer Experience
+
+Present the actual shopping experience and available customer services.
+
+G. Trust and Shopping Commitment
+
+Create a visually polished section that communicates the brand's commitment to customers without making unsupported claims.
+
+H. Final CTA
+
+Provide an attractive CTA directing users toward shopping or contacting the business.
+
+DESIGN QUALITY:
+
+The About Page must look like a professionally designed commercial e-commerce website.
+
+Avoid:
+
+- Generic template appearance.
+- Excessive gradients.
+- Unnecessary animations.
+- Random icons.
+- Repetitive cards.
+- Excessive whitespace.
+- Artificial statistics.
+- Fake testimonials.
+- Unsupported business claims.
+
+Use a balanced, premium, content-rich layout.
+
+==================================================
+4. DEDICATED PREMIUM BLOG PAGE
+==================================================
+
+Create a separate Blog Page.
+
+Suggested route:
+
+/blog
+
+The Blog navigation link must navigate to this dedicated page.
+
+Do not redirect it to the About Page, homepage, or generic placeholder.
+
+DESIGN OBJECTIVE:
+
+Create a premium editorial-style Blog experience that visually matches the existing e-commerce website.
+
+The Blog Page should look like a professional brand publication.
+
+Suggested sections:
+
+A. Blog Hero
+
+- Attractive editorial headline.
+- Short introduction.
+- Professional visual composition.
+
+B. Featured Article
+
+- Featured article image.
+- Article title.
+- Short description.
+- Publication date.
+- Category.
+- Read More button.
+
+C. Latest Articles
+
+Create a visually attractive article listing.
+
+Each article card should support:
+
+- Cover image.
+- Article title.
+- Excerpt.
+- Category.
+- Publication date.
+- Read More action.
+
+D. Blog Categories
+
+Display relevant categories based on actual available content.
+
+E. Blog Search and Filtering
+
+If supported by the existing application architecture, implement functional search and category filtering.
+
+F. Individual Blog Details
+
+Where the application supports article content management, implement dedicated article detail routes.
+
+For example:
+
+/blog/:slug
+
+The article detail page should display:
+
+- Article title.
+- Cover image.
+- Publication date.
+- Category.
+- Author information where available.
+- Complete article content.
+- Related articles where available.
+
+IMPORTANT DATABASE REQUIREMENT:
+
+Inspect whether the application already has a Blog or Article model.
+
+If it exists, reuse it.
+
+If it does not exist and a real database-backed blog system is required, implement an appropriate MongoDB model and backend API following the existing architecture.
+
+Do not use hardcoded arrays as a substitute for a real database-backed system.
+
+Do not generate fake blog content and pretend it is stored in MongoDB.
+
+If blog management is available through the Admin Dashboard, preserve and integrate it.
+
+Do not unnecessarily create a second content management system.
+
+If no admin blog management exists, identify the minimum necessary implementation for managing articles without disrupting the existing Admin Dashboard.
+
+==================================================
+5. PREMIUM CONTACT PAGE
+==================================================
+
+Create a completely separate Contact Page.
+
+Suggested route:
+
+/contact
+
+The Contact navigation link must navigate to this dedicated page.
+
+It must NOT display the About Page or generic homepage content.
+
+DESIGN OBJECTIVE:
+
+Create a premium, elegant, modern, professionally designed Contact Page that matches the existing homepage design.
+
+The Contact Page should contain:
+
+A. Contact Hero Section
+
+- Professional headline.
+- Helpful supporting description.
+- Visually attractive layout.
+
+B. Contact Information
+
+Display only legitimate business contact information found in the existing project.
+
+Where available:
+
+- Business email.
+- Phone number.
+- Business address.
+- Business hours.
+- Social media links.
+
+Never invent contact information.
+
+C. Premium Contact Form
+
+Create a complete, visually polished contact form.
+
+Required fields:
+
+1. Full Name.
+2. Email Address.
+3. Subject.
+4. Message.
+
+Optional fields may be added only when useful and consistent with the existing business.
+
+Form requirements:
+
+- Proper labels.
+- Clear placeholders.
+- Required-field validation.
+- Email format validation.
+- Message length validation.
+- Accessible input controls.
+- Responsive layout.
+- Proper focus states.
+- Clear error messages.
+- Submission loading state.
+- Submission success state.
+- Submission failure state.
+
+The form must work with the real backend.
+
+==================================================
+6. CONTACT FORM: MESSAGES MUST GO TO THE ADMIN DASHBOARD
+==================================================
+
+THIS IS A CRITICAL BUSINESS REQUIREMENT.
+
+When a visitor submits the Contact Form, the message must be stored in MongoDB and become visible inside the existing Admin Dashboard.
+
+IMPORTANT:
+
+DO NOT SEND CONTACT FORM MESSAGES TO EMAIL.
+
+DO NOT USE SMTP FOR CONTACT FORM DELIVERY.
+
+DO NOT USE RESEND FOR CONTACT FORM DELIVERY.
+
+DO NOT SEND THE CONTACT MESSAGE TO THE BUSINESS OWNER'S EMAIL.
+
+The destination of the contact form submission is the application's own database-backed Admin Message Management System.
+
+EXPECTED WORKFLOW:
+
+1. Visitor opens /contact.
+2. Visitor completes the contact form.
+3. Visitor clicks Submit.
+4. Frontend validates the form.
+5. Frontend sends the message to the actual Express backend.
+6. Backend validates and sanitizes the submitted information.
+7. Backend creates a new contact message record in MongoDB.
+8. Backend returns a successful response.
+9. Frontend displays a polished success notification or success state.
+10. Admin can open the Admin Dashboard.
+11. Admin navigates to the Contact Messages section.
+12. Admin sees the newly submitted message.
+
+The entire workflow must use actual backend and database integration.
+
+Do not simulate message submission.
+
+Do not use LocalStorage as the message database.
+
+Do not create an in-memory message store.
+
+Do not show success unless the database operation succeeds.
+
+==================================================
+7. MONGODB CONTACT MESSAGE MODEL
+==================================================
+
+Inspect the existing MongoDB models first.
+
+If a suitable contact message model already exists, reuse and extend it.
+
+Otherwise, implement a proper ContactMessage model.
+
+Suggested fields:
+
+- _id
+- name
+- email
+- subject
+- message
+- status
+- isRead
+- createdAt
+- updatedAt
+
+Suggested status values:
+
+- NEW
+- READ
+- REPLIED
+- ARCHIVED
+
+Use the existing naming conventions and schema architecture.
+
+Requirements:
+
+- Proper schema validation.
+- Required field validation.
+- Appropriate string length limits.
+- Timestamps.
+- Appropriate database indexes.
+- Safe handling of user-submitted content.
+
+Store messages persistently in MongoDB.
+
+Do not store sensitive or unnecessary information.
+
+==================================================
+8. ADMIN CONTACT MESSAGE MANAGEMENT
+==================================================
+
+Integrate a Contact Messages section into the EXISTING Admin Dashboard.
+
+Do not create a separate admin application.
+
+Do not redesign the entire Admin Dashboard unnecessarily.
+
+Reuse its existing sidebar, navigation, layout, cards, tables, typography, and design system.
+
+Add a dedicated Contact Messages management section.
+
+Suggested route:
+
+/admin/messages
+
+However, inspect the existing admin routing conventions before selecting the final route.
+
+ADMIN FEATURES:
+
+A. Message List
+
+Display:
+
+- Sender name.
+- Sender email.
+- Subject.
+- Submission date.
+- Message status.
+- Read/unread indicator.
+
+B. Message Details
+
+When an administrator opens a message, display:
+
+- Complete sender information.
+- Full subject.
+- Complete message.
+- Submission date.
+- Current status.
+
+C. Message Status Management
+
+Allow authorized administrators to:
+
+- Mark as Read.
+- Mark as Unread.
+- Mark as Replied.
+- Archive messages.
+
+D. Message Filtering
+
+Where practical, support:
+
+- All Messages.
+- New Messages.
+- Unread Messages.
+- Read Messages.
+- Replied Messages.
+- Archived Messages.
+
+E. Search
+
+Implement actual backend-supported message search where appropriate.
+
+F. Pagination
+
+Use server-side pagination for larger message collections.
+
+G. Delete
+
+Allow authorized administrators to delete messages if consistent with the existing admin management patterns.
+
+Use an appropriate confirmation modal.
+
+Do not use window.confirm().
+
+H. Admin Dashboard Integration
+
+If the existing dashboard already has statistics or notification badges, integrate the unread contact message count appropriately.
+
+Do not unnecessarily modify unrelated dashboard sections.
+
+==================================================
+9. BACKEND API AND SECURITY
+==================================================
+
+Implement the required Express APIs following the existing backend architecture.
+
+Potential public API:
+
+POST /api/.../contact
+
+This endpoint should:
+
+- Accept contact form submissions.
+- Validate all fields.
+- Sanitize user input.
+- Apply appropriate rate limiting.
+- Prevent spam and abuse.
+- Save the message to MongoDB.
+- Return a consistent response.
+
+Admin APIs must support the actual management operations.
+
+Possible operations:
+
+- Retrieve messages.
+- Retrieve a single message.
+- Search messages.
+- Filter by status.
+- Update message status.
+- Archive messages.
+- Delete messages.
+- Retrieve unread message counts.
+
+These are functional requirements, not instructions to blindly create these exact routes.
+
+Inspect existing API naming conventions and reuse them.
+
+SECURITY REQUIREMENTS:
+
+- Public users may submit contact messages.
+- Public users must NOT access admin message records.
+- Only authorized administrators may retrieve messages.
+- Only authorized administrators may update message status.
+- Only authorized administrators may delete messages.
+- Enforce authorization on the backend.
+- Do not rely on frontend route protection alone.
+- Validate MongoDB ObjectIds.
+- Prevent unauthorized data access.
+- Protect against injection and malformed payloads.
+- Implement sensible rate limiting.
+- Never expose internal errors or stack traces.
+
+==================================================
+10. CONTACT SUBMISSION ANIMATION AND CANVAS EFFECT
+==================================================
+
+When the user successfully submits the Contact Form, provide a premium visual feedback experience.
+
+I specifically want a beautiful Canvas-style visual effect.
+
+The effect should feel polished, elegant, and professional.
+
+Possible visual direction:
+
+- Subtle particle animation.
+- Elegant floating visual elements.
+- Smooth success transition.
+- Beautiful confirmation presentation.
+- Refined motion and visual feedback.
+
+The animation must occur only after the backend confirms successful database persistence.
+
+Do not display a success animation when submission fails.
+
+Do not create an excessive or distracting animation.
+
+Performance requirements:
+
+- Keep animations lightweight.
+- Support reduced-motion preferences.
+- Avoid blocking form interactions.
+- Avoid memory leaks.
+- Clean up animation frames and event listeners.
+- Maintain good mobile performance.
+
+If a canvas-based implementation is appropriate, implement it efficiently.
+
+Do not add unnecessary animation dependencies.
+
+==================================================
+11. ROUTING AND PAGE SEPARATION
+==================================================
+
+Ensure each navigation link points to the correct dedicated page.
+
+Required behavior:
+
+ABOUT:
+Navigation click -> /about -> Dedicated About Page.
+
+BLOG:
+Navigation click -> /blog -> Dedicated Blog Page.
+
+CONTACT:
+Navigation click -> /contact -> Dedicated Contact Page.
+
+ADMIN:
+No default Admin navigation menu item.
+
+Admin Dashboard remains accessible through the existing Account popup for authorized administrators.
+
+Ensure:
+
+- Direct URL access works.
+- Browser refresh works.
+- Internal navigation works.
+- Existing routes remain intact.
+- Unknown routes show the application's appropriate 404 page.
+- Protected admin routes remain protected.
+- No route accidentally renders another page's content.
+
+Fix the root cause of the existing identical-page rendering problem.
+
+==================================================
+12. RESPONSIVE DESIGN
+==================================================
+
+Every new and modified section must be fully responsive.
+
+Support:
+
+- Large desktop.
+- Standard desktop.
+- Laptop.
+- Tablet.
+- Mobile.
+
+Requirements:
+
+- Proper responsive navigation.
+- No horizontal overflow.
+- Correct typography scaling.
+- Appropriate image behavior.
+- Mobile-friendly forms.
+- Responsive blog cards.
+- Proper spacing.
+- Accessible interactive elements.
+- Correct admin message table behavior on smaller screens.
+
+Do not simply shrink desktop layouts.
+
+Adapt each section intelligently.
+
+==================================================
+13. CODE QUALITY AND ARCHITECTURAL RULES
+==================================================
+
+Follow the existing architecture.
+
+Use:
+
+- React.
+- TypeScript.
+- Tailwind CSS.
+- Node.js.
+- Express.js.
+- MongoDB.
+
+Mandatory engineering standards:
+
+- Strict TypeScript.
+- Reusable components.
+- Proper API service separation.
+- Backend validation.
+- Secure authorization.
+- Consistent error handling.
+- Clean database architecture.
+- Maintainable code.
+- Accessible UI.
+- Production-quality implementation.
+
+STRICTLY AVOID:
+
+- any.
+- @ts-ignore.
+- @ts-nocheck.
+- Fake APIs.
+- Mock message submissions.
+- Hardcoded production data.
+- Fake blog database records.
+- Duplicate routes.
+- Duplicate database models.
+- Unnecessary dependencies.
+- Unrelated refactoring.
+- Unnecessary schema changes.
+- window.alert().
+- window.confirm().
+- window.prompt().
+- window.location.reload().
+
+Do not replace the entire application.
+
+Modify only the files required for this task.
+
+Preserve existing working functionality.
+
+==================================================
+14. REGRESSION PREVENTION
+==================================================
+
+Before implementation, identify all potentially affected components.
+
+Pay particular attention to:
+
+- Homepage.
+- Header.
+- Navigation.
+- Account popup.
+- Admin Dashboard.
+- Cart state.
+- Product pages.
+- Existing blog functionality.
+- Existing authentication.
+- Existing routes.
+- Shared UI components.
+
+Do not break any existing feature.
+
+Do not remove existing functionality merely to simplify implementation.
+
+Do not introduce new dependencies without a genuine technical reason.
+
+If an existing component is shared across multiple pages, verify that changes do not unintentionally alter unrelated pages.
+
+Preserve existing design consistency.
+
+==================================================
+15. ACTUAL TESTING AND VERIFICATION
+==================================================
+
+After implementation, perform actual testing.
+
+FRONTEND:
+
+- About Page renders correctly.
+- Blog Page renders correctly.
+- Contact Page renders correctly.
+- Navigation links point to correct routes.
+- Admin link is absent from the main navigation.
+- Admin Dashboard remains accessible through Account popup.
+- Cart indicator shows only the item count.
+- Cart amount is no longer displayed in navigation.
+- Contact form validation works.
+- Contact form loading state works.
+- Success animation works after confirmed submission.
+- Error state works.
+- Responsive layouts work.
+
+BACKEND:
+
+- Contact submission endpoint works.
+- Invalid form submissions are rejected.
+- Messages persist in MongoDB.
+- Public users cannot retrieve admin messages.
+- Unauthorized users cannot access admin message APIs.
+- Admin can retrieve messages.
+- Admin can view message details.
+- Admin can update statuses.
+- Admin can archive messages.
+- Admin can delete messages if implemented.
+
+REGRESSION:
+
+- Homepage still works.
+- Product pages still work.
+- Cart still works.
+- Authentication still works.
+- Account popup still works.
+- Admin Dashboard still works.
+- Existing routes still work.
+
+Run available:
+
+- TypeScript checks.
+- Production build.
+- Lint checks.
+- Relevant unit tests.
+- Relevant integration tests.
+
+Fix regressions caused by your implementation.
+
+Do not claim successful verification without actually performing it.
+
+==================================================
+16. IMPLEMENTATION EXECUTION ORDER
+==================================================
+
+Follow this sequence:
+
+PHASE 1: Inspect the complete project.
+
+PHASE 2: Identify the root cause of About, Blog, and Contact rendering the same content.
+
+PHASE 3: Analyze the existing homepage design and design system.
+
+PHASE 4: Map existing backend APIs, MongoDB models, admin architecture, and cart state.
+
+PHASE 5: Fix navigation routing and remove the redundant Admin navigation link.
+
+PHASE 6: Modify the cart indicator to display only the actual cart item count.
+
+PHASE 7: Design and implement the premium About Page.
+
+PHASE 8: Design and implement the dedicated Blog Page.
+
+PHASE 9: Design and implement the premium Contact Page and functional contact form.
+
+PHASE 10: Implement real MongoDB-backed contact message persistence.
+
+PHASE 11: Integrate Contact Message Management into the existing Admin Dashboard.
+
+PHASE 12: Implement the successful submission Canvas-style animation.
+
+PHASE 13: Verify responsive behavior across devices.
+
+PHASE 14: Run actual tests and regression checks.
+
+PHASE 15: Review the complete implementation.
+
+Do not stop after completing the frontend.
+
+Do not stop after creating the database model.
+
+The public contact form and the admin message management interface must work together.
+
+==================================================
+17. FINAL DELIVERY REPORT
+==================================================
+
+After completing the task, provide a technically accurate implementation report.
+
+Include:
+
+1. Root cause of the identical About, Blog, and Contact pages.
+2. Routing corrections.
+3. About Page implementation.
+4. Blog Page implementation.
+5. Contact Page implementation.
+6. Contact form backend integration.
+7. MongoDB message persistence.
+8. Admin message management implementation.
+9. Canvas-style success animation.
+10. Navigation corrections.
+11. Cart indicator corrections.
+12. Responsive design verification.
+13. Build and test results.
+14. Existing functionality preserved.
+15. Remaining issues or external dependencies.
+
+Use the following statuses:
+
+VERIFIED — Implemented and actually tested.
+
+PARTIAL — Implemented but not fully verified.
+
+BLOCKED — Requires unavailable configuration or infrastructure.
+
+NOT IMPLEMENTED — Not implemented.
+
+Never report unverified functionality as completed.
+
+==================================================
+FINAL ENGINEERING OBJECTIVE
+==================================================
+
+Deliver a complete, premium, production-quality website experience.
+
+The About Page must communicate the brand professionally.
+
+The Blog Page must be a genuinely separate editorial experience.
+
+The Contact Page must have a beautiful, fully functional contact form.
+
+Contact messages must be stored in MongoDB and managed directly from the existing Admin Dashboard.
+
+Contact messages must NOT be sent to email.
+
+The main navigation must not display the redundant Admin link.
+
+The Account popup must retain the existing Admin Dashboard access.
+
+The cart navigation indicator must display only the cart icon and actual item count, never the cart monetary amount.
+
+Everything must be fully responsive.
+
+Most importantly:
+
+PRESERVE THE EXISTING APPLICATION.
+
+DO NOT INTRODUCE UNNECESSARY CHANGES.
+
+DO NOT BREAK EXISTING WORKING FEATURES.
+
+DO NOT IMPLEMENT FAKE FUNCTIONALITY.
+
+DO NOT STOP AT UI DESIGN.
+
+IMPLEMENT AND VERIFY THE COMPLETE FRONTEND, BACKEND, AND DATABASE WORKFLOW.
+
+BEGIN BY INSPECTING THE EXISTING CODEBASE.

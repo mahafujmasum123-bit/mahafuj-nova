@@ -1,0 +1,1097 @@
+# ULTIMATE MASTER PROMPT
+## COMPLETE ADMIN PANEL FUNCTIONAL AUDIT, DYNAMIC HOMEPAGE MANAGEMENT, HERO SLIDER, BANNER, ADVERTISEMENT SYSTEM & PRODUCTION-LEVEL FULL-STACK VERIFICATION
+
+---
+
+# 1. YOUR ROLE AND RESPONSIBILITIES
+
+Act as a multidisciplinary Principal-Level Software Engineering and Quality Assurance Team.
+
+Operate with the combined expertise of:
+
+- Principal Full-Stack Software Engineer
+- Senior Frontend Architect
+- Senior Backend Engineer
+- Database Architect
+- Application Security Engineer
+- Admin Dashboard Specialist
+- Dynamic Content Management System Architect
+- Analytics Engineer
+- API Integration Engineer
+- QA Automation Engineer
+- Production Reliability Engineer
+
+Your responsibility is to thoroughly audit, repair, complete, and verify the entire existing Admin Panel and its connection with the public-facing website.
+
+This is NOT a simple UI inspection.
+
+This is NOT a frontend-only functionality check.
+
+This is a complete Full-Stack Functional Audit and Production-Oriented Implementation Task.
+
+The existing project must be inspected before any changes are made.
+
+Your objective is to ensure that every relevant administrative feature actually works through the frontend, backend, server-side logic, APIs, and database.
+
+---
+
+# 2. CRITICAL OPERATING PRINCIPLE
+
+Follow this principle throughout the entire task:
+
+**The Admin Panel must control the actual website. The website must display actual database-managed content. Every administrative action must persist through the real backend.**
+
+For example:
+
+When an administrator creates a new homepage banner:
+
+1. The Admin Panel submits the data.
+2. The backend validates the request.
+3. The server processes the operation.
+4. The database stores the banner.
+5. The public Homepage retrieves the updated banner.
+6. The banner appears to visitors.
+7. Updating or deleting the banner from the Admin Panel must update the actual public Homepage.
+
+The same principle applies to:
+
+- Hero Sliders
+- Homepage Banners
+- Advertisements
+- User Management
+- Analytics
+- Other existing homepage content modules
+
+Never implement an isolated frontend demonstration.
+
+---
+
+# 3. PHASE ONE — COMPLETE EXISTING PROJECT AUDIT
+
+Before implementing anything, inspect the existing project thoroughly.
+
+Understand its actual architecture.
+
+## Frontend Inspection
+
+Inspect:
+
+- Admin Panel layout
+- Dashboard
+- Sidebar
+- Header
+- Existing administrative pages
+- Homepage
+- Hero Slider components
+- Banner components
+- Advertisement components
+- User interface components
+- API service layer
+- State management
+- Routing
+- Forms
+- Validation
+- Loading states
+- Error handling
+
+## Backend Inspection
+
+Inspect:
+
+- Server configuration
+- API routes
+- Controllers
+- Services
+- Middleware
+- Authentication
+- Authorization
+- Admin permissions
+- Existing content management APIs
+- Analytics APIs
+- Upload APIs
+- Database integration
+- Error handling
+
+## Database Inspection
+
+Inspect:
+
+- Existing models
+- Schemas
+- Collections or tables
+- Relationships
+- Indexes
+- Validation rules
+- Existing content records
+- User records
+- Analytics-related data
+- Existing banner and slider data structures
+
+## Audit Objectives
+
+Determine:
+
+1. Which features are fully functional?
+2. Which features are only frontend implementations?
+3. Which features use mock or hardcoded data?
+4. Which features have incomplete backend integration?
+5. Which database operations are failing?
+6. Which APIs are missing?
+7. Which existing features are broken?
+8. Which modules need improvement?
+9. Which functionality is completely missing?
+
+Do not guess.
+
+Verify the actual implementation before deciding what to change.
+
+---
+
+# 4. COMPLETE ADMIN PANEL FUNCTIONALITY AUDIT
+
+Inspect every existing Admin Panel module.
+
+Do not limit the audit to the Dashboard.
+
+Check all relevant administrative sections, including:
+
+- Dashboard
+- Users
+- Products, if applicable
+- Categories, if applicable
+- Orders, if applicable
+- Hero Slider Management
+- Banner Management
+- Advertisement Management
+- Analytics
+- Visitors
+- Reviews
+- Settings
+- Other existing administrative modules
+
+For every module, verify:
+
+- Page loading
+- API connectivity
+- Database integration
+- Create
+- Read
+- Update
+- Delete
+- Search
+- Filtering
+- Sorting
+- Pagination
+- Validation
+- Authorization
+- Error handling
+- Loading states
+- Success notifications
+
+Every visible button must perform its intended operation.
+
+Every form must submit valid data to the actual backend.
+
+Every modification must persist in the actual database.
+
+If something is incomplete or broken, investigate its root cause and fix it.
+
+Do not replace existing working functionality unnecessarily.
+
+---
+
+# 5. HERO SLIDER MANAGEMENT — COMPLETE IMPLEMENTATION
+
+This is one of the highest-priority requirements.
+
+Inspect the entire existing Hero Slider system.
+
+Determine whether the Admin Panel can actually control the public Homepage Hero Slider.
+
+If the system is missing or incomplete, implement it.
+
+## 5.1 Admin Panel Hero Slider Management
+
+The administrator must be able to:
+
+- Create a new slider.
+- Upload or select a slider image.
+- Preview the image.
+- Update slider content.
+- Change the slider image.
+- Modify the heading.
+- Modify the subtitle.
+- Modify description text, if applicable.
+- Configure button text.
+- Configure button destination.
+- Set display order.
+- Enable or disable a slider.
+- Schedule publication, if supported.
+- Delete a slider.
+- Preview the final slider.
+- Save all changes.
+
+Use actual project requirements to determine the appropriate fields.
+
+Do not add unnecessary fields that have no purpose.
+
+## 5.2 Homepage Integration
+
+Connect the Hero Slider management system to the actual Homepage.
+
+The public Homepage must retrieve active sliders from the backend.
+
+Requirements:
+
+- Display only published and enabled sliders.
+- Respect the configured display order.
+- Display the correct uploaded images.
+- Display the correct text.
+- Display the correct buttons.
+- Navigate to the configured destinations.
+- Reflect administrative updates.
+- Stop displaying deleted or disabled sliders.
+
+## 5.3 Slider Behavior
+
+Verify:
+
+- Previous navigation
+- Next navigation
+- Automatic sliding
+- Pause behavior, where appropriate
+- Touch/swipe behavior
+- Responsive image rendering
+- Image loading
+- Empty-state handling
+- Error handling
+
+Do not display broken image placeholders.
+
+If there are no active sliders, use an appropriate fallback design rather than crashing the Homepage.
+
+## 5.4 Database Persistence
+
+Verify that:
+
+- Slider creation saves to the database.
+- Slider updates persist.
+- Slider deletion works.
+- Active/inactive status persists.
+- Display order persists.
+- Homepage retrieves the correct records.
+
+A slider must not disappear permanently only because the browser was refreshed.
+
+---
+
+# 6. COMPLETE HOMEPAGE BANNER MANAGEMENT
+
+Inspect every banner currently displayed throughout the public Homepage.
+
+Create an inventory of all existing banner placements.
+
+Examples may include:
+
+- Main promotional banners
+- Secondary promotional banners
+- Category banners
+- Product campaign banners
+- Promotional strips
+- Full-width banners
+- Sidebar banners
+- Other existing promotional sections
+
+Only include placements that are relevant to the actual project.
+
+## 6.1 Admin Banner Management
+
+The administrator must be able to:
+
+- Create banners.
+- Upload banner images.
+- Preview banners.
+- Edit banner content.
+- Replace images.
+- Change headings.
+- Change descriptions.
+- Modify button labels.
+- Modify destination links.
+- Change display positions.
+- Enable or disable banners.
+- Schedule banners, if supported.
+- Delete banners.
+
+## 6.2 Banner Placement Management
+
+The system must identify where each banner should appear.
+
+Use a proper placement identifier or equivalent architecture.
+
+Examples:
+
+- homepage-main
+- homepage-secondary
+- homepage-category
+- homepage-promotion
+
+Use actual project requirements rather than blindly introducing these exact identifiers.
+
+The Admin Panel must make it clear where each banner will appear.
+
+## 6.3 Public Homepage Integration
+
+All managed banners must load from the actual backend.
+
+Verify:
+
+- Correct placement.
+- Correct image.
+- Correct content.
+- Correct destination.
+- Correct display order.
+- Active/inactive behavior.
+- Updated content visibility.
+- Deleted content removal.
+
+Do not leave important Homepage banners permanently hardcoded when they are intended to be administratively managed.
+
+However, do not unnecessarily convert static branding or decorative UI elements into database-managed content.
+
+---
+
+# 7. ADVERTISEMENT MANAGEMENT SYSTEM
+
+Implement a complete Advertisement Management System if it does not already exist.
+
+The system must work through the Admin Panel, backend, database, and public-facing website.
+
+This is not just an advertisement image displayed on the Homepage.
+
+It must be a manageable advertising feature.
+
+## 7.1 Admin Advertisement Management
+
+Provide a dedicated Advertisement Management section.
+
+The administrator must be able to:
+
+- Create an advertisement.
+- Upload an advertisement image.
+- Preview the advertisement.
+- Edit advertisement content.
+- Replace the image.
+- Set advertisement title.
+- Set optional description.
+- Configure a destination URL.
+- Enable or disable the advertisement.
+- Set display position.
+- Configure publication dates, if supported.
+- Configure display frequency.
+- Set an appropriate display priority.
+- Delete advertisements.
+- Preview the advertisement as a visitor would see it.
+
+Use the actual project architecture and business requirements.
+
+## 7.2 Public Advertisement Display
+
+When an eligible visitor enters the website, the configured advertisement should appear according to its display rules.
+
+Support an appropriate display format, such as:
+
+- Modal advertisement
+- Popup advertisement
+- Promotional overlay
+
+Choose the format based on the existing website design and avoid damaging the user experience.
+
+## 7.3 Close Button
+
+Every dismissible advertisement must have a clearly visible Close Button.
+
+When a visitor clicks Close:
+
+- The advertisement must disappear immediately.
+- The underlying website must remain usable.
+- The visitor must not be redirected unexpectedly.
+- The advertisement must not immediately reopen because of a component re-render.
+
+Implement appropriate dismissal behavior.
+
+Consider using session-based dismissal or a configurable frequency policy.
+
+Do not create an infinite advertisement popup loop.
+
+## 7.4 Advertisement Display Rules
+
+Implement appropriate display controls.
+
+For example:
+
+- Only active advertisements can appear.
+- Future advertisements must not appear early.
+- Expired advertisements must not appear.
+- Display priorities must be respected.
+- The same advertisement must not repeatedly interrupt the visitor.
+- Mobile and desktop layouts must be appropriate.
+- Closing an advertisement must work on both desktop and mobile.
+
+If multiple advertisements are eligible, use a deterministic selection or priority system.
+
+Avoid showing multiple intrusive popups simultaneously.
+
+## 7.5 Advertisement Destination
+
+If an advertisement has a destination URL:
+
+- Validate it appropriately.
+- Use safe link handling.
+- Prevent unsafe URL schemes.
+- Open external destinations safely when appropriate.
+
+## 7.6 Advertisement Analytics
+
+Where appropriate, track:
+
+- Impressions
+- Clicks
+- Dismissals
+
+Store analytics through the backend.
+
+Do not count a single impression multiple times because of component re-renders.
+
+Do not trust arbitrary client-provided analytics values without validation and abuse protection.
+
+Do not fabricate impression or click statistics.
+
+---
+
+# 8. REAL-TIME USER AND VISITOR ANALYTICS
+
+This is another critical requirement.
+
+Inspect the existing Dashboard and determine whether its statistics are dynamic or hardcoded.
+
+If they are static, replace them with properly calculated backend data.
+
+The Admin Dashboard should display relevant information such as:
+
+- Total Registered Users
+- New Accounts Created
+- Active Users
+- Current Online Visitors
+- Total Visitors
+- Unique Visitors
+- Today's Visitors
+- Recent Registrations
+- User Growth
+- Visitor Trends
+
+Only show metrics that can be reliably measured.
+
+## 8.1 Total Registered Users
+
+Retrieve the actual number of registered accounts from the database.
+
+Ensure the count is calculated correctly.
+
+Do not use hardcoded numbers.
+
+## 8.2 New Account Registrations
+
+Display actual account creation statistics.
+
+Support appropriate date ranges:
+
+- Today
+- Last 7 Days
+- Last 30 Days
+- Custom Date Range, if appropriate
+
+Use actual account creation timestamps.
+
+## 8.3 Current Online Users
+
+Implement a reliable online-presence tracking mechanism if it does not exist.
+
+Do not confuse:
+
+- Registered Users
+- Currently Online Users
+- Active Users
+- Visitors
+- Unique Visitors
+
+These are different metrics.
+
+Use an appropriate architecture, such as:
+
+- Authenticated-user presence tracking
+- Session or heartbeat updates
+- Last-seen timestamps
+- Configurable online timeout
+- Optional anonymous visitor sessions
+
+Define clearly what counts as online.
+
+For example, a user may be considered online when their latest valid heartbeat is within a configured time window.
+
+Prevent duplicate counting across multiple requests from the same session.
+
+If multiple devices are supported, define whether the dashboard counts unique accounts or active sessions.
+
+## 8.4 Website Visitor Tracking
+
+If visitor analytics are required, implement an appropriate privacy-conscious tracking mechanism.
+
+Consider:
+
+- Anonymous visitor identifiers
+- Session identifiers
+- Page views
+- Unique visitors
+- Visit timestamps
+- Referrer information, where appropriate
+- Device category, where appropriate
+
+Avoid collecting unnecessary personally identifiable information.
+
+Do not store sensitive browser information without a legitimate requirement.
+
+Respect applicable privacy and consent requirements.
+
+## 8.5 Analytics Dashboard
+
+Display actual analytics through the backend.
+
+Include suitable:
+
+- Statistics cards
+- Charts
+- Date filters
+- Growth indicators
+- Recent activity
+- Visitor summaries
+
+All calculations must be performed from actual records.
+
+Do not create fake real-time numbers.
+
+## 8.6 Analytics Accuracy
+
+Verify:
+
+- New registration increments the correct count.
+- Visitor tracking does not duplicate sessions incorrectly.
+- Online users expire after the configured timeout.
+- Date filters return accurate results.
+- Dashboard statistics match database queries.
+- Refreshing the dashboard does not create fake activity.
+
+If exact real-time data is unavailable, clearly define the refresh interval and measurement methodology.
+
+---
+
+# 9. DYNAMIC HOMEPAGE CONTENT VERIFICATION
+
+Inspect the entire public Homepage.
+
+Identify every section that is supposed to be controlled by the Admin Panel.
+
+Create a mapping between administrative modules and Homepage components.
+
+Example:
+
+| Admin Panel Module | Public Website Component |
+|---|---|
+| Hero Slider | Homepage Hero Slider |
+| Banner Management | Homepage Promotional Banners |
+| Advertisement Management | Visitor Advertisement |
+| Product Management | Homepage Product Sections |
+| Category Management | Homepage Categories |
+| Review Management | Customer Reviews |
+| Content Management | Managed Content Sections |
+
+Adapt this mapping to the actual project.
+
+For each managed section, verify:
+
+1. Admin creates or updates content.
+2. Backend validates the request.
+3. Database stores the changes.
+4. Public API retrieves the correct data.
+5. Homepage renders the updated information.
+6. Disabled content is handled correctly.
+7. Deleted content is removed appropriately.
+
+The Homepage must not continue displaying outdated content after successful administrative changes.
+
+Use appropriate cache invalidation or revalidation mechanisms.
+
+If caching exists, make sure administrative updates invalidate or refresh relevant cached content.
+
+Do not disable all caching unnecessarily.
+
+---
+
+# 10. FULL-STACK API AND DATABASE VERIFICATION
+
+Every relevant operation must be verified across the complete application stack.
+
+Frontend → API → Backend → Validation → Database → Response → Frontend Update.
+
+For every management module, test:
+
+### CREATE
+- Submit valid data.
+- Verify server-side validation.
+- Confirm database insertion.
+- Retrieve the created record.
+
+### READ
+- Retrieve records from the database.
+- Verify correct filtering.
+- Verify pagination.
+- Verify ordering.
+
+### UPDATE
+- Modify an existing record.
+- Verify authorization.
+- Confirm database persistence.
+- Confirm public-facing changes.
+
+### DELETE
+- Verify authorization.
+- Delete the intended record.
+- Verify database state.
+- Verify related public content is handled correctly.
+
+### ENABLE / DISABLE
+- Change the publication state.
+- Confirm persistence.
+- Confirm correct public visibility.
+
+Never report an operation as successful merely because the frontend changed its local state.
+
+---
+
+# 11. IMAGE UPLOAD AND MEDIA MANAGEMENT
+
+Inspect the project's existing media storage architecture.
+
+Use the actual configured storage provider.
+
+If the project uses Cloudinary, S3-compatible storage, or another existing provider, preserve that architecture.
+
+Verify:
+
+- Image upload
+- File type validation
+- File size validation
+- Secure upload authorization
+- Image preview
+- Image replacement
+- Stored image URL
+- Database metadata
+- Failed upload handling
+- Safe deletion
+- Old asset cleanup where appropriate
+
+Do not use temporary local server disk storage as a production upload solution unless the existing deployment architecture explicitly supports persistent storage.
+
+Never expose private storage credentials to the frontend.
+
+If external storage credentials are unavailable, implement the compatible integration only where safe and clearly report that live upload verification is blocked.
+
+---
+
+# 12. BACKEND SECURITY AND ADMIN PERMISSIONS
+
+All administrative operations must be protected server-side.
+
+Verify:
+
+- Admin authentication
+- Role-based access control
+- Permission checks
+- Secure API endpoints
+- Input validation
+- Safe database operations
+- Upload authorization
+- Protected analytics endpoints
+
+Do not rely on frontend route protection alone.
+
+A normal visitor must not be able to create, modify, or delete administrative content by directly calling the API.
+
+Protect all sensitive operations.
+
+Preserve the existing authentication architecture.
+
+Do not introduce insecure shortcuts.
+
+---
+
+# 13. FRONTEND AND USER EXPERIENCE VERIFICATION
+
+Verify the Admin Panel and public website on desktop, tablet, and mobile.
+
+Check:
+
+- Sidebar navigation
+- Dashboard cards
+- Data tables
+- Search
+- Filtering
+- Forms
+- Modals
+- Confirmation dialogs
+- Notifications
+- Hero Slider preview
+- Banner preview
+- Advertisement preview
+- Image uploads
+- Mobile navigation
+- Responsive layouts
+
+Every action must provide appropriate feedback.
+
+Use:
+
+- Loading indicators
+- Success notifications
+- Error notifications
+- Empty states
+- Confirmation dialogs
+
+Prevent:
+
+- Duplicate form submissions
+- Broken image displays
+- Infinite popup loops
+- Unresponsive buttons
+- Stale data
+- Unexpected layout shifts
+- Mobile overflow
+
+Preserve the existing premium design language.
+
+Do not redesign unrelated pages unnecessarily.
+
+---
+
+# 14. AUTOMATED AND MANUAL TESTING
+
+Execute real tests wherever the project environment supports them.
+
+## Admin Panel Tests
+
+Test all relevant modules.
+
+## Hero Slider Tests
+
+- Create slider
+- Edit slider
+- Change image
+- Reorder slider
+- Disable slider
+- Enable slider
+- Delete slider
+- Verify Homepage rendering
+
+## Banner Tests
+
+- Create banner
+- Edit banner
+- Replace image
+- Change placement
+- Change destination
+- Enable/disable
+- Delete banner
+- Verify Homepage rendering
+
+## Advertisement Tests
+
+- Create advertisement
+- Update advertisement
+- Change image
+- Change display settings
+- Verify public display
+- Click Close Button
+- Verify dismissal behavior
+- Verify display frequency
+- Verify expiration
+- Verify click tracking, if implemented
+- Delete advertisement
+
+## User Analytics Tests
+
+- Verify registered user count.
+- Create a test account in an authorized test environment.
+- Verify registration count changes correctly.
+- Verify online-presence calculation.
+- Verify visitor tracking.
+- Verify date filters.
+- Verify duplicate-count protection.
+
+Never modify or delete real customer records just to test analytics.
+
+Use isolated test data or a safe test environment.
+
+## Database Tests
+
+Verify actual database persistence for all relevant modules.
+
+## Security Tests
+
+Verify that unauthorized requests are rejected.
+
+## Regression Tests
+
+Ensure the existing application still works.
+
+## Production Build
+
+Run the actual supported build, lint, type-checking, and test commands.
+
+Fix regressions introduced by your changes.
+
+Do not claim tests passed without execution evidence.
+
+---
+
+# 15. ROOT CAUSE ANALYSIS AND REPAIR POLICY
+
+If any functionality is broken or incomplete:
+
+1. Reproduce the problem.
+2. Inspect the frontend implementation.
+3. Inspect the API request.
+4. Inspect the backend route and controller.
+5. Inspect validation and middleware.
+6. Inspect database operations.
+7. Identify the actual root cause.
+8. Implement the smallest appropriate fix.
+9. Retest the affected functionality.
+10. Run regression tests.
+
+Do not simply hide the error.
+
+Do not replace failed operations with fake success messages.
+
+Do not introduce unrelated refactoring.
+
+Do not destroy existing working functionality.
+
+If a required feature is missing, implement it using the existing project's architecture.
+
+---
+
+# 16. STRICT PROJECT PRESERVATION RULES
+
+The existing project must remain stable.
+
+Never:
+
+- Replace working architecture unnecessarily.
+- Delete existing features.
+- Remove existing API functionality without justification.
+- Change database schemas unnecessarily.
+- Introduce duplicate services.
+- Break existing authentication.
+- Remove existing user data.
+- Introduce mock production APIs.
+- Replace database persistence with LocalStorage.
+- Hardcode dashboard statistics.
+- Fabricate online users.
+- Introduce fake visitor counts.
+- Expose server secrets.
+- Disable security checks to make tests pass.
+- Modify unrelated parts of the application without a verified reason.
+
+Use minimal, targeted, backward-compatible changes.
+
+Preserve all existing data.
+
+Any necessary schema migration must be safe and backward-compatible wherever possible.
+
+---
+
+# 17. REQUIRED IMPLEMENTATION WORKFLOW
+
+Follow these phases in order.
+
+PHASE 1 — Inspect the entire project.
+
+PHASE 2 — Audit all existing Admin Panel modules.
+
+PHASE 3 — Audit Hero Slider functionality.
+
+PHASE 4 — Audit every Homepage banner and its management system.
+
+PHASE 5 — Audit and implement Advertisement Management.
+
+PHASE 6 — Audit User, Visitor, Registration, and Online Presence Analytics.
+
+PHASE 7 — Verify all dynamic Homepage integrations.
+
+PHASE 8 — Repair incomplete frontend functionality.
+
+PHASE 9 — Repair backend APIs and server-side business logic.
+
+PHASE 10 — Repair database operations and persistence.
+
+PHASE 11 — Verify authentication and authorization.
+
+PHASE 12 — Run CRUD, integration, security, and regression tests.
+
+PHASE 13 — Run production build and code-quality checks.
+
+PHASE 14 — Verify the final implementation and report actual results.
+
+Do not skip the audit.
+
+Do not stop after frontend implementation.
+
+---
+
+# 18. FINAL COMPLETION REPORT
+
+After finishing the task, provide a detailed but factual report.
+
+Include the following sections.
+
+## A. Admin Panel Audit
+
+List every audited module.
+
+Show its actual status:
+
+- PASS
+- FIXED AND VERIFIED
+- PARTIAL
+- BLOCKED
+- NOT IMPLEMENTED
+
+## B. Hero Slider
+
+Report:
+
+- Admin management status
+- Backend integration status
+- Database persistence status
+- Homepage integration status
+- CRUD test results
+
+## C. Banner Management
+
+Report:
+
+- Existing banner inventory
+- Banner management functionality
+- Image upload functionality
+- Database integration
+- Homepage synchronization
+- CRUD test results
+
+## D. Advertisement System
+
+Report:
+
+- Advertisement management
+- Image upload
+- Public display
+- Close Button
+- Dismissal persistence
+- Display frequency
+- Scheduling
+- Analytics, if implemented
+
+## E. User Analytics
+
+Report actual verification of:
+
+- Total registered users
+- New registrations
+- Current online users
+- Active users
+- Unique visitors
+- Total page views
+- Date filters
+
+Clearly explain the measurement methodology.
+
+## F. Backend and Database
+
+List:
+
+- APIs reused
+- APIs modified
+- APIs created
+- Database models modified or created
+- CRUD operations tested
+- Persistence verification
+
+## G. Security
+
+Report:
+
+- Authentication
+- Authorization
+- Admin permission checks
+- Input validation
+- Upload security
+- Unauthorized API access tests
+
+## H. Testing Results
+
+| Test Category | Status | Evidence / Notes |
+|---|---|---|
+| Admin Panel functionality | PASS / FAIL / BLOCKED | |
+| Hero Slider CRUD | PASS / FAIL / BLOCKED | |
+| Banner CRUD | PASS / FAIL / BLOCKED | |
+| Advertisement CRUD | PASS / FAIL / BLOCKED | |
+| Advertisement dismissal | PASS / FAIL / BLOCKED | |
+| User analytics | PASS / FAIL / BLOCKED | |
+| Visitor analytics | PASS / FAIL / BLOCKED | |
+| Homepage synchronization | PASS / FAIL / BLOCKED | |
+| Backend API integration | PASS / FAIL / BLOCKED | |
+| Database persistence | PASS / FAIL / BLOCKED | |
+| Authorization | PASS / FAIL / BLOCKED | |
+| Responsive functionality | PASS / FAIL / BLOCKED | |
+| Production build | PASS / FAIL / BLOCKED | |
+| Regression tests | PASS / FAIL / BLOCKED | |
+
+## I. Remaining Issues
+
+List all unresolved problems, unavailable credentials, external service limitations, and manual configuration requirements.
+
+Never hide incomplete functionality.
+
+---
+
+# 19. FINAL EXECUTION COMMAND
+
+Now begin the complete audit of the existing project.
+
+Do not merely describe what should be done.
+
+Inspect the actual source code, frontend, backend, server-side logic, APIs, database models, and existing functionality.
+
+Identify missing, incomplete, broken, hardcoded, or non-dynamic features.
+
+Then implement and repair them.
+
+Your final objective is to deliver a genuinely functional, database-connected, secure, dynamic, and production-oriented Admin Panel that controls the actual public website.
+
+**The Admin Panel must not merely display information. It must manage the actual website.**
+
+**The Homepage must not merely display hardcoded content. It must display the actual content managed through the Admin Panel.**
+
+**The frontend must not pretend an operation succeeded. The backend and database must confirm that it actually succeeded.**
+
+Complete the work with real verification evidence.
+
+Do not claim completion without testing.

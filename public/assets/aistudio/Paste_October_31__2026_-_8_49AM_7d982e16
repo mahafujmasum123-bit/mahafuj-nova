@@ -1,0 +1,1897 @@
+# ULTIMATE MASTER PROMPT — NOVARA COMMERCE
+## Principal-Level Full-Stack Engineering, Premium Retail UX, Secure Architecture & Production-Oriented Delivery
+
+---
+
+# 1. YOUR ROLE AND OPERATING STANDARD
+
+Act as a senior multidisciplinary engineering team operating at principal-engineer standards. Your responsibilities include:
+
+- Principal Full-Stack Software Engineer
+- Senior Software Architect
+- React, TypeScript and UI/UX Specialist
+- Node.js and Express Backend Engineer
+- MongoDB Atlas Database Architect
+- Application Security Engineer
+- E-commerce Business Logic Engineer
+- QA Automation and Reliability Engineer
+- SEO and Web Performance Engineer
+- DevOps and Production Deployment Engineer
+
+Your task is to build **NOVARA COMMERCE**, a premium, production-oriented, full-stack, single-vendor, multi-category e-commerce platform for the Bangladesh market.
+
+Do not produce merely a UI prototype, static storefront, generic dashboard, incomplete scaffold, or collection of disconnected pages.
+
+Build a coherent application in which the storefront, customer accounts, cart, checkout, inventory, orders, payment workflows, reviews, CMS and admin operations work together through a real backend and persistent database.
+
+Use evidence-based engineering, inspect before modifying, implement the actual business logic, run available checks, and report honestly.
+
+Never claim to have implemented, tested, or verified anything that you have not actually completed.
+
+# 2. PROJECT CONTEXT AND NON-NEGOTIABLE BUSINESS RULES
+
+**Project name:** NOVARA COMMERCE
+
+**Business model:** Single-vendor retail e-commerce.
+
+**Target market:** Bangladesh.
+
+**Catalog:** Thousands of SKUs across multiple categories.
+
+**Platforms:** Responsive desktop, tablet and mobile web application.
+
+The business owner and authorized staff control products, pricing, stock, orders, customer service, marketing, payments, content and operations.
+
+There must be no external seller registration, vendor storefronts, marketplace commissions, seller dashboards or multi-vendor marketplace functionality.
+
+## Mandatory technology stack
+
+| Layer | Required technology |
+|---|---|
+| Frontend | React |
+| Language | TypeScript with strict typing |
+| Styling | Tailwind CSS |
+| State management | Redux Toolkit |
+| Routing | React Router |
+| Backend | Node.js and Express |
+| Database | MongoDB Atlas |
+| Data access | Mongoose |
+| API | REST API |
+| Authentication | Secure server-backed session or appropriately implemented JWT authentication |
+| Image storage | Cloudinary |
+| Email | Resend HTTP API |
+| Validation | Zod or an equivalent robust schema validation library |
+| Deployment | Render-compatible production deployment |
+
+Use compatible, stable package versions supported by the actual environment. Inspect existing dependencies before adding or replacing anything.
+
+### ABSOLUTE DATABASE REQUIREMENT
+
+**MongoDB Atlas is mandatory.**
+
+- All persistent business data must be stored in MongoDB Atlas.
+- `MONGODB_URI` must be read securely from server-side environment variables.
+- Connect to the real configured Atlas deployment.
+- Implement connection validation, appropriate startup failure behavior, and clear operational logging.
+- Use persistent database models and real API operations for all implemented business workflows.
+- Do not replace database persistence with arrays, mock objects, browser storage, JSON files, or in-memory data.
+
+**MongoDB Memory Server is strictly prohibited.**
+
+Do not use `mongodb-memory-server`, an in-memory MongoDB substitute, or any similar in-memory database as the application database.
+
+Do not silently fall back to mock data when Atlas is unavailable. A development or production environment with a missing database connection must fail clearly where persistence is required.
+
+Automated tests may use properly isolated test infrastructure, but they must not turn a mock or in-memory database into the application's production persistence layer.
+
+### Additional mandatory rules
+
+1. Use Redux Toolkit for cart state. Do not implement cart state using React Context or a `CartContext`.
+2. Use Cloudinary for persistent product, category, brand, campaign, banner and other managed image uploads.
+3. Do not store uploaded images as base64 or use local filesystem storage as permanent production image storage.
+4. Do not use browser `alert()`, `confirm()`, `prompt()` or `window.alert`, `window.confirm` and `window.prompt`.
+5. Use accessible custom dialogs, modal overlays, drawers, toasts and confirmation flows.
+6. Never hardcode production credentials, payment secrets, JWT secrets, OAuth client secrets or database credentials.
+7. Do not disable TypeScript, linting, validation or tests to conceal errors.
+8. Do not create fake success responses, simulated checkout completion or fake admin operations.
+9. Do not mark unfinished features as completed.
+10. Every visible functional control must have a real, defined behavior or be explicitly identified as unavailable until its required integration is configured.
+
+# 3. REPOSITORY INSPECTION AND EXECUTION STRATEGY
+
+Before making significant changes, inspect the actual Google AI Studio project environment.
+
+Determine:
+
+- Whether the project already contains source code.
+- Existing folder and file structure.
+- Package configuration and scripts.
+- Framework and dependency versions.
+- Existing frontend and backend entry points.
+- Routing and state management.
+- Database configuration and models.
+- Existing API endpoints and authentication.
+- Existing environment variable names.
+- Available image, email, OAuth and payment integrations.
+- Current build, typecheck and testing status.
+
+Treat the actual repository as the source of truth.
+
+If the project is empty, create a complete, modular project structure appropriate to this specification.
+
+If the project already exists, preserve working functionality, inspect relevant dependencies and make justified changes rather than blindly replacing the entire application.
+
+Do not invent existing APIs, environment variables, files or successful test results.
+
+## Implementation workflow
+
+Work in logical, verifiable stages:
+
+1. Repository inspection and architecture planning.
+2. Application scaffolding and environment configuration.
+3. MongoDB Atlas connectivity, models and validation.
+4. Authentication, authorization and staff permissions.
+5. Shared UI components, routing and Redux Toolkit store.
+6. Catalog, categories, brands, variants and Cloudinary uploads.
+7. Search, product listing and product detail pages.
+8. Cart, checkout, pricing and inventory integrity.
+9. Orders, payments, delivery, returns and refunds.
+10. Customer account and review systems.
+11. Admin modules, CMS and operational reports.
+12. Notifications, SEO, performance and accessibility.
+13. Integration testing, production build and deployment documentation.
+
+Do not stop after creating a plan, homepage or initial scaffold. Continue implementing the remaining authorized work as the environment permits.
+
+If context, execution time or tool limitations prevent completion in one pass, preserve a clear record of implemented modules, remaining tasks and verification results. Resume from the actual repository state instead of rebuilding everything or falsely claiming completion.
+
+# 4. HOMEPAGE IMAGE REFERENCE — STRICT VISUAL PRIORITY
+
+I will provide a reference image specifically for the NOVARA COMMERCE homepage.
+
+**The supplied image is the primary visual source of truth for the homepage.**
+
+Analyze the actual reference image before implementing the homepage.
+
+Reproduce its visual direction as faithfully as practical, including:
+
+- Overall layout and section composition.
+- Header structure and navigation placement.
+- Hero image proportions and text placement.
+- Content width and alignment.
+- Typography hierarchy.
+- Backgrounds and visual contrast.
+- Spacing and section density.
+- Product card proportions.
+- Button shapes and visual hierarchy.
+- Image cropping and aspect ratios.
+- Decorative details and overall visual character.
+
+Do not merely take inspiration from the image and create an unrelated generic e-commerce homepage.
+
+Do not replace the reference design with a generic AI-generated luxury dashboard, generic gradient hero or arbitrary template.
+
+Do not invent the image's exact contents if they are not visible. Reproduce the observable layout and visual properties and adapt them to the NOVARA business content.
+
+### Homepage reference precedence
+
+For the homepage, the supplied image overrides the client's specifically listed color palette and any conflicting homepage color assumptions.
+
+Do not force the previously specified Navy `#17243A`, Warm White `#F7F7F5`, Muted Gold `#D8B778`, Soft Gray `#E7E9ED` and Charcoal `#24282F` palette onto the homepage when it conflicts with the reference image.
+
+Extract appropriate design tokens from the reference image. Use those tokens for the homepage while preserving readability, contrast, accessibility and responsive behavior.
+
+### Other pages are not copies of the homepage
+
+The reference image applies to the homepage's visual direction, not to the entire application.
+
+Create independently optimized, professional interfaces for:
+
+- Product listing and search results.
+- Product details.
+- Shopping cart.
+- Checkout.
+- Login and registration.
+- Customer account.
+- Order history and order details.
+- Saved addresses.
+- Wishlist.
+- Reviews and returns.
+- Contact and support.
+- Admin dashboard.
+- Admin catalog and operational modules.
+
+These pages must follow the client's functional requirements and the additional specifications below.
+
+They must share consistent design tokens and reusable UI components without blindly copying the homepage layout.
+
+### Homepage implementation acceptance
+
+At desktop and mobile breakpoints, compare the rendered homepage against the supplied reference image.
+
+Correct obvious differences in layout, spacing, proportions, image treatment and section hierarchy.
+
+If the environment cannot capture or compare screenshots automatically, inspect the available preview manually when possible and disclose any unverified visual differences.
+
+# 5. ARCHITECTURE AND STRICT PROJECT STRUCTURE
+
+Use a maintainable modular architecture. Frontend and backend must be separated clearly, with explicit API contracts and sensible boundaries.
+
+Avoid one giant component, one giant Express router, one oversized controller or one file containing the entire admin panel.
+
+Do not create unnecessary folders, redundant abstraction layers, duplicate components or empty placeholder files merely to make the project appear large.
+
+Use a module-based organization. Each major admin business module must have its own frontend and backend responsibilities, with separate files for pages, components, schemas, services, controllers, routes and models as appropriate.
+
+A recommended structure for a new project is:
+
+```text
+novara-commerce/
+├── client/
+│   ├── public/
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── store.ts
+│   │   │   ├── hooks.ts
+│   │   │   └── providers/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   │   ├── ui/
+│   │   │   ├── layout/
+│   │   │   ├── feedback/
+│   │   │   └── forms/
+│   │   ├── features/
+│   │   │   ├── auth/
+│   │   │   ├── catalog/
+│   │   │   ├── search/
+│   │   │   ├── cart/
+│   │   │   ├── checkout/
+│   │   │   ├── orders/
+│   │   │   ├── payments/
+│   │   │   ├── inventory/
+│   │   │   ├── wishlist/
+│   │   │   ├── reviews/
+│   │   │   ├── customers/
+│   │   │   ├── addresses/
+│   │   │   ├── returns/
+│   │   │   ├── promotions/
+│   │   │   ├── notifications/
+│   │   │   ├── cms/
+│   │   │   ├── analytics/
+│   │   │   └── support/
+│   │   ├── pages/
+│   │   ├── layouts/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── lib/
+│   │   ├── types/
+│   │   ├── styles/
+│   │   └── main.tsx
+│   ├── index.html
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── vite.config.ts
+├── server/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── database/
+│   │   ├── middleware/
+│   │   ├── modules/
+│   │   │   ├── auth/
+│   │   │   ├── users/
+│   │   │   ├── products/
+│   │   │   ├── categories/
+│   │   │   ├── brands/
+│   │   │   ├── attributes/
+│   │   │   ├── variants/
+│   │   │   ├── inventory/
+│   │   │   ├── search/
+│   │   │   ├── cart/
+│   │   │   ├── wishlist/
+│   │   │   ├── addresses/
+│   │   │   ├── orders/
+│   │   │   ├── payments/
+│   │   │   ├── shipping/
+│   │   │   ├── coupons/
+│   │   │   ├── reviews/
+│   │   │   ├── returns/
+│   │   │   ├── cms/
+│   │   │   ├── ads/
+│   │   │   ├── notifications/
+│   │   │   ├── newsletter/
+│   │   │   ├── support/
+│   │   │   ├── reports/
+│   │   │   ├── staff/
+│   │   │   └── audit/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   ├── types/
+│   │   ├── app.ts
+│   │   └── server.ts
+│   ├── package.json
+│   └── tsconfig.json
+├── package.json
+├── render.yaml
+├── .gitignore
+├── .env.example
+└── README.md
+```
+
+This is a reference architecture, not permission to create unnecessary files.
+
+Use the smallest structure that correctly supports the implemented application. If an existing project uses a different valid organization, adapt it without unnecessary duplication.
+
+### Module-level conventions
+
+For each sufficiently complex backend module, organize files by responsibility:
+
+```text
+modules/
+└── products/
+    ├── product.model.ts
+    ├── product.schema.ts
+    ├── product.service.ts
+    ├── product.controller.ts
+    ├── product.routes.ts
+    └── product.types.ts
+```
+
+Use the corresponding frontend module for its page, feature components, hooks, types and API functions where appropriate.
+
+Create separate admin pages and module components for Products, Categories, Brands, Orders, Reviews, Customers, Inventory, Coupons, CMS, Payments, Reports and Staff.
+
+Do not put every admin operation into one generic page or component.
+
+### Engineering boundaries
+
+- Routes define endpoints and middleware composition.
+- Controllers handle HTTP input/output.
+- Services contain business logic.
+- Models define persistent database structures and constraints.
+- Schemas validate external input.
+- Middleware handles authentication, permissions, rate limits and other cross-cutting concerns.
+- Frontend API clients handle HTTP communication.
+- Redux Toolkit owns shared client state where appropriate.
+- Components handle presentation and user interaction.
+- Shared utilities contain genuinely reusable logic.
+
+Do not place database queries directly in UI components. Do not put all business logic in Express controllers.
+
+# 6. AUTHENTICATION, REGISTRATION AND REQUIRED CUSTOMER ACCOUNTS
+
+Customers must have an account before an order can be placed.
+
+**Unauthenticated customers must not be allowed to create orders.**
+
+Guests may browse products and maintain an appropriate guest cart, but they cannot complete order creation until they have successfully registered or signed in.
+
+### Account navigation popup
+
+Provide a polished account icon in the navigation bar.
+
+Clicking it opens a properly positioned, accessible popup containing:
+
+- Sign in / registration.
+- My orders / order history.
+- Saved addresses.
+- Account/profile settings.
+
+If a customer is not authenticated, protected destinations must redirect to authentication and then return the customer to the intended destination when appropriate.
+
+### Registration and login
+
+Support:
+
+1. Email and password registration.
+2. Email and password login.
+3. Google OAuth.
+4. Facebook OAuth.
+5. Password reset.
+6. Email verification where applicable.
+7. Secure logout and session/token invalidation as supported by the chosen authentication architecture.
+
+Google and Facebook authentication must be implemented using real provider integrations and server-side verification.
+
+If OAuth credentials or provider configuration are missing, show an explicit setup or temporarily unavailable state. Never simulate a successful OAuth login.
+
+Use secure password hashing, appropriate authentication expiration, account verification rules, safe error messages and rate limiting.
+
+Do not expose secrets in the client bundle.
+
+### Registration modal
+
+Registration, login and password reset must use a reusable custom modal or backdrop overlay.
+
+The modal must:
+
+- Appear above the application content.
+- Use a correct stacking context and z-index.
+- Support keyboard navigation.
+- Support Escape to close where appropriate.
+- Manage focus correctly.
+- Restore focus when closed.
+- Support mobile scrolling without locking the form off-screen.
+- Prevent accidental background interactions.
+- Display validation and server errors clearly.
+
+# 7. CUSTOM MODAL, BACKDROP AND FORM SYSTEM
+
+This is a mandatory global interface rule.
+
+Whenever a user opens a create/edit form from an admin module, display the form in a reusable custom modal or backdrop overlay above the relevant page.
+
+Examples include:
+
+- Create/edit product.
+- Create/edit category.
+- Create/edit brand.
+- Create/edit collection.
+- Create/edit campaign.
+- Create/edit coupon.
+- Upload or configure a banner/ad placement.
+- Review moderation actions requiring a form.
+- Staff creation and permission editing.
+- Inventory adjustment.
+- Shipping rule configuration.
+- Payment/refund confirmation.
+- Other administrative create/edit workflows where a modal is appropriate.
+
+Authentication and registration forms must follow the same overlay hierarchy.
+
+Do not open forms behind tables, dropdowns, sidebars or page content.
+
+### Overlay implementation
+
+Use a consistent, reusable dialog system with:
+
+- Backdrop.
+- Dialog panel.
+- Appropriate z-index.
+- Correct stacking context.
+- Body-scroll management.
+- Focus trap for modal dialogs.
+- Escape handling.
+- Focus restoration.
+- Accessible title and description.
+- Form validation.
+- Loading/submission state.
+- Error and success feedback.
+- Unsaved-change confirmation where needed.
+- Responsive sizing and mobile scrolling.
+
+Use a drawer for long or complex forms only where a drawer is genuinely more usable. It must still appear above the backdrop and other content.
+
+Avoid nested overlays unless necessary.
+
+When a modal contains a dropdown, date picker or image picker, ensure the popup is not clipped or rendered behind the modal.
+
+Use a centralized, maintainable implementation rather than independently recreating inconsistent overlays in every module.
+
+# 8. CUSTOM TOAST NOTIFICATION SYSTEM
+
+Do not use browser-native alerts.
+
+Implement a reusable, polished custom notification/toast system.
+
+Support:
+
+- Success.
+- Error.
+- Warning.
+- Informational messages.
+
+Each notification should include an appropriate icon, concise text, a clear visual hierarchy and a close control.
+
+### Mandatory progress bar
+
+Every toast must display a thin, visually polished progress bar along its bottom edge.
+
+- Notification duration: **4 seconds by default**.
+- The progress bar must visually move from right to left as time elapses.
+- When the progress completes, dismiss the toast.
+- Manual dismissal must work.
+- Pause the countdown while hovered or focused when appropriate.
+- Support screen-reader announcements.
+- Avoid stacking an unlimited number of notifications.
+- Allow appropriate grouping or replacement for duplicate messages.
+- Clean up timers when a toast is dismissed or its component unmounts.
+
+Implement the progress behavior accurately; do not use a static decorative bar that never moves.
+
+Use one centralized toast provider/store or equivalent reusable system. Do not use React Context for cart state merely because notifications use a shared provider.
+
+Use this notification system for cart operations, form submissions, authentication, coupon errors, order status updates and admin actions.
+
+# 9. HOMEPAGE AND DYNAMIC CONTENT MANAGEMENT
+
+Implement the homepage to match the supplied reference image while keeping its content fully manageable by authorized administrators.
+
+Required potential sections:
+
+1. Announcement bar.
+2. Main header.
+3. Primary category navigation.
+4. Hero campaign.
+5. Category shortcuts.
+6. Flash sale.
+7. Featured products.
+8. Best sellers.
+9. New arrivals.
+10. Category-specific product collections.
+11. Curated collections.
+12. Trust and service information.
+13. Authentic customer reviews.
+14. Newsletter subscription.
+15. Configurable promotional/ad placement.
+16. Footer.
+
+Section ordering, visibility and content must be manageable from the admin CMS wherever appropriate.
+
+The admin must be able to:
+
+- Enable/disable supported sections.
+- Reorder sections.
+- Configure campaign titles, descriptions and CTA links.
+- Upload and replace images using Cloudinary.
+- Select products and collections.
+- Set campaign start and end times.
+- Schedule publication where scheduling is implemented.
+- Preview drafts where practical.
+- Publish and unpublish content.
+- Control navigation, announcement bars, notices and footer content.
+
+Do not render empty, broken or disabled placeholder sections.
+
+If a section has no valid published content, hide it or show an intentional empty state appropriate to the design.
+
+Best sellers must use real sales/order data and a defined calculation window. Do not label manually selected products as best sellers unless the label is intentionally a curated editorial designation.
+
+Flash-sale pricing and timing must be validated by the server. An expired sale must not remain eligible for its expired price.
+
+Trust statements, shipping promises and return claims must come from actual business policies.
+
+# 10. ADMIN-MANAGED PROMOTIONAL ADS AND OPTIONAL GOOGLE ADSENSE
+
+Create a dedicated, optional homepage promotional placement that administrators can configure from the admin panel.
+
+The administrator should be able to:
+
+- Enable or disable the placement.
+- Upload promotional artwork through Cloudinary.
+- Configure title or accessible alternative text.
+- Configure destination URL.
+- Select appropriate placement or supported layout.
+- Define campaign start and end times.
+- Preview the placement.
+- Publish or unpublish it.
+
+Use safe URL validation and reject unsafe destinations.
+
+### Empty placement behavior
+
+If no active, valid ad content is configured, the entire placement must be omitted from the homepage.
+
+Do not display a blank container, empty card, unexplained gap or placeholder advertisement.
+
+When configured, the placement must fit naturally into the reference-based homepage without unnecessarily disrupting the design.
+
+### Google AdSense distinction
+
+An administrator-uploaded promotional image is a first-party promotional campaign, not automatically a Google AdSense advertisement.
+
+If actual Google AdSense integration is required, implement it as a separate, configurable integration using the real publisher/ad-unit configuration, applicable consent requirements and Google's integration rules.
+
+Do not fabricate AdSense ads, invent publisher IDs, claim that an uploaded image is a live Google advertisement or expose private credentials.
+
+If AdSense configuration is absent, the first-party promotional placement may still function independently.
+
+# 11. PRODUCT CATALOG, CATEGORIES, BRANDS AND VARIANTS
+
+Build a genuinely dynamic catalog.
+
+Administrators must be able to create, edit, publish, unpublish, archive and organize products, categories, nested categories, brands, attributes, variants and collections.
+
+All changes must persist in MongoDB Atlas and be reflected throughout the storefront through real API queries.
+
+Do not hardcode category names, brands or product lists into the storefront when those values should be managed by the administrator.
+
+### Required product data
+
+Include appropriate fields such as:
+
+- Product name.
+- Unique slug.
+- SKU.
+- Optional barcode.
+- Brand.
+- Parent and nested category relationships.
+- Description and product features.
+- Category-specific attributes.
+- Base price and eligible sale price.
+- Variant information.
+- Product images and image ordering.
+- Product status.
+- Inventory information.
+- Warranty and relevant policies.
+- SEO title, description and canonical information where applicable.
+- Created/updated timestamps.
+
+### Category-specific attributes
+
+**Electronics:** Brand, model, technical specifications, warranty, compatibility, color, storage and other relevant features.
+
+Support secure, authorized serial/IMEI-related operational records only where necessary. Avoid exposing sensitive device identifiers publicly.
+
+**Beauty and personal care:** Ingredients, skin/hair type, volume, shade, expiry-related information and usage instructions where applicable.
+
+**Books and education:** Author, ISBN, publisher, edition, language, format and publication year.
+
+**Home, lifestyle and accessories:** Dimensions, material, color, weight, care instructions and relevant specifications.
+
+Use a flexible, validated category-attribute system. Do not create one enormous schema with hundreds of irrelevant fields for every product.
+
+### Product variants
+
+Support variant-level information such as:
+
+- Variant identifier.
+- Unique SKU.
+- Options such as size, color, storage, shade or volume.
+- Variant-specific images.
+- Price where supported.
+- Stock and reservation information.
+- Availability status.
+- Relevant attributes.
+
+Enforce SKU uniqueness at the appropriate database level and handle duplicate-key errors correctly.
+
+Validate the selected variant on the server during cart changes and checkout.
+
+### Bulk catalog operations
+
+Implement actual bulk import/export workflows.
+
+- Define a supported CSV format.
+- Validate rows before committing changes.
+- Report row-level validation errors.
+- Detect duplicate SKUs and invalid references.
+- Handle large imports in bounded batches.
+- Avoid silently skipping failed rows.
+- Protect against unauthorized mass updates.
+- Provide export filters and clear operation status.
+
+Use appropriate product/category indexes and server-side pagination, filtering and sorting.
+
+# 12. CLOUDINARY IMAGE UPLOAD — MANDATORY
+
+All persistent product and CMS image uploads must use Cloudinary.
+
+This applies to:
+
+- Product images.
+- Variant images.
+- Category images.
+- Brand logos.
+- Homepage banners and campaign artwork.
+- Collections.
+- Optional promotional ads.
+- Review images, if implemented.
+
+### Required upload workflow
+
+1. Authorized administrator selects an image.
+2. Frontend validates file type and size for user feedback.
+3. Backend verifies authentication and permissions.
+4. Backend validates the uploaded file and request limits.
+5. Server securely uploads to Cloudinary or issues an appropriately restricted upload authorization.
+6. Cloudinary returns the stored asset reference and metadata.
+7. Backend persists the necessary Cloudinary public ID, secure URL and metadata in MongoDB Atlas.
+8. Frontend updates the form using the real result.
+9. The image is displayed through the persisted record after refresh.
+
+Never treat a client-supplied URL as proof that an image has been uploaded or approved.
+
+Use secure upload policies and appropriate file validation. Do not trust MIME types alone.
+
+When replacing or deleting an image, coordinate database updates with Cloudinary cleanup. Avoid deleting a shared asset that is still referenced by another record.
+
+Do not store image bytes in MongoDB documents or browser local storage.
+
+# 13. SEARCH ENGINE AND CROSS-LINGUAL SEARCH
+
+Implement a real backend-powered catalog search.
+
+### Searchable information
+
+- Product name.
+- SKU.
+- Brand.
+- Category and subcategory.
+- Product description.
+- Relevant specifications and attributes.
+
+### Cross-lingual requirement
+
+Support useful Bangla–English cross-lingual product discovery.
+
+Examples:
+
+- A user searches `মোটিভেশনাল বই` and finds relevant products cataloged as `Motivational Books`.
+- A user searches an English product term and can discover relevant products described in Bangla when equivalent catalog data exists.
+- Search supports relevant synonyms, spelling variations and transliteration where practical.
+
+Do not assume that simply translating the search box label or lowercasing text implements cross-lingual search.
+
+Implement a defensible strategy appropriate to the available infrastructure. Options may include normalized bilingual keywords, curated synonym dictionaries, Bangla/English transliteration mappings and an appropriate search index or search service if justified and available.
+
+Do not add an external paid search dependency without a clear justification.
+
+The search system must degrade gracefully when an optional search integration is unavailable. It must not silently substitute unrelated mock results.
+
+### Autocomplete dropdown
+
+Implement a polished, bounded autocomplete dropdown.
+
+Each suggestion must display:
+
+- Product image.
+- Product name.
+- Current valid price.
+- Discount or original price only when applicable.
+
+Requirements:
+
+- Search suggestions should use a backend endpoint.
+- Use a short debounce to reduce unnecessary requests.
+- Do not run an unrestricted query on every keystroke.
+- Do not automatically replace the full results page with live-filtered results while typing.
+- Selecting a suggestion should navigate to the correct product page.
+- Pressing Enter should submit the search.
+- Arrow keys and Escape should work.
+- Highlight the relevant text when practical.
+- Recent and popular searches may be shown where appropriate.
+- The dropdown must have a sensible maximum height and scroll internally when there are many results.
+- It must not overflow the viewport or create an unnecessary page scrollbar.
+- On mobile, ensure touch-friendly interaction.
+- If suggestions fail, show an appropriate state without crashing the search interface.
+
+Limit suggestion results to a small, configurable number, such as eight, and validate the requested limit on the server.
+
+### Search results page
+
+Include:
+
+- Result count.
+- Breadcrumb or search heading.
+- Filters.
+- Sorting.
+- Server-side pagination.
+- URL-persisted filter and sorting state.
+- Loading, empty, error and retry states.
+- Clear filters.
+- Safe, validated query parameters.
+
+Track useful search analytics without storing unnecessary personal information.
+
+# 14. PRODUCT LISTING PAGE
+
+Implement professional product listing pages for categories, subcategories, brands and search results.
+
+Include:
+
+- Page title and breadcrumb.
+- Category description where appropriate.
+- Product count.
+- Server-side sorting and filtering.
+- Price range.
+- Brand.
+- Category-specific attributes.
+- Rating, availability and discount filters where applicable.
+- Desktop sidebar.
+- Mobile filter drawer.
+- Clear-all control.
+- Pagination or an appropriate server-side loading strategy.
+- URL-persisted filters.
+- Responsive product grid.
+- Empty, loading and error states.
+
+### Product cards
+
+Each product card should include relevant information:
+
+- Primary image.
+- Secondary image where appropriate.
+- Product name.
+- Brand.
+- Current price.
+- Original price and discount when valid.
+- Authentic rating and review count when available.
+- Stock or availability.
+- Variant indicator.
+- Wishlist control.
+- Appropriate quick-add or quick-view action.
+- Truthful badges such as New or Best Seller when supported.
+
+Do not display fake ratings, fake review counts, artificial scarcity or false discounts.
+
+# 15. PRODUCT DETAILS PAGE — HIGH-QUALITY IMPLEMENTATION
+
+The product details page must be one of the most polished customer-facing pages in the application.
+
+Design it as a complete, responsive retail purchasing experience, not a generic product template.
+
+## A. Product media gallery
+
+Implement:
+
+- Main image.
+- Thumbnail strip.
+- Multiple product images.
+- Appropriate zoom.
+- Video support if implemented.
+- Responsive mobile gallery.
+- Correct image loading and broken-image handling.
+- Variant-specific images where configured.
+- Accessible controls and keyboard navigation.
+
+Maintain appropriate image ratios without distorting product photography.
+
+## B. Product identity and purchase panel
+
+Display:
+
+- Breadcrumb.
+- Product name.
+- Brand.
+- SKU.
+- Rating and review count based on real data.
+- Current price.
+- Original price and valid discount.
+- Availability.
+- Variant selectors.
+- Quantity selector.
+- Add to Cart.
+- Buy Now.
+- Wishlist.
+- Warranty and authenticity information where applicable.
+- Relevant delivery and return information.
+
+Quantity must respect available stock and valid variant selection.
+
+The server must independently verify the product, variant, price and stock.
+
+## C. Delivery information
+
+Display location-dependent delivery charge and realistic delivery estimates where configured.
+
+Support Cash on Delivery availability and links to return/replacement policies.
+
+Do not promise a guaranteed delivery date without a reliable source for that guarantee.
+
+## D. Product information
+
+Use structured sections or tabs for:
+
+- Description.
+- Specifications.
+- Features.
+- Warranty.
+- Shipping and returns.
+- Ingredients or care instructions where relevant.
+- FAQ where configured.
+
+Use category-specific rendering so books, electronics, beauty products and home products are presented appropriately.
+
+## E. Review and rating interface
+
+Create a polished review section with:
+
+- Average rating.
+- Total review count.
+- Five-star to one-star distribution.
+- Rating histogram or bar visualization.
+- Review submission form.
+- Written review.
+- Optional image upload if supported.
+- Verified-purchase indicator when confirmed by order data.
+- Review date.
+- Sorting controls.
+- Pagination.
+- Helpful voting if implemented.
+- Report review.
+- Admin moderation.
+- Appropriate loading, empty and error states.
+
+Only authorized customers who satisfy the review eligibility rules may submit reviews.
+
+A verified purchase must be supported by actual eligible order data. Do not grant the badge merely because a user is authenticated.
+
+Prevent duplicate reviews according to the chosen business rule. Define edit, delete and moderation-history behavior.
+
+No reviews must mean no reviews, not a fabricated 4.8-star rating or invented customer testimonials.
+
+## F. Related shopping
+
+Include suitable:
+
+- Related products.
+- Complementary accessories.
+- Frequently bought together, when sufficient order data supports it.
+- Recently viewed products with appropriate privacy handling.
+- Back-in-stock notifications for customers who opt in.
+
+Use real catalog data and truthful merchandising rules.
+
+# 16. REDUX TOOLKIT CART ARCHITECTURE
+
+**Redux Toolkit is mandatory for cart state. React Context must not be used as the cart state management system.**
+
+Use a properly configured Redux store and typed hooks.
+
+Use Redux Toolkit slices and, where appropriate, Redux Toolkit Query or a consistent API client.
+
+### Cart functionality
+
+- Add product/variant.
+- Remove item.
+- Update quantity.
+- Handle selected variants correctly.
+- Prevent duplicate line items for the same product/variant.
+- Display a cart badge based on the number of unique cart lines, not total item quantity.
+- Show loading and error states.
+- Validate availability.
+- Apply and remove coupons.
+- Display subtotal, discount, delivery charge and final total.
+- Handle stale or unavailable items.
+- Merge guest cart with the authenticated customer's cart when they sign in, without duplicating line items.
+
+### Persistence
+
+Authenticated customer cart data must be synchronized with the backend and persisted in MongoDB Atlas.
+
+A guest cart may use appropriate browser storage for temporary persistence, but browser storage is never the authority for price, stock, discount or order creation.
+
+After login, merge cart items through a validated backend workflow.
+
+Refreshing the page must not unexpectedly destroy the cart when the underlying items remain valid.
+
+Do not trust client-supplied prices or totals.
+
+# 17. CHECKOUT — AUTHENTICATED CUSTOMERS ONLY
+
+Checkout must require a registered and authenticated customer.
+
+If an unauthenticated visitor attempts to place an order:
+
+1. Preserve their eligible guest cart.
+2. Open the login/registration modal or redirect them to authentication.
+3. Return them to checkout after successful authentication.
+4. Revalidate cart items and current prices.
+5. Require the customer to confirm the final order.
+
+Do not create an order until authentication, validation, inventory checks and all required checkout steps have succeeded.
+
+### Checkout sections
+
+- Customer contact details.
+- Delivery address.
+- Saved addresses.
+- Delivery method.
+- Coupon.
+- Payment method.
+- Itemized order summary.
+- Subtotal.
+- Discount.
+- Shipping charge.
+- Tax where legally applicable.
+- Final total.
+- Terms and policy information where appropriate.
+- Final order confirmation.
+
+The backend must calculate all monetary values.
+
+### Bangladesh address hierarchy
+
+Support dependent address selection:
+
+**Division → District → Upazila/Thana → Union/Ward or applicable local area**
+
+Also support:
+
+- House/building.
+- Road/street.
+- Landmark.
+- Recipient name.
+- Phone number.
+- Additional delivery instructions where appropriate.
+
+Use accurate, maintainable administrative-area data rather than inventing an incomplete hierarchy and presenting it as exhaustive.
+
+When an upstream selection changes, clear any now-invalid downstream selection.
+
+Validate address combinations on the server.
+
+### Saved address behavior
+
+When a customer previously saved an address:
+
+- Automatically select the customer's valid default address on a later checkout.
+- If no default exists, select an appropriate previously saved address when unambiguous.
+- Allow the customer to change the selected address.
+- Allow the customer to add a new address.
+- Allow authorized address edits and default-address changes.
+- Persist the selected address appropriately.
+- Store an address snapshot in the order so later address edits do not rewrite historical orders.
+
+Never apply another customer's saved address to the current customer.
+
+# 18. ORDER MANAGEMENT AND BUSINESS STATE MACHINES
+
+Create real persistent order records with unique order numbers.
+
+Each order must preserve an immutable or appropriately protected snapshot of:
+
+- Product and variant identity.
+- SKU.
+- Product name.
+- Selected options.
+- Quantity.
+- Unit price.
+- Discounts.
+- Shipping charge.
+- Applicable tax.
+- Final total.
+- Customer and delivery details.
+- Payment method and status.
+- Relevant policy and pricing details.
+
+### Order lifecycle
+
+Support appropriate transitions such as:
+
+Pending → Confirmed → Processing → Packed → Shipped → Delivered
+
+Also support relevant exceptional states:
+
+- Cancelled.
+- Payment Failed.
+- Return Requested.
+- Returned.
+- Refund Pending.
+- Refunded.
+
+Do not force every order through an invalid linear transition.
+
+Define permitted transitions based on payment method, fulfillment state and return eligibility.
+
+### Separate lifecycle state
+
+Model order, payment, fulfillment and return/refund state separately where appropriate.
+
+Do not overload a single `status` field with every unrelated workflow.
+
+Record important status transitions, timestamps, actors and reasons.
+
+### Customer order history
+
+Create a dedicated, polished order history page.
+
+It must include:
+
+- Order list.
+- Order number.
+- Order date.
+- Product thumbnails.
+- Item summary.
+- Total.
+- Payment status.
+- Fulfillment status.
+- Status timeline.
+- View details.
+- Tracking information where available.
+- Cancellation eligibility.
+- Return/refund requests where eligible.
+- Empty state and pagination.
+
+The order details page must provide a useful, structured view of the complete order rather than merely displaying a number.
+
+Protect customer ownership at the server. Customers must never be able to read another customer's order by changing a URL or identifier.
+
+### Admin order operations
+
+Provide a dedicated admin orders module with:
+
+- Search.
+- Filters.
+- Date ranges.
+- Order details.
+- Authorized status updates.
+- Customer and shipping information.
+- Payment summary.
+- Stock consistency.
+- Cancellation reasons.
+- Invoice and packing slip generation.
+- Refund records.
+- Staff notes.
+- Audit history.
+- Safe bulk actions where appropriate.
+
+Do not permit unauthorized staff to change financial or administrative fields.
+
+# 19. INVENTORY INTEGRITY AND CONCURRENCY
+
+Implement real stock tracking.
+
+Track the appropriate values:
+
+- Stock on hand.
+- Reserved stock.
+- Available stock.
+- Stock movement history.
+- Variant-level inventory.
+- Low-stock threshold.
+- Adjustment reason.
+- Actor and timestamp.
+
+Use the database as the source of truth.
+
+### Prevent overselling
+
+Concurrent purchases must not allow multiple customers to purchase more than the available stock.
+
+Use atomic conditional updates, transactions where supported and necessary, or another justified concurrency-safe mechanism.
+
+For payment-pending orders, define a consistent reservation policy.
+
+If MongoDB transactions are used, verify the actual Atlas deployment configuration supports them.
+
+Do not assume every local or development MongoDB configuration behaves like a production Atlas replica set.
+
+### Stock lifecycle
+
+Define and test:
+
+- Reservation.
+- Payment success.
+- Payment failure.
+- Reservation expiry.
+- Order cancellation.
+- Fulfillment.
+- Return approval.
+- Physical return inspection.
+- Restocking where eligible.
+
+Never automatically restore returned stock when the item has not been received or is not eligible for resale.
+
+Record inventory adjustments and movements for auditability.
+
+# 20. PAYMENT INTEGRATION AND RECONCILIATION
+
+Support:
+
+- Cash on Delivery.
+- One appropriate Bangladesh-supported payment gateway.
+- Gateway-supported card and mobile financial service payment methods.
+
+Do not invent the gateway or claim production integration is ready without real credentials, documentation and verification.
+
+If the client has not specified the provider, design a clean payment-provider interface and identify the configuration decision.
+
+Implement the actual selected gateway when the necessary provider and credentials are available.
+
+### Payment requirements
+
+- Server-side order-total verification.
+- Server-side payment initiation.
+- Payment transaction references.
+- Verified server-side callback/webhook.
+- Provider signature verification where applicable.
+- Idempotent payment processing.
+- Duplicate notification protection.
+- Pending, successful, failed, cancelled and refunded states.
+- Refund requests and status.
+- Reconciliation records.
+- Audit logs.
+- Customer-facing payment feedback.
+
+A browser redirect or success query parameter is not sufficient proof of payment.
+
+Never mark an order as paid because the client claims success.
+
+If a payment notification is received more than once, the system must not create duplicate orders, double-apply stock changes or process a refund twice.
+
+Use the provider's documented integration protocol. Do not fabricate API endpoints, signatures or credentials.
+
+### Cash on Delivery
+
+COD orders must be tracked accurately.
+
+Define when stock is reserved, when the order is confirmed and how cancellation or failed delivery affects inventory.
+
+A COD order must not be treated as a completed payment merely because the order was created.
+
+# 21. COUPONS, PROMOTIONS AND FLASH SALES
+
+Implement:
+
+- Fixed discount.
+- Percentage discount.
+- Validity dates.
+- Minimum order amount.
+- Usage limits.
+- Per-customer limits.
+- Eligible products/categories.
+- Coupon stacking rules.
+- Maximum discount cap.
+- Campaign activation and expiration.
+- Redemption history.
+
+Validate every discount on the server.
+
+Use atomic or otherwise concurrency-safe redemption limits when necessary.
+
+Do not permit negative totals, unauthorized price overrides, expired coupons or discounts applied to ineligible products.
+
+# 22. CUSTOMER ACCOUNT, WISHLIST AND ADDRESSES
+
+Provide a dedicated customer account area with:
+
+- Profile management.
+- Email and password security.
+- Saved addresses.
+- Default address.
+- Order history.
+- Order details.
+- Wishlist.
+- Reviews.
+- Return/refund requests.
+- Notification preferences.
+- Password/security settings.
+- Applicable privacy and data-management requests.
+
+Keep customer data synchronized through the backend.
+
+Do not trust client-supplied user IDs to determine data ownership.
+
+Implement a persistent wishlist with authenticated-user ownership.
+
+# 23. REVIEW MODERATION AND CUSTOMER TRUST
+
+Create separate review-management workflows.
+
+Administrators with the appropriate permissions can:
+
+- Review pending submissions.
+- Approve or reject reviews.
+- Inspect reported reviews.
+- Record moderation reasons.
+- Handle abusive content.
+- View moderation history.
+- Apply the configured review edit/delete policy.
+
+A customer cannot approve their own review through a public endpoint.
+
+Only approved reviews should appear in public rating aggregates.
+
+Verify purchase eligibility against the actual order and relevant product or variant.
+
+Keep verified-purchase status derived from authoritative order records.
+
+Do not use fake review fixtures as real production content.
+
+# 24. ADMIN PANEL — COMPLETE OPERATIONAL CONTROL
+
+The admin panel is the central business operations interface.
+
+Use a dedicated admin layout with a responsive sidebar, top navigation, breadcrumbs, page titles, filters, tables, action menus, modal forms and consistent feedback.
+
+Each business module must have its own meaningful route, page, components and backend responsibilities.
+
+### Required modules
+
+**Overview Dashboard**
+
+- Gross sales.
+- Net sales.
+- Order count.
+- Average order value.
+- Pending orders.
+- Low-stock products.
+- Out-of-stock products.
+- Return/cancellation summary.
+- Payment summary.
+- Product/category performance.
+- Date-range comparison.
+- Recent administrative activity.
+
+Define every metric. Exclude or separately report refunded, cancelled and unpaid orders according to the chosen business definitions.
+
+**Catalog Management**
+
+- Products.
+- Categories and nested categories.
+- Brands.
+- Attributes.
+- Variants.
+- Collections.
+- Images.
+- SEO metadata.
+- Bulk import/export.
+- Draft and publication status.
+
+**Inventory**
+
+- Stock on hand.
+- Reserved stock.
+- Available stock.
+- Stock adjustments.
+- Movement history.
+- Low-stock alerts.
+- Variant-specific stock.
+
+**Orders and Fulfillment**
+
+- Search and filters.
+- Order details.
+- Status transitions.
+- Shipping.
+- Cancellation.
+- Returns and refunds.
+- Invoice/packing slip.
+- Staff notes.
+- Audit history.
+
+**Customers**
+
+- Customer profiles.
+- Order history.
+- Authorized support context.
+- Relevant account status.
+- Privacy-conscious access.
+
+**Reviews and Moderation**
+
+- Pending reviews.
+- Approved/rejected reviews.
+- Reported reviews.
+- Moderation reasons.
+- Audit history.
+
+**Marketing**
+
+- Coupons.
+- Promotions.
+- Flash sales.
+- Campaigns.
+- Featured products.
+- Homepage collections.
+
+**Content Management**
+
+- Homepage section configuration.
+- Banners.
+- Announcements.
+- Navigation.
+- Footer.
+- Policies.
+- Contact information.
+- Promotional placements.
+- Scheduled publication where implemented.
+
+**Delivery and Payments**
+
+- Shipping rules.
+- Payment statuses.
+- Gateway configuration status.
+- Transactions.
+- Refund records.
+- Reconciliation.
+
+**Reports and Analytics**
+
+- Sales.
+- Product/category performance.
+- Order status.
+- Payments.
+- Inventory valuation.
+- Stock movement.
+- Returns/refunds.
+- Coupon usage.
+- Repeat purchase.
+- Filtered CSV exports.
+
+**Staff and Permissions**
+
+- Staff accounts.
+- Roles and permissions.
+- Role assignment.
+- Access restrictions.
+- Audit logs.
+
+**Settings**
+
+- Store profile.
+- Business policies.
+- Notification settings.
+- Shipping configuration.
+- Payment integration configuration status.
+- SEO defaults.
+- Authorized operational settings.
+
+Every implemented setting must actually affect the appropriate frontend or backend behavior.
+
+Do not create decorative settings screens that save no data or have no operational effect.
+
+# 25. STAFF RBAC AND ADMIN SECURITY
+
+Support these roles as appropriate:
+
+- Super Admin.
+- Admin.
+- Order Manager.
+- Inventory Manager.
+- Catalog/Content Manager.
+- Customer Support.
+- Finance/Accounts.
+
+Define explicit permission rules.
+
+Examples:
+
+- Inventory Manager can perform authorized inventory operations but cannot independently grant themselves Super Admin access.
+- Order Manager can manage permitted fulfillment transitions but cannot alter protected payment verification results.
+- Customer Support can access authorized customer/order support context without unrestricted financial or account-security access.
+- Finance/Accounts can manage authorized reconciliation and refund workflows.
+- Catalog/Content Manager can manage assigned catalog and CMS operations.
+- Only appropriately authorized administrators can manage staff and high-risk system settings.
+
+Implement server-side permission middleware or an equivalent enforceable authorization layer.
+
+Hiding sidebar links is not security.
+
+Validate resource ownership and permissions on every protected API operation.
+
+Protect against mass assignment and unauthorized modification of sensitive fields.
+
+Implement safe initial Super Admin bootstrap using documented environment configuration or another justified secure setup mechanism.
+
+Never hardcode production administrator credentials.
+
+Use audit logging for important actions such as price changes, stock adjustments, refunds, staff permission changes and order status transitions.
+
+Consider re-authentication for especially sensitive actions.
+
+# 26. DATABASE MODELING AND DATA INTEGRITY
+
+Design MongoDB Atlas schemas based on the actual business workflows.
+
+Potential models include:
+
+- User.
+- StaffRole/Permission or equivalent authorization structures.
+- Address.
+- Category.
+- Brand.
+- Product.
+- ProductVariant.
+- InventoryMovement.
+- Cart.
+- Wishlist.
+- Order.
+- PaymentTransaction.
+- Coupon.
+- CouponRedemption.
+- Review.
+- ReturnRequest.
+- RefundRecord.
+- Collection.
+- Campaign.
+- HomepageConfiguration.
+- PromotionalPlacement.
+- NewsletterSubscription.
+- SupportEnquiry.
+- NotificationRecord.
+- AuditLog.
+- SearchAnalytics.
+
+These are candidates, not a requirement to create a separate collection for every concept regardless of need.
+
+Choose relationships and embedding based on query patterns, update frequency and consistency requirements.
+
+### Required database practices
+
+- Appropriate unique indexes.
+- SKU uniqueness.
+- Slug uniqueness where required.
+- Validated references.
+- Consistent timestamps.
+- Pagination-friendly queries.
+- Appropriate compound indexes.
+- Safe update operators.
+- Controlled schema migrations or equivalent change management.
+- Protected order snapshots.
+- Properly scoped queries.
+- Correct handling of duplicate-key errors.
+- Explicit data-retention rules where needed.
+
+Do not delete historical orders simply because a product is archived.
+
+Use soft deletion or archival where appropriate.
+
+Do not expose internal database fields unnecessarily through API responses.
+
+# 27. API DESIGN AND ERROR HANDLING
+
+Use a coherent REST API.
+
+Keep routes, controllers, services, models, schemas and permissions separated.
+
+Implement appropriate:
+
+- HTTP methods.
+- Status codes.
+- Request schemas.
+- Response structures.
+- Authentication middleware.
+- Authorization checks.
+- Pagination.
+- Filtering.
+- Sorting.
+- Rate limits.
+- Request-size limits.
+- Centralized error handling.
+- Structured server logs.
+
+Return predictable errors, such as validation failures, unauthenticated requests, unauthorized operations, missing resources, conflicts, rate limits and internal errors.
+
+Do not expose production stack traces or secrets.
+
+Do not silently swallow errors.
+
+The frontend must distinguish validation errors, network failures, expired authentication, unavailable integrations and genuine empty results.
+
+If an API fails, show a helpful error state and retry option where appropriate. Do not substitute unrelated mock data.
+
+# 28. CUSTOMER CONTACT AND SUPPORT
+
+Create a polished contact/support page with configurable, real business contact information.
+
+Support relevant links for:
+
+- WhatsApp.
+- Facebook Messenger.
+- Instagram.
+- LinkedIn.
+- Email.
+- Telephone where configured.
+
+Do not invent contact handles, phone numbers or business URLs.
+
+If an official contact channel has not been configured, do not show a misleading active link.
+
+Provide a support enquiry form with server-side validation, spam protection, persistent storage and authorized admin-side enquiry management.
+
+Support relevant enquiry status, assigned staff, internal notes and timestamps.
+
+Do not expose internal support notes to customers.
+
+# 29. NEWSLETTER AND NOTIFICATIONS
+
+Implement a functional newsletter subscription workflow.
+
+- Store consent and subscription status.
+- Validate email addresses.
+- Prevent inappropriate duplicate subscriptions.
+- Provide unsubscribe support.
+- Record consent and relevant timestamps.
+- Do not subscribe users to marketing merely because they create an account or place an order.
+
+Use Resend HTTP API for transactional email.
+
+Potential messages include:
+
+- Account verification.
+- Password reset.
+- Order confirmation.
+- Payment status.
+- Shipment and delivery updates.
+- Cancellation/refund updates.
+- Security-related notifications.
+- Back-in-stock notifications.
+- Consented marketing emails.
+
+Track notification delivery status where appropriate.
+
+Use retry mechanisms with sensible limits.
+
+An email delivery failure must not silently undo an otherwise valid database transaction.
+
+Use a reliable post-commit notification workflow, with an outbox or another justified mechanism for critical notifications when appropriate.
+
+Never claim an email was delivered unless actual delivery status supports that claim.
+
+# 30. SEO AND PERFORMANCE
+
+SEO must be implemented as part of the actual application, not merely listed in the README.
+
+### SEO requirements
+
+- Product-specific titles and meta descriptions.
+- Category-specific metadata.
+- Canonical URLs.
+- Clean, stable product/category URLs.
+- Appropriate social-sharing metadata.
+- XML sitemap.
+- Robots configuration.
+- Accurate product structured data.
+- Correct price, availability and rating markup only when the corresponding data is real.
+- Breadcrumbs.
+- Correct 404 handling.
+- Archived/unavailable product handling.
+- Duplicate-content prevention.
+- Indexing rules for private, cart, checkout and administrative routes.
+
+Inspect the rendering strategy and choose a technically sound approach for search engine discoverability.
+
+A client-rendered React SPA must not be assumed to provide complete server-rendered SEO automatically. If prerendering, SSR or another strategy is needed, implement it only when supported by the environment and architecture.
+
+### Performance
+
+- Server-side pagination and filtering.
+- Appropriate MongoDB indexes.
+- Efficient query projections.
+- Avoid N+1 queries.
+- Lazy-loaded images.
+- Responsive image sizes.
+- Route-level code splitting.
+- Efficient bundle composition.
+- Caching where freshness and security allow.
+- Avoid unnecessary rerenders.
+- Loading skeletons where appropriate.
+- Avoid unnecessary network requests.
+
+Measure performance where the environment permits.
+
+Do not claim arbitrary latency, uptime or Core Web Vitals results without actual measurements.
+
+# 31. ACCESSIBILITY AND RESPONSIVE DESIGN
+
+Support desktop, tablet and mobile.
+
+Ensure:
+
+- Semantic HTML.
+- Accessible form labels.
+- Visible focus indicators.
+- Keyboard-accessible navigation.
+- Correct dialog behavior.
+- Screen-reader-friendly errors and notifications.
+- Appropriate color contrast.
+- Touch-friendly controls.
+- Responsive tables or alternative mobile presentations.
+- No unintended horizontal overflow.
+- No clipped modals.
+- No dropdowns hidden behind other layers.
+- Reduced-motion preferences.
+- Meaningful alt text for images.
+
+Do not sacrifice accessibility merely to reproduce decorative details in the reference image.
+
+# 32. TESTING AND VERIFICATION REQUIREMENTS
+
+Implement tests appropriate to the actual project and available environment.
+
+Prioritize critical business workflows.
+
+### Required test coverage
+
+**Authentication and permissions**
+
+- Registration and login.
+- Authentication failures.
+- Unauthorized admin access.
+- Role-specific access.
+- Customer data ownership.
+- Password reset and relevant OAuth verification.
+
+**Catalog**
+
+- Product validation.
+- Duplicate SKU rejection.
+- Variant validation.
+- Category/brand relationships.
+- Image upload authorization.
+- Search and pagination.
+
+**Cart and checkout**
+
+- Quantity validation.
+- Server-side pricing.
+- Coupon eligibility.
+- Guest checkout prevention.
+- Required customer authentication.
+- Address validation.
+- Cart merge.
+- Unavailable product handling.
+
+**Inventory and orders**
+
+- Concurrent stock updates.
+- Reservation behavior.
+- Duplicate order submission.
+- Valid and invalid order transitions.
+- Cancellation and stock restoration.
+- Historical order snapshot integrity.
+
+**Payments**
+
+- Success and failure.
+- Invalid callback.
+- Duplicate webhook.
+- Incorrect amount.
+- Refund workflow.
+- Reconciliation consistency.
+
+**Reviews and CMS**
+
+- Review eligibility.
+- Duplicate reviews.
+- Moderation permissions.
+- Homepage publication.
+- Disabled or expired promotional placement.
+- No fabricated rating or sale data.
+
+### Verification rules
+
+Actually run available:
+
+- TypeScript checks.
+- Linting.
+- Unit tests.
+- Integration tests.
+- Production build.
+- Relevant API and workflow tests.
+- Runtime smoke tests where possible.
+
+Fix errors introduced by your changes.
+
+If MongoDB Atlas, Cloudinary, OAuth, Resend or a payment gateway cannot be accessed because credentials or external connectivity are unavailable, clearly identify the blocked integration and the exact verification still required.
+
+A mocked test result must not be presented as proof of a live external integration.
+
+Do not state that all 12 acceptance criteria are satisfied unless each has actually been verified.
+
+# 33. ENVIRONMENT CONFIGURATION AND RENDER DEPLOYMENT
+
+Create a clear `.env.example` containing variable names and safe placeholder values only.
+
+Potential configuration names include:
+
+```text
+NODE_ENV=
+PORT=
+MONGODB_URI=
+CLIENT_URL=
+API_BASE_URL=
+JWT_SECRET=
+SESSION_SECRET=
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+RESEND_API_KEY=
+EMAIL_FROM=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+FACEBOOK_APP_ID=
+FACEBOOK_APP_SECRET=
+PAYMENT_PROVIDER=
+PAYMENT_PUBLIC_KEY=
+PAYMENT_SECRET_KEY=
+PAYMENT_WEBHOOK_SECRET=
+```
+
+Only include variables required by the selected implementation.
+
+Never commit real secrets.
+
+Do not expose server-only credentials through Vite-prefixed public environment variables.
+
+Document how to configure MongoDB Atlas network access, database users, Cloudinary, Resend, OAuth providers and the selected payment gateway.
+
+Use a Render-compatible deployment configuration appropriate to the actual repository.
+
+Ensure that:
+
+- The client production build is generated correctly.
+- The backend starts using the correct entry point.
+- The API is reachable through the intended deployment URL.
+- The frontend uses the correct API base URL.
+- SPA routes work on refresh.
+- API routes are not swallowed by frontend fallback routing.
+- Environment variables are validated.
+- Database connectivity is checked.
+- Health checks report actual service readiness.
+- Logs do not expose credentials or sensitive customer data.
+
+Do not invent successful deployment results.
+
+# 34. FINAL ACCEPTANCE CRITERIA
+
+The project is not complete merely because the homepage renders.
+
+Verify the following end-to-end workflows:
+
+1. A customer can search for a product, open its details, select a valid variant and add it to the Redux Toolkit cart.
+2. Cart state behaves correctly after refresh and authenticated cart synchronization.
+3. An unauthenticated customer cannot create an order and is guided through registration or login.
+4. Checkout validates customer identity, address, current price, coupons, shipping and inventory on the server.
+5. An order is persisted in MongoDB Atlas and appears in the correct customer's order history.
+6. Admin staff can find orders, perform authorized status transitions and produce audit records.
+7. Inventory updates and concurrent purchases preserve stock integrity.
+8. Product, category, brand, variant and image management work through dedicated admin modules.
+9. Cloudinary uploads persist correctly and survive refreshes.
+10. Reviews enforce the configured eligibility rules and show no fabricated ratings.
+11. Payment processing correctly distinguishes unverified, successful, failed and refunded states.
+12. Duplicate requests and payment callbacks do not duplicate critical business operations.
+13. Admin permissions are enforced by the backend, not merely by the interface.
+14. Homepage content, campaigns, section ordering and optional promotional placement respond to real CMS settings.
+15. Disabled or unconfigured ad placements do not leave unwanted blank space.
+16. Search supports useful Bangla/English discovery and a bounded, keyboard-accessible suggestion dropdown.
+17. Saved addresses work correctly with the Division-to-local-area hierarchy.
+18. Customer support and newsletter workflows persist valid submissions.
+19. Critical pages work at desktop and mobile sizes.
+20. SEO metadata, sitemap and indexing rules are configured appropriately.
+21. Typecheck, lint, relevant tests and production build are run and their results recorded.
+22. Environment setup and deployment instructions are documented.
+
+For every criterion, report one of:
+
+- Verified.
+- Partially verified.
+- Not verified.
+- Blocked.
+
+Do not treat the existence of a component or API endpoint as proof that its complete workflow works.
+
+# 35. FINAL EXECUTION DIRECTIVE
+
+Begin by inspecting the actual repository and the provided homepage reference image.
+
+Then build NOVARA COMMERCE using the requirements in this prompt.
+
+The most important constraints are:
+
+1. **MongoDB Atlas is mandatory. MongoDB Memory Server is prohibited.**
+2. **Cloudinary is mandatory for persistent managed image uploads.**
+3. **Redux Toolkit is mandatory for cart state; no CartContext.**
+4. **Customers must authenticate before placing an order.**
+5. **Admin forms and authentication forms must use correct custom backdrop/modal overlays.**
+6. **Notifications must use custom toasts with a four-second default duration and a right-to-left progress bar.**
+7. **The homepage must follow the supplied image; other pages must follow the written functional requirements and their own appropriate professional layouts.**
+8. **Products, brands, categories, campaigns and other supported business content must be dynamically controlled through authorized admin modules.**
+9. **The application must use real backend operations and persistent data, not fake production functionality.**
+10. **Security, pricing, stock, order, payment and authorization rules must be enforced server-side.**
+11. **Use modular frontend and backend structures with dedicated files for each major business module.**
+12. **Run actual verification and report incomplete work honestly.**
+
+Do not spend the entire task producing plans, documentation or attractive mockups. Implement the application.
+
+Do not stop after the first successful build if critical workflows remain unfinished.
+
+Do not claim production readiness when external integrations, critical workflows, deployment or verification remain incomplete.
+
+When you finish, provide a concise but evidence-based delivery report containing:
+
+- Implemented architecture.
+- Major frontend and backend modules completed.
+- Database and external integrations actually configured.
+- Important files and configuration added or changed.
+- Tests, typecheck, lint and build actually executed.
+- Verified acceptance criteria.
+- Remaining incomplete or blocked features.
+- Required environment variables and deployment steps.
+- Known security, operational and compatibility risks.
+
+**Final objective:** Deliver the most complete, secure, maintainable and genuinely functional NOVARA COMMERCE application that the available environment and configured services allow. Prioritize real business functionality, data integrity, visual fidelity to the supplied homepage image, professional page-specific UX and verifiable results over superficial completeness.
+
+**END OF MASTER PROMPT**

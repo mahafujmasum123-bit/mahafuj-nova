@@ -1,0 +1,1176 @@
+# ULTIMATE MASTER ENGINEERING PROMPT
+## Large-Scale Data Architecture, Cross-Lingual Search Engine, Advanced Shopping Cart System & Real-World Production Validation
+
+You are operating as a Principal Software Architect, Senior Full-Stack Engineer, Database Architect, Search Infrastructure Engineer, E-commerce Business Logic Specialist, Security Engineer, and QA Automation Engineer.
+
+Your mission is to investigate, optimize, and upgrade my EXISTING E-commerce application to support large-scale production workloads.
+
+This task includes:
+
+1. Large-scale database and data retrieval architecture.
+2. Efficient handling of millions of records.
+3. A production-grade cross-lingual search system.
+4. Advanced shopping cart quantity management.
+5. Navigation cart badge with a strict 99+ display limit.
+6. Accurate cart page quantity calculations.
+7. MongoDB schema and business logic validation.
+8. Real-world functional and regression testing.
+
+THIS IS NOT A SIMPLE FEATURE IMPLEMENTATION.
+
+You must understand the existing application before modifying anything.
+
+Do not generate a new application.
+
+Do not replace existing working architecture unnecessarily.
+
+The final implementation must be scalable, secure, maintainable, and production-ready.
+
+==================================================
+1. EXISTING TECHNOLOGY STACK
+==================================================
+
+Frontend:
+- React.
+- TypeScript.
+- Tailwind CSS.
+
+Backend:
+- Node.js.
+- Express.js.
+
+Database:
+- MongoDB.
+
+Follow the existing technology stack.
+
+Do not introduce unnecessary infrastructure or dependencies.
+
+Inspect the existing architecture before selecting implementation strategies.
+
+==================================================
+2. PHASE ONE: COMPLETE PROJECT INVESTIGATION
+==================================================
+
+Before modifying any code, inspect the entire relevant codebase.
+
+Investigate:
+
+- Frontend architecture.
+- Backend architecture.
+- MongoDB connection configuration.
+- Existing database models.
+- Product schema.
+- Product variants.
+- Product categories.
+- Inventory management.
+- Shopping cart schema.
+- Cart state management.
+- Cart API endpoints.
+- Add to Cart implementation.
+- Cart quantity update logic.
+- Cart removal logic.
+- Cart drawer.
+- Cart page.
+- Navigation cart badge.
+- Checkout implementation.
+- Order creation.
+- Search implementation.
+- Search API.
+- Search indexing.
+- Existing caching mechanisms.
+- Authentication and authorization.
+- Existing validation utilities.
+- Error handling.
+- Pagination.
+- Database indexes.
+- Existing automated tests.
+
+Identify confirmed facts, existing limitations, and architectural risks.
+
+Do not assume that a particular API, model, service, or caching layer exists.
+
+Do not blindly replace existing implementations.
+
+Reuse existing functionality wherever possible.
+
+==================================================
+3. LARGE-SCALE DATA HANDLING: MILLIONS OF RECORDS
+==================================================
+
+The application must be architected to handle potentially millions of records without loading or caching the entire dataset in application memory.
+
+IMPORTANT INTERPRETATION:
+
+The objective is to support millions of real records efficiently.
+
+Do not unnecessarily generate millions of fake production records.
+
+Do not preload millions of products into the frontend.
+
+Do not retrieve an entire MongoDB collection for ordinary page requests.
+
+Do not store complete product collections in browser memory.
+
+Do not create unnecessary application-level caches containing the entire database.
+
+The system must retrieve only the data required for the current operation.
+
+--------------------------------------------------
+A. DATABASE QUERY OPTIMIZATION
+--------------------------------------------------
+
+Analyze existing MongoDB schemas and optimize queries.
+
+Implement appropriate indexes based on actual query patterns.
+
+Consider:
+
+- Product lookup.
+- Product search.
+- Category filtering.
+- Price filtering.
+- Inventory lookup.
+- Cart retrieval.
+- Order retrieval.
+- User-specific records.
+- Administrative queries.
+
+Use appropriate:
+
+- Compound indexes.
+- Unique indexes.
+- Sparse indexes where appropriate.
+- Partial indexes where appropriate.
+- Text or search indexes where justified.
+
+Avoid creating unnecessary indexes.
+
+Understand index selectivity and query execution plans.
+
+Use MongoDB explain() during relevant query optimization.
+
+Avoid:
+
+- Unbounded find() operations.
+- Unnecessary collection scans.
+- Excessive populate() operations.
+- N+1 query patterns.
+- Retrieving unused fields.
+- Repeated database queries.
+- Inefficient aggregation pipelines.
+
+Use projections to retrieve only necessary fields.
+
+--------------------------------------------------
+B. PAGINATION
+--------------------------------------------------
+
+Implement efficient pagination for large datasets.
+
+Use the most appropriate pagination strategy based on the query and sorting requirements.
+
+For example:
+
+- Cursor-based pagination for large product feeds.
+- Stable sorting.
+- Appropriate indexed pagination.
+- Offset pagination only where suitable.
+
+Support:
+
+- Product listings.
+- Search results.
+- Categories.
+- Orders.
+- Admin records.
+- Other large collections.
+
+Do not retrieve millions of records and paginate only on the frontend.
+
+Pagination must happen on the backend.
+
+Prevent duplicate or missing records when navigating between pages.
+
+--------------------------------------------------
+C. MEMORY AND CACHE MANAGEMENT
+--------------------------------------------------
+
+The system must avoid unnecessary memory consumption.
+
+Do not cache entire product databases.
+
+Do not preload all records.
+
+Do not create uncontrolled in-memory Maps or arrays containing millions of records.
+
+Inspect existing Redis, application cache, HTTP cache, browser cache, and database cache usage before modifying anything.
+
+IMPORTANT:
+
+Do not blindly disable all caching.
+
+Caching is not inherently bad.
+
+Use caching only where it provides measurable benefits and does not create stale or incorrect business data.
+
+If caching is used, implement appropriate:
+
+- TTL.
+- Cache invalidation.
+- Cache key design.
+- Memory limits.
+- Cache consistency.
+- User isolation.
+
+Never cache sensitive user-specific cart or account data in a publicly shared cache.
+
+Never allow cached inventory or pricing information to override authoritative backend validation.
+
+--------------------------------------------------
+D. LARGE-SCALE DATA STRESS TESTING
+--------------------------------------------------
+
+Create a controlled, isolated load-testing strategy.
+
+If synthetic datasets are necessary:
+
+- Generate them only in a dedicated test or staging environment.
+- Use deterministic seed generation where appropriate.
+- Keep production data untouched.
+- Provide safe cleanup procedures.
+- Avoid destructive operations against real collections.
+
+Test progressively with realistic dataset sizes.
+
+For example:
+
+- 10,000 products.
+- 100,000 products.
+- 500,000 products.
+- 1,000,000 products.
+
+Measure:
+
+- Query execution time.
+- Database index usage.
+- Memory consumption.
+- API response time.
+- Pagination consistency.
+- Search performance.
+- Error rates.
+
+Do not claim million-record scalability based only on successful compilation.
+
+==================================================
+4. PHASE TWO: CROSS-LINGUAL SEARCH SYSTEM
+==================================================
+
+Implement a professional Cross-Lingual Product Search System.
+
+The search experience should allow users to search using different languages and still discover relevant products.
+
+PRIMARY LANGUAGE REQUIREMENTS:
+
+- Bangla.
+- English.
+
+The system should support searching for relevant products even when the query language differs from the stored product language.
+
+EXAMPLES:
+
+A user searches:
+
+"জুতা"
+
+The search system should be able to discover relevant products described using:
+
+- জুতা.
+- Shoes.
+- Footwear.
+
+A user searches:
+
+"Shirt"
+
+The system should discover relevant products described using:
+
+- Shirt.
+- শার্ট.
+- প্রাসঙ্গিক বাংলা নাম.
+
+A user searches:
+
+"মোবাইল"
+
+The system should discover relevant products described using:
+
+- Mobile.
+- Smartphone.
+- মোবাইল ফোন.
+
+These are examples of the desired search behavior.
+
+Do not rely exclusively on exact string matching.
+
+--------------------------------------------------
+A. SEARCH NORMALIZATION
+--------------------------------------------------
+
+Implement appropriate multilingual query normalization.
+
+Consider:
+
+- Unicode normalization.
+- Bangla Unicode handling.
+- English case normalization.
+- Leading and trailing whitespace.
+- Repeated whitespace.
+- Punctuation normalization.
+- Relevant spelling variations.
+- Common transliterations.
+- Bangla-English mixed queries.
+
+Preserve the original search query for appropriate matching and debugging.
+
+Do not apply destructive normalization that changes the meaning of product names.
+
+--------------------------------------------------
+B. CROSS-LINGUAL PRODUCT INDEXING
+--------------------------------------------------
+
+Inspect the existing Product schema.
+
+If necessary, extend the product search metadata to support multilingual search.
+
+Possible searchable attributes:
+
+- Product name.
+- Bangla product name.
+- English product name.
+- Description.
+- Category.
+- Brand.
+- SKU.
+- Search keywords.
+- Relevant translated terms.
+- Transliteration metadata.
+
+Use the existing product data wherever possible.
+
+Do not generate fake product translations.
+
+Do not overwrite original product information.
+
+If a translation or synonym system is introduced, keep it maintainable and independently manageable.
+
+--------------------------------------------------
+C. SEARCH ENGINE IMPLEMENTATION
+--------------------------------------------------
+
+First inspect the available search infrastructure.
+
+If MongoDB Atlas Search is already configured or available in the project's deployment environment, evaluate whether it is appropriate.
+
+Otherwise, consider an efficient MongoDB-compatible search architecture.
+
+The search system should support:
+
+- Partial matching.
+- Relevant keyword matching.
+- Bangla-English matching.
+- Product name matching.
+- Category matching.
+- Brand matching.
+- SKU matching.
+- Search suggestions where appropriate.
+- Relevant result ranking.
+- Pagination.
+
+Do not implement expensive regular-expression searches across entire collections.
+
+Do not perform unbounded full collection scans.
+
+Do not introduce a paid external search service without an explicit technical requirement and configuration.
+
+--------------------------------------------------
+D. SEARCH RELEVANCE
+--------------------------------------------------
+
+Search results should prioritize:
+
+1. Exact product name matches.
+2. Strong keyword matches.
+3. Relevant cross-language matches.
+4. Category and brand matches.
+5. Relevant partial matches.
+
+Avoid unrelated search results.
+
+Use an explainable and maintainable ranking strategy.
+
+Search results must be retrieved from the actual database.
+
+Do not use hardcoded search results.
+
+--------------------------------------------------
+E. SEARCH SECURITY AND PERFORMANCE
+--------------------------------------------------
+
+Implement:
+
+- Query length limits.
+- Input validation.
+- Safe query construction.
+- Appropriate request throttling.
+- Backend pagination.
+- Search result limits.
+- Indexed query execution.
+
+Prevent search abuse.
+
+Ensure the search system performs efficiently with large datasets.
+
+==================================================
+5. PHASE THREE: ADVANCED ADD TO CART QUANTITY LOGIC
+==================================================
+
+This is a critical business requirement.
+
+I want a specific Add to Cart quantity behavior.
+
+REQUIRED BUSINESS RULE:
+
+One successful Add to Cart button click should add 10 units of the selected product to the cart by default.
+
+For example:
+
+Initial cart quantity: 0
+
+User clicks Add to Cart once:
+
+Cart quantity: 10
+
+User clicks Add to Cart again:
+
+Cart quantity: 20
+
+The operation must use the existing cart architecture and actual backend persistence.
+
+Do not implement a fake frontend-only quantity counter.
+
+--------------------------------------------------
+A. ADD TO CART VALIDATION
+--------------------------------------------------
+
+Before adding 10 units:
+
+- Validate the product.
+- Validate the selected variant if applicable.
+- Validate inventory availability.
+- Validate existing cart quantity.
+- Check product-specific purchase limits.
+- Check backend business rules.
+
+If fewer than 10 units are available, do not silently add 10 units.
+
+Follow the application's actual stock and purchase-limit rules.
+
+Return a meaningful validation response.
+
+Never allow cart quantities to exceed available inventory or configured purchase limits.
+
+IMPORTANT:
+
+The default increment of 10 must be centralized in the appropriate business logic or configuration.
+
+Do not duplicate the value across unrelated components.
+
+If the application already has a different established quantity policy, inspect it and resolve the conflict carefully without silently breaking existing functionality.
+
+--------------------------------------------------
+B. CART QUANTITY CALCULATION
+--------------------------------------------------
+
+Distinguish between:
+
+1. Total cart units.
+2. Number of distinct cart line items.
+
+Example:
+
+Product A = 10 units.
+
+Product B = 20 units.
+
+Product C = 30 units.
+
+Total distinct cart lines = 3.
+
+Total cart units = 60.
+
+For the navigation cart badge, use TOTAL CART UNITS.
+
+For the Cart Page, display both quantities clearly where appropriate:
+
+- Total quantity: 60.
+- Distinct products: 3.
+
+Ensure the same calculation is used consistently across the application.
+
+Do not confuse line-item count with total product quantity.
+
+==================================================
+6. NAVIGATION CART BADGE: STRICT 99+ DISPLAY LIMIT
+==================================================
+
+The navigation bar's cart indicator must follow a strict display rule.
+
+The actual cart quantity may continue increasing.
+
+However, the navigation cart badge must NEVER display a number greater than 99.
+
+Required behavior:
+
+| Actual Cart Units | Navigation Badge |
+|-------------------|------------------|
+| 0 | Hidden or existing empty state |
+| 1 | 1 |
+| 10 | 10 |
+| 25 | 25 |
+| 50 | 50 |
+| 98 | 98 |
+| 99 | 99 |
+| 100 | 99+ |
+| 150 | 99+ |
+| 200 | 99+ |
+| 500 | 99+ |
+| 1,000 | 99+ |
+
+Implementation rule:
+
+If totalCartUnits <= 99:
+
+Display the actual number.
+
+If totalCartUnits > 99:
+
+Display exactly:
+
+99+
+
+The navigation badge must never display:
+
+100, 150, 200, 500, or 1000.
+
+IMPORTANT:
+
+This is a presentation-only restriction.
+
+Do not limit the actual cart quantity to 99.
+
+Do not truncate database quantities.
+
+Do not change the actual cart state to 99.
+
+The actual cart quantity must remain accurate.
+
+--------------------------------------------------
+A. BADGE RESPONSIVENESS
+--------------------------------------------------
+
+The 99+ badge must:
+
+- Remain visually balanced.
+- Fit properly beside the cart icon.
+- Work on mobile and desktop.
+- Avoid breaking navigation spacing.
+- Maintain readable typography.
+- Avoid layout shifts.
+
+==================================================
+7. CART PAGE: DISPLAY THE REAL TOTAL QUANTITY
+==================================================
+
+The actual Cart Page must display the complete cart quantity.
+
+Unlike the navigation badge, the Cart Page must never truncate quantities to 99+.
+
+Examples:
+
+Product A = 10.
+
+Product B = 20.
+
+Product C = 30.
+
+Cart Page:
+
+Total Quantity: 60
+
+Distinct Products: 3
+
+Another example:
+
+Product A = 100.
+
+Product B = 200.
+
+Product C = 300.
+
+Cart Page:
+
+Total Quantity: 600
+
+Distinct Products: 3
+
+The Cart Page must show the real database-backed cart information.
+
+Display:
+
+- Product image.
+- Product name.
+- Selected variant.
+- Unit price.
+- Quantity.
+- Line subtotal.
+- Total quantity.
+- Distinct product count.
+- Cart subtotal.
+- Applicable discounts.
+- Other applicable charges.
+- Final total.
+
+All monetary values must be calculated using trusted backend business rules.
+
+Do not derive authoritative totals from frontend-only state.
+
+==================================================
+8. CART SYNCHRONIZATION
+==================================================
+
+The following must remain synchronized:
+
+- Product Add to Cart button.
+- Cart state.
+- Navigation cart badge.
+- Cart drawer.
+- Cart Page.
+- Backend cart records.
+- Checkout Page.
+
+When a product is added:
+
+- Persist the cart change.
+- Update the frontend cart state.
+- Update the navigation badge.
+- Update the cart drawer.
+- Update the Cart Page.
+
+When quantity changes:
+
+- Recalculate the actual total units.
+- Update all relevant interfaces.
+
+When an item is removed:
+
+- Recalculate all quantities.
+- Update all relevant interfaces.
+
+When the cart is cleared:
+
+- Reset the badge appropriately.
+- Update the Cart Page.
+- Synchronize the backend.
+
+Support the application's existing authenticated and guest cart workflows.
+
+Prevent stale state and inconsistent totals.
+
+==================================================
+9. MONGODB SCHEMA VALIDATION
+==================================================
+
+Perform a professional schema audit.
+
+Inspect:
+
+- Product schema.
+- Product variant schema.
+- Cart schema.
+- Cart item schema.
+- User schema.
+- Inventory schema.
+- Order schema.
+- Coupon schema.
+- Relevant relationships.
+
+Verify:
+
+- Field types.
+- Required fields.
+- Default values.
+- Enum constraints.
+- Minimum and maximum values.
+- Unique constraints.
+- ObjectId references.
+- Timestamps.
+- Indexes.
+- Nested schema validation.
+- Data consistency.
+
+Pay particular attention to quantity fields.
+
+Cart quantity must use an appropriate positive integer representation.
+
+Prevent:
+
+- Negative quantities.
+- Zero quantities where invalid.
+- Decimal quantities for non-divisible products.
+- Invalid product references.
+- Invalid variants.
+- Duplicate cart records where not permitted.
+- Overselling.
+- Invalid prices.
+- Inconsistent order snapshots.
+
+Do not perform destructive schema migrations.
+
+If a schema change is necessary:
+
+1. Explain the reason.
+2. Identify affected existing records.
+3. Implement a safe migration strategy.
+4. Preserve existing data.
+5. Verify backward compatibility.
+
+==================================================
+10. REAL-WORLD E-COMMERCE BUSINESS LOGIC VALIDATION
+==================================================
+
+Perform a comprehensive business logic audit.
+
+Test realistic scenarios.
+
+PRODUCT SCENARIOS:
+
+- Available product.
+- Out-of-stock product.
+- Low-stock product.
+- Product with variants.
+- Product with different prices.
+- Inactive product.
+- Deleted product.
+- Product whose price changes after being added to cart.
+
+CART SCENARIOS:
+
+- First Add to Cart.
+- Repeated Add to Cart.
+- Adding 10 units.
+- Adding different products.
+- Adding the same product again.
+- Quantity increase.
+- Quantity decrease.
+- Product removal.
+- Empty cart.
+- Guest cart.
+- Authenticated cart.
+- Cart synchronization.
+- Cart quantity exceeding available inventory.
+
+BADGE SCENARIOS:
+
+- 1 unit.
+- 10 units.
+- 98 units.
+- 99 units.
+- 100 units.
+- 150 units.
+- 500 units.
+- 1,000 units.
+
+Verify that the navigation badge follows the exact 99+ display rule.
+
+Verify that the Cart Page always displays the actual total.
+
+CHECKOUT SCENARIOS:
+
+- Valid checkout.
+- Empty cart checkout.
+- Insufficient inventory.
+- Invalid product reference.
+- Invalid quantity.
+- Price changed after cart addition.
+- Duplicate order submission.
+- Invalid coupon.
+- Failed payment.
+- Successful verified payment.
+- Cancelled payment.
+
+Do not assume that a successful cart operation automatically means a valid order.
+
+The backend must independently validate checkout data.
+
+==================================================
+11. DATABASE AND TRANSACTION CONSISTENCY
+==================================================
+
+Where supported and appropriate, use MongoDB transactions for operations that require atomic consistency.
+
+Pay particular attention to:
+
+- Cart updates.
+- Inventory reservations or deductions.
+- Order creation.
+- Payment state transitions.
+
+Prevent:
+
+- Duplicate orders.
+- Overselling.
+- Lost updates.
+- Inconsistent inventory.
+- Duplicate quantity increments.
+- Partial checkout failures.
+
+Use appropriate concurrency control and idempotency mechanisms.
+
+Do not assume transactions are available in every deployment configuration.
+
+Inspect the actual MongoDB deployment topology.
+
+If transactions are unavailable, implement a safe alternative with explicit failure recovery.
+
+==================================================
+12. API ARCHITECTURE
+==================================================
+
+Inspect existing Express routes and controllers.
+
+Extend existing APIs rather than creating unnecessary duplicates.
+
+All important operations must be handled by the backend.
+
+Implement appropriate:
+
+- Request validation.
+- Authentication.
+- Authorization.
+- Error handling.
+- Database consistency.
+- Pagination.
+- Rate limiting where necessary.
+- Safe API response structures.
+
+Never trust frontend-submitted:
+
+- Product prices.
+- Subtotals.
+- Total cart quantities.
+- Discounts.
+- Shipping fees.
+- Final order totals.
+
+The backend must calculate authoritative values.
+
+==================================================
+13. SECURITY REQUIREMENTS
+==================================================
+
+Implement production-level security.
+
+Protect against:
+
+- Unauthorized cart access.
+- Cross-user cart modification.
+- Invalid product references.
+- Quantity manipulation.
+- Price manipulation.
+- Search abuse.
+- Malformed requests.
+- Duplicate submissions.
+- Injection vulnerabilities.
+- Unauthorized order creation.
+
+Apply user ownership checks on every relevant cart operation.
+
+Do not rely only on frontend authorization.
+
+Do not expose secrets or sensitive internal errors.
+
+==================================================
+14. FRONTEND PERFORMANCE AND STATE MANAGEMENT
+==================================================
+
+Use the existing React state management architecture.
+
+Do not introduce unnecessary state management libraries.
+
+Optimize:
+
+- Product listing rendering.
+- Search result rendering.
+- Cart updates.
+- Navigation badge updates.
+- Cart drawer rendering.
+- Cart Page rendering.
+- Large dataset handling.
+
+Use:
+
+- Pagination.
+- Efficient selectors.
+- Appropriate memoization.
+- Controlled component rendering.
+- Debounced search where appropriate.
+- AbortController where appropriate.
+- Virtualization for genuinely large rendered lists.
+
+Do not render thousands of product cards simultaneously.
+
+Do not cache entire product databases in browser memory.
+
+Do not introduce unnecessary React re-renders.
+
+==================================================
+15. CODE QUALITY REQUIREMENTS
+==================================================
+
+Maintain professional engineering standards.
+
+Use:
+
+- Strict TypeScript.
+- Proper type definitions.
+- Reusable components.
+- Maintainable services.
+- Clean database models.
+- Consistent API contracts.
+- Proper validation.
+- Clear error handling.
+
+Strictly avoid:
+
+- any.
+- @ts-ignore.
+- @ts-nocheck.
+- Fake API responses.
+- Mock production data.
+- In-memory production databases.
+- Hardcoded product results.
+- Duplicate business logic.
+- Unnecessary dependencies.
+- Unrelated refactoring.
+- Destructive database operations.
+
+Preserve the existing working application.
+
+==================================================
+16. REAL-WORLD TESTING AND VALIDATION
+==================================================
+
+Perform actual tests.
+
+Do not claim testing based only on code inspection.
+
+A. SCHEMA VALIDATION
+
+Verify:
+
+- Valid documents.
+- Invalid documents.
+- Required fields.
+- Quantity constraints.
+- Reference validity.
+- Unique constraints.
+- Index behavior.
+
+B. SEARCH TESTING
+
+Test:
+
+- Bangla queries.
+- English queries.
+- Mixed-language queries.
+- Transliteration.
+- Partial matching.
+- Exact matching.
+- Category matching.
+- Brand matching.
+- Empty query.
+- Invalid query.
+- Large result sets.
+- Pagination.
+
+C. CART TESTING
+
+Test:
+
+- One click adds 10 units.
+- Repeated clicks increment correctly.
+- Different products are handled correctly.
+- Inventory constraints are respected.
+- Cart badge stops at 99+.
+- Actual cart quantity remains unrestricted by the badge.
+- Cart Page displays the complete quantity.
+- Cart state remains synchronized.
+
+D. DATABASE PERFORMANCE TESTING
+
+Test realistic datasets in an isolated environment.
+
+Evaluate:
+
+- Query plans.
+- Index usage.
+- API response times.
+- Database resource consumption.
+- Memory consumption.
+- Pagination consistency.
+- Search performance.
+
+E. REGRESSION TESTING
+
+Ensure existing:
+
+- Homepage.
+- Product pages.
+- Search.
+- Cart drawer.
+- Cart Page.
+- Checkout.
+- Authentication.
+- Orders.
+- Admin Dashboard.
+
+Continue working correctly.
+
+Run:
+
+- TypeScript checks.
+- Lint checks.
+- Production build.
+- Relevant unit tests.
+- Integration tests.
+- API tests.
+- Database tests.
+
+Fix regressions introduced by your implementation.
+
+==================================================
+17. IMPLEMENTATION EXECUTION ORDER
+==================================================
+
+Follow this sequence:
+
+PHASE 1 — Complete project investigation.
+
+PHASE 2 — Database schema and architecture audit.
+
+PHASE 3 — Large-scale data retrieval and indexing optimization.
+
+PHASE 4 — Cross-lingual search architecture and implementation.
+
+PHASE 5 — Add to Cart quantity increment implementation.
+
+PHASE 6 — Navigation badge 99+ display implementation.
+
+PHASE 7 — Cart Page actual quantity implementation.
+
+PHASE 8 — Backend and frontend cart synchronization.
+
+PHASE 9 — Real-world business logic validation.
+
+PHASE 10 — Large-scale performance and load testing.
+
+PHASE 11 — Security and regression testing.
+
+PHASE 12 — Final production readiness review.
+
+Do not skip project investigation.
+
+Do not skip database validation.
+
+Do not stop after frontend implementation.
+
+==================================================
+18. FINAL DELIVERY REPORT
+==================================================
+
+Provide a detailed implementation report.
+
+Include:
+
+1. Existing architecture findings.
+2. Database schema audit results.
+3. Large-scale data optimization.
+4. Indexes created or modified.
+5. Pagination strategy.
+6. Caching strategy and invalidation.
+7. Cross-lingual search implementation.
+8. Bangla-English search verification.
+9. Add to Cart quantity increment behavior.
+10. Navigation 99+ badge verification.
+11. Cart Page quantity verification.
+12. Backend cart synchronization.
+13. Inventory and checkout validation.
+14. Performance testing results.
+15. Security verification.
+16. Regression testing.
+17. Remaining blockers.
+
+Use these statuses:
+
+VERIFIED — Implemented and actually tested.
+
+PARTIAL — Implemented but not completely verified.
+
+BLOCKED — Requires unavailable infrastructure or configuration.
+
+NOT IMPLEMENTED — Not implemented.
+
+Clearly distinguish measured performance from estimates.
+
+Do not claim that the application supports millions of records unless appropriate tests have actually demonstrated the relevant behavior.
+
+==================================================
+FINAL OBJECTIVE
+==================================================
+
+Upgrade the existing E-commerce application into a scalable, production-grade system.
+
+The database architecture must efficiently support millions of records without unnecessarily loading or caching entire datasets.
+
+The search system must support meaningful Bangla-English cross-lingual product discovery.
+
+One successful Add to Cart click must add 10 units by default, subject to real inventory and business validation.
+
+The navigation cart badge must display a maximum of 99+, regardless of the actual cart quantity.
+
+The Cart Page must always display the real total quantity, including 100, 200, 300, 500, or more units when valid.
+
+The complete cart, backend, database, and checkout systems must remain synchronized.
+
+All schema validation, business logic validation, and performance testing must reflect real-world conditions.
+
+MOST IMPORTANT:
+
+DO NOT BREAK EXISTING WORKING FEATURES.
+
+DO NOT GENERATE FAKE PRODUCTION DATA.
+
+DO NOT LOAD MILLIONS OF RECORDS INTO MEMORY.
+
+DO NOT TRUST FRONTEND BUSINESS LOGIC.
+
+DO NOT ALLOW INVENTORY INCONSISTENCIES.
+
+DO NOT TRUNCATE ACTUAL CART QUANTITIES TO 99.
+
+DO NOT CLAIM UNVERIFIED PERFORMANCE.
+
+IMPLEMENT EVERYTHING THROUGH THE EXISTING ARCHITECTURE.
+
+BEGIN BY INSPECTING THE COMPLETE EXISTING PROJECT.

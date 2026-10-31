@@ -1,0 +1,973 @@
+# ULTIMATE MASTER PROMPT
+## Pixel-Accurate Reference-Based Product Details Page
+### Principal-Level Full-Stack Engineering | Dynamic Product Architecture | Production-Ready Backend | Database Integration
+
+---
+
+# 1. YOUR ROLE AND RESPONSIBILITIES
+
+Act as a senior multidisciplinary engineering team operating at Principal Engineer standards.
+
+Your responsibilities include:
+
+- Principal Full-Stack Software Engineer
+- Senior Software Architect
+- Senior React & TypeScript Engineer
+- Senior UI/UX and Product Designer
+- Node.js & Express Backend Engineer
+- MongoDB Database Architect
+- E-commerce Systems Engineer
+- API Integration Specialist
+- Quality Assurance Engineer
+- Security and Performance Engineer
+
+You are working on my EXISTING E-COMMERCE PROJECT.
+
+Your task is to carefully inspect the existing project and professionally redesign and implement its Product Details Page using the Reference Image I provide.
+
+This is NOT a request to create an isolated frontend mockup.
+
+This is a complete, production-oriented implementation involving:
+
+1. Reference-based frontend redesign.
+2. Dynamic product data integration.
+3. Backend API integration.
+4. Database integration.
+5. Product image gallery functionality.
+6. Product variants and stock management.
+7. Shopping cart integration.
+8. Wishlist integration.
+9. Customer reviews and ratings.
+10. Related product recommendations.
+11. Responsive design.
+12. Complete functional verification.
+
+The existing project's architecture and working functionality must be preserved.
+
+---
+
+# 2. PRIMARY OBJECTIVE — REFERENCE IMAGE MUST DEFINE THE DESIGN
+
+I will provide a Reference Image showing the Product Details Page design I want.
+
+Your primary visual objective is to reproduce that design as accurately as technically possible.
+
+Treat the supplied Reference Image as the PRIMARY VISUAL DESIGN SPECIFICATION.
+
+Do not create your own unrelated design.
+
+Do not replace the reference design with a generic e-commerce product page.
+
+Do not merely take inspiration from the image.
+
+Carefully inspect the entire reference image and identify its:
+
+- Overall page layout.
+- Main product information section.
+- Product image dimensions and positioning.
+- Image gallery arrangement.
+- Product title placement.
+- Pricing presentation.
+- Discount badges.
+- Product ratings.
+- Stock availability indicators.
+- Product description.
+- Variant selectors.
+- Quantity selector.
+- Add to Cart button.
+- Buy Now button.
+- Wishlist functionality.
+- Delivery information.
+- Product specifications.
+- Customer review section.
+- Related products section.
+- Section backgrounds.
+- Borders and shadows.
+- Typography and font hierarchy.
+- Spacing and alignment.
+- Button dimensions.
+- Icon styles.
+- Responsive behavior, where inferable.
+
+Reproduce these visual elements as closely as possible.
+
+IMPORTANT:
+
+The Reference Image determines the visual design.
+
+The Existing Project determines the actual content, business logic, data structure, architecture, and functionality.
+
+Do not sacrifice either requirement.
+
+If the Reference Image contains information or sections that differ from the existing project's data structure, adapt them intelligently without inventing product information.
+
+---
+
+# 3. FIRST STEP — COMPLETE EXISTING PROJECT AUDIT
+
+Before modifying anything, inspect the existing project.
+
+Do not immediately start writing code.
+
+First understand:
+
+### Frontend
+
+- Existing React architecture.
+- Routing configuration.
+- Homepage implementation.
+- Existing Product Cards.
+- Product navigation behavior.
+- Existing Product Details Page, if available.
+- State management.
+- Cart functionality.
+- Wishlist functionality.
+- Existing reusable components.
+- Styling architecture.
+- Responsive breakpoints.
+
+### Backend
+
+- Existing Express server architecture.
+- Product API endpoints.
+- Product controllers.
+- Product services.
+- Authentication middleware.
+- Authorization and ownership checks.
+- Cart APIs.
+- Wishlist APIs.
+- Review APIs.
+- Related product functionality, if available.
+
+### Database
+
+- Existing MongoDB Atlas connection.
+- Product schema.
+- Product image structure.
+- Product variants.
+- Pricing and discount fields.
+- Inventory and stock fields.
+- Category relationships.
+- Review schema.
+- User relationships.
+- Cart and wishlist persistence.
+
+### Existing Business Logic
+
+Understand how the current application handles:
+
+- Product identification.
+- Product slugs.
+- MongoDB ObjectIds.
+- Product categories.
+- Product pricing.
+- Product availability.
+- Product variants.
+- Cart calculations.
+- Wishlist operations.
+- Customer reviews.
+- Product recommendations.
+
+IMPORTANT:
+
+Do not assume that any API endpoint, database field, route, environment variable, or service exists.
+
+Verify everything from the actual source code.
+
+Do not create duplicate functionality when an existing implementation can be properly reused.
+
+---
+
+# 4. CORE REQUIREMENT — FULLY DYNAMIC PRODUCT DETAILS PAGE
+
+This is one of the most important requirements.
+
+The Product Details Page must be completely dynamic.
+
+Every product displayed on the Homepage or other product listing sections must navigate to its corresponding Product Details Page.
+
+For example:
+
+Homepage:
+
+Product A → Click → Product A Details
+
+Product B → Click → Product B Details
+
+Product C → Click → Product C Details
+
+Product D → Click → Product D Details
+
+Each product must display its own actual information.
+
+Implement a proper dynamic routing architecture using the existing project's routing system.
+
+Example route patterns:
+
+/products/:slug
+
+or
+
+/product/:productId
+
+Use whichever routing convention is already appropriate for the existing project.
+
+Do not create a separate hardcoded page for each product.
+
+Do not create a Product Details Page that only works for one particular product.
+
+A single reusable Product Details Page component must dynamically render the selected product.
+
+### Dynamic Product Data
+
+When a customer opens a product:
+
+1. Identify the selected product using its actual identifier.
+2. Fetch the correct product from the backend.
+3. Validate that the requested product exists.
+4. Retrieve the product's complete information.
+5. Display the information dynamically.
+6. Handle loading, errors, and unavailable products properly.
+
+The page must correctly handle:
+
+- Valid product.
+- Invalid product ID.
+- Non-existing product.
+- Deleted product.
+- Unpublished product.
+- Out-of-stock product.
+- Loading state.
+- Network failure.
+- Server error.
+
+Never silently display another product when the requested product cannot be found.
+
+Never use hardcoded product information as a production fallback.
+
+---
+
+# 5. PRODUCT IMAGE GALLERY
+
+Implement the image gallery according to the Reference Image.
+
+The gallery must support:
+
+- Main product image.
+- Multiple thumbnail images.
+- Thumbnail selection.
+- Main image switching.
+- Proper image aspect ratios.
+- Responsive image rendering.
+- Image loading states.
+- Broken image handling.
+- Appropriate fallback behavior.
+
+If the existing project supports product image zoom, implement or preserve it appropriately.
+
+All images must come from the actual product data stored in the database or the existing image storage system.
+
+Do not use static demonstration images.
+
+Do not display the same hardcoded image for every product.
+
+If the project uses Cloudinary, preserve its existing integration.
+
+---
+
+# 6. COMPLETE PRODUCT INFORMATION
+
+Dynamically display all available product information supported by the existing database.
+
+Examples:
+
+- Product Name.
+- Product SKU.
+- Product Brand.
+- Product Category.
+- Product Price.
+- Discounted Price.
+- Discount Percentage.
+- Product Rating.
+- Review Count.
+- Stock Availability.
+- Product Description.
+- Product Images.
+- Product Variants.
+- Product Specifications.
+- Product Features.
+- Delivery Information.
+- Return Policy.
+- Warranty Information.
+
+Only display information that is actually available and relevant.
+
+Do not invent product specifications, warranties, discounts, or delivery promises.
+
+### Pricing Accuracy
+
+The frontend must never independently determine authoritative product prices.
+
+Use verified backend product data.
+
+Validate pricing again on the backend during cart and order operations.
+
+Never trust client-submitted prices.
+
+---
+
+# 7. PRODUCT VARIANTS AND OPTIONS
+
+If the existing project supports product variants, implement them properly.
+
+Examples:
+
+- Size.
+- Color.
+- Material.
+- Storage Capacity.
+- Model.
+- Other configurable attributes.
+
+Requirements:
+
+- Dynamically display available options.
+- Allow customers to select options.
+- Visually indicate the selected option.
+- Validate unavailable combinations.
+- Display variant-specific pricing when supported.
+- Display variant-specific stock when supported.
+- Update the product information according to the selected variant.
+- Prevent adding unavailable variants to the cart.
+
+Do not create fake variants if the database does not support them.
+
+If the existing schema needs additional functionality, extend it carefully without breaking existing products.
+
+---
+
+# 8. QUANTITY SELECTOR
+
+Implement a functional quantity selector.
+
+Requirements:
+
+- Increase quantity.
+- Decrease quantity.
+- Minimum quantity validation.
+- Maximum quantity validation.
+- Respect actual available stock.
+- Prevent negative quantities.
+- Prevent purchasing more than the available inventory.
+
+The backend must validate the final quantity independently.
+
+---
+
+# 9. ADD TO CART — REAL BACKEND INTEGRATION
+
+The Add to Cart button must perform an actual cart operation.
+
+Expected workflow:
+
+1. Customer selects a product.
+2. Customer selects available variants, if applicable.
+3. Customer selects quantity.
+4. Customer clicks Add to Cart.
+5. Frontend sends the appropriate request to the existing backend.
+6. Backend validates the product.
+7. Backend validates the selected variant.
+8. Backend checks stock availability.
+9. Backend calculates the authoritative price.
+10. Backend updates the customer's cart.
+11. Database persists the cart changes.
+12. Frontend displays the actual operation result.
+13. Cart count and cart state update appropriately.
+
+Support the existing authentication and guest-cart architecture.
+
+Do not create a new cart system if one already exists.
+
+Do not display a success notification before the backend confirms success.
+
+If the operation fails, show an appropriate error notification.
+
+---
+
+# 10. BUY NOW FUNCTIONALITY
+
+If Buy Now exists in the Reference Image, implement it according to the existing checkout architecture.
+
+Expected behavior:
+
+- Validate product availability.
+- Validate selected variants.
+- Validate quantity.
+- Ensure the correct product is passed to checkout.
+- Use authoritative backend pricing.
+- Follow the existing checkout and authentication flow.
+
+Do not create a fake checkout page.
+
+Do not simulate payment success.
+
+Do not bypass existing order validation.
+
+---
+
+# 11. WISHLIST FUNCTIONALITY
+
+If the Reference Image contains a wishlist button or icon, implement actual wishlist functionality.
+
+Requirements:
+
+- Add product to wishlist.
+- Remove product from wishlist.
+- Correct active/inactive wishlist state.
+- Persist changes through the existing backend.
+- Synchronize with the database.
+- Handle authentication requirements.
+- Prevent duplicate wishlist entries.
+- Update the UI only after the operation is confirmed.
+
+If the customer is not authenticated, follow the existing project's guest or authentication behavior.
+
+---
+
+# 12. CUSTOMER REVIEWS AND RATINGS
+
+Implement the Customer Reviews section according to the Reference Image.
+
+This section must use actual review data.
+
+Required functionality:
+
+### Review Display
+
+Display:
+
+- Average Rating.
+- Total Review Count.
+- Rating Distribution.
+- Individual Customer Reviews.
+- Customer Name or approved display identity.
+- Star Rating.
+- Review Text.
+- Review Date.
+- Verified Purchase Indicator, if supported.
+
+### Review Submission
+
+If the existing project supports customer review submission, integrate it.
+
+Otherwise, implement the missing backend and database functionality only after inspecting the existing architecture.
+
+Requirements:
+
+- Authenticated customer validation.
+- Product existence validation.
+- Rating validation.
+- Review content validation.
+- Duplicate review prevention according to business rules.
+- Verified purchase validation if the platform requires verified-purchase reviews.
+- Secure backend authorization.
+- Persistent database storage.
+
+### Rating Calculation
+
+Calculate the average rating and rating distribution using actual database records.
+
+Do not hardcode ratings.
+
+Do not generate fake customer reviews.
+
+Do not display fabricated verified-purchase badges.
+
+If reviews do not exist, display a professionally designed empty state.
+
+---
+
+# 13. RELATED PRODUCTS — DYNAMIC RECOMMENDATIONS
+
+Implement the Related Products section according to the Reference Image.
+
+This section must dynamically display products related to the currently viewed product.
+
+Recommendation criteria may include:
+
+1. Same category.
+2. Same subcategory.
+3. Related brand.
+4. Relevant product attributes.
+5. Existing recommendation logic.
+
+Use the most appropriate strategy supported by the existing project.
+
+IMPORTANT:
+
+- Do not display the current product in its own Related Products section.
+- Do not display unrelated hardcoded products.
+- Exclude deleted or unpublished products.
+- Respect product visibility rules.
+- Use actual backend product records.
+- Ensure every related product links to its own dynamic Product Details Page.
+
+The Related Products section must change according to the currently selected product.
+
+For example:
+
+When viewing Product A, display products related to Product A.
+
+When viewing Product B, display products related to Product B.
+
+The section must never remain static across different product pages.
+
+---
+
+# 14. ADDITIONAL PRODUCT INFORMATION SECTIONS
+
+Inspect the Reference Image and implement every visible section that is relevant to the existing project.
+
+Potential sections include:
+
+- Product Description.
+- Product Specifications.
+- Product Features.
+- Product Information Tabs.
+- Customer Reviews.
+- Shipping Information.
+- Return Policy.
+- Warranty Details.
+- Related Products.
+- Recently Viewed Products.
+
+Do not omit visible reference sections without a valid technical or business reason.
+
+Do not invent unnecessary sections that significantly change the reference design.
+
+---
+
+# 15. BACKEND AND DATABASE ENGINEERING
+
+This is a critical requirement.
+
+The implementation must be fully integrated with the existing backend and database.
+
+The frontend must not be treated as the entire application.
+
+### Backend Requirements
+
+- Reuse existing API architecture.
+- Implement missing endpoints only when necessary.
+- Follow existing controller/service conventions.
+- Validate request parameters.
+- Validate request bodies.
+- Handle database errors.
+- Implement correct authentication.
+- Implement backend authorization.
+- Enforce product ownership and user access rules where applicable.
+- Prevent unauthorized review modifications.
+- Validate inventory.
+- Validate product availability.
+- Prevent price manipulation.
+- Prevent duplicate operations where relevant.
+- Return consistent API responses.
+
+### Database Requirements
+
+Use the existing production database.
+
+If the project uses MongoDB Atlas, continue using MongoDB Atlas.
+
+- Preserve existing schemas where possible.
+- Extend schemas carefully.
+- Maintain correct references.
+- Use appropriate indexes.
+- Prevent duplicate records.
+- Handle ObjectIds correctly.
+- Avoid unnecessary database queries.
+- Use pagination for large review collections.
+- Avoid N+1 query patterns.
+- Maintain data consistency.
+
+Never use:
+
+- MongoDB Memory Server as a production database.
+- In-memory Maps as a replacement for persistent storage.
+- localStorage as the primary database.
+- Hardcoded production product data.
+- Fake API responses.
+- Simulated backend success.
+- Frontend-only cart persistence as a replacement for the existing backend.
+
+Do not expose database credentials or secrets to the frontend.
+
+---
+
+# 16. FRONTEND ENGINEERING STANDARDS
+
+Implement the design using the existing project's technologies and conventions.
+
+Requirements:
+
+- Reusable components.
+- Clean component architecture.
+- Proper TypeScript types.
+- Maintainable state management.
+- Correct API integration.
+- Efficient rendering.
+- Appropriate loading states.
+- Error boundaries where appropriate.
+- Accessible interactions.
+- Semantic HTML.
+- Keyboard accessibility.
+- Responsive image handling.
+
+Avoid:
+
+- `any`.
+- `@ts-ignore`.
+- `@ts-nocheck`.
+- Unnecessary code duplication.
+- Unnecessary global state.
+- Unrelated refactoring.
+- Breaking existing functionality.
+- Hardcoded product-specific conditions.
+
+Do not introduce additional dependencies unless they provide genuine value and are compatible with the existing project.
+
+---
+
+# 17. RESPONSIVE DESIGN
+
+The Reference Image is the primary desktop design reference.
+
+However, the implementation must also work professionally on:
+
+- Desktop.
+- Laptop.
+- Tablet.
+- Mobile.
+
+On mobile:
+
+- Main product image must remain properly visible.
+- Gallery thumbnails must remain accessible.
+- Product information must be readable.
+- Buttons must be touch-friendly.
+- Quantity selection must work.
+- Review sections must be readable.
+- Related product cards must adapt to screen width.
+- No horizontal overflow.
+- No broken layouts.
+
+Preserve the visual identity of the Reference Image while adapting the layout intelligently to smaller screens.
+
+---
+
+# 18. PERFORMANCE AND SEO
+
+Implement appropriate performance optimizations.
+
+Requirements:
+
+- Avoid unnecessary API requests.
+- Avoid unnecessary component re-renders.
+- Optimize product image loading.
+- Use lazy loading where appropriate.
+- Prevent layout shifts.
+- Implement proper caching where appropriate.
+- Use meaningful page titles.
+- Generate dynamic product metadata where supported.
+- Implement canonical URLs if appropriate.
+- Provide structured product data only when the available information is accurate.
+
+Do not introduce caching that causes stale stock or pricing information during purchase operations.
+
+---
+
+# 19. STRICT REFERENCE DESIGN PRESERVATION
+
+This section is extremely important.
+
+The Reference Image must guide the final visual implementation.
+
+Do not:
+
+- Replace the reference layout with a generic template.
+- Arbitrarily change the color scheme.
+- Rearrange the main content without reason.
+- Remove visible sections.
+- Use unrelated typography.
+- Introduce unnecessary decorative elements.
+- Change the product gallery structure.
+- Ignore the reference spacing and proportions.
+- Create an entirely different design because it is easier to implement.
+
+Your goal is:
+
+REFERENCE IMAGE VISUAL FIDELITY + EXISTING PROJECT FUNCTIONALITY.
+
+The final page should visually resemble the supplied reference while displaying real project data and supporting real business operations.
+
+---
+
+# 20. REGRESSION PREVENTION
+
+The existing application must continue working after implementation.
+
+Do not damage:
+
+- Homepage.
+- Product Listing Pages.
+- Product Cards.
+- Existing Routing.
+- Categories.
+- Search.
+- Filters.
+- Cart.
+- Wishlist.
+- Authentication.
+- Checkout.
+- Order Management.
+- Admin Product Management.
+- Existing APIs.
+- Existing Database Relationships.
+
+If a shared component needs modification, inspect every relevant usage before changing it.
+
+Do not perform unrelated refactoring.
+
+Do not delete working functionality.
+
+Do not overwrite existing working business logic unnecessarily.
+
+---
+
+# 21. TESTING AND VERIFICATION
+
+After implementation, perform real verification.
+
+### Frontend Verification
+
+- Product Details Page loads.
+- Different product IDs display different products.
+- Product image gallery works.
+- Variant selection works.
+- Quantity selector works.
+- Add to Cart works.
+- Buy Now follows the real checkout flow.
+- Wishlist works.
+- Reviews display correctly.
+- Review submission works where implemented.
+- Related Products change dynamically.
+- Loading states work.
+- Error states work.
+- Responsive layouts work.
+
+### Backend Verification
+
+- Product API returns correct data.
+- Invalid product IDs are handled.
+- Non-existing products return appropriate errors.
+- Cart operations persist correctly.
+- Stock validation works.
+- Price validation works.
+- Wishlist operations persist correctly.
+- Review authorization works.
+- Related product API returns appropriate records.
+
+### Database Verification
+
+- Correct product records are retrieved.
+- Cart changes persist.
+- Wishlist changes persist.
+- Reviews persist.
+- Product relationships remain correct.
+- No unintended duplicate records are created.
+
+### Regression Verification
+
+Verify that existing Homepage, Product Listing, Cart, Checkout, Authentication, and Admin functionality remain operational.
+
+Run the existing:
+
+- TypeScript checks.
+- Lint checks.
+- Build commands.
+- Relevant automated tests.
+
+Do not claim that a test passed unless it was actually executed successfully.
+
+---
+
+# 22. IMPLEMENTATION WORKFLOW
+
+Follow this workflow strictly.
+
+PHASE 1 — PROJECT INSPECTION
+
+Inspect the complete relevant project architecture.
+
+PHASE 2 — REFERENCE IMAGE ANALYSIS
+
+Analyze the supplied image and identify all visible design components.
+
+PHASE 3 — EXISTING SYSTEM MAPPING
+
+Map the existing frontend, backend, APIs, database schemas, and business logic.
+
+PHASE 4 — IMPLEMENTATION
+
+Implement the reference-based dynamic Product Details Page.
+
+PHASE 5 — BACKEND INTEGRATION
+
+Connect every applicable interactive feature to real backend APIs and persistent database operations.
+
+PHASE 6 — DYNAMIC ROUTING
+
+Ensure every product from Homepage and other product listings opens the correct dynamic details page.
+
+PHASE 7 — RESPONSIVENESS
+
+Verify desktop, tablet, and mobile layouts.
+
+PHASE 8 — TESTING
+
+Perform actual functionality, integration, and regression testing.
+
+PHASE 9 — FINAL REVIEW
+
+Compare the implemented page against the Reference Image and correct visible discrepancies.
+
+---
+
+# 23. NON-NEGOTIABLE RULES
+
+1. Work inside my existing project.
+2. Do not create a separate demonstration application.
+3. Do not replace the existing architecture without justification.
+4. Do not use fake product data.
+5. Do not use mock APIs.
+6. Do not simulate successful backend operations.
+7. Do not implement frontend-only functionality where backend integration is required.
+8. Do not hardcode one product's information.
+9. Do not create separate static pages for individual products.
+10. Every product must use the same reusable dynamic Product Details Page architecture.
+11. Every product must display its own actual database information.
+12. Related Products must be dynamically generated.
+13. Reviews and ratings must use actual persisted records.
+14. Cart and wishlist operations must follow the existing backend architecture.
+15. Backend validation is mandatory.
+16. Database persistence is mandatory.
+17. Preserve existing working functionality.
+18. Do not make unrelated changes.
+19. Do not claim unverified functionality.
+20. Reference Image visual fidelity and full-stack functionality are equally important.
+
+---
+
+# 24. FINAL ACCEPTANCE CRITERIA
+
+The task is complete only when ALL applicable requirements are satisfied.
+
+### DESIGN
+
+The Product Details Page closely matches the supplied Reference Image.
+
+### DYNAMIC FUNCTIONALITY
+
+Every product clicked from the Homepage or other product listings displays its own correct information through a reusable dynamic route.
+
+### BACKEND
+
+All applicable interactive features communicate with the actual backend.
+
+### DATABASE
+
+Product information, cart operations, wishlist operations, and customer reviews use the existing persistent database architecture.
+
+### RELATED PRODUCTS
+
+Related products are dynamically selected according to the currently viewed product.
+
+### RESPONSIVENESS
+
+The design works correctly across desktop, tablet, and mobile.
+
+### REGRESSION
+
+Existing application functionality remains intact.
+
+### VERIFICATION
+
+Build, TypeScript, lint, and relevant tests are executed and their actual results are reported.
+
+---
+
+# 25. FINAL DELIVERY REPORT
+
+After completing the implementation, provide a professional report containing:
+
+1. Project architecture inspected.
+2. Reference Image design elements implemented.
+3. Frontend files created or modified.
+4. Backend files created or modified.
+5. Database schemas modified, if any.
+6. APIs reused or implemented.
+7. Dynamic routing implementation.
+8. Product Gallery functionality.
+9. Cart and Wishlist integration.
+10. Customer Reviews implementation.
+11. Related Products implementation.
+12. Responsive design implementation.
+13. Tests actually executed.
+14. Build and TypeScript verification results.
+15. Existing functionality regression results.
+16. Any remaining limitations or blockers.
+
+Clearly classify each requirement as:
+
+- VERIFIED
+- PARTIALLY VERIFIED
+- NOT IMPLEMENTED
+- BLOCKED
+
+Never report a feature as VERIFIED without actual evidence.
+
+---
+
+# FINAL DIRECTIVE
+
+I am providing a Reference Image because I want the Product Details Page of my existing e-commerce project to visually match that image as closely as possible.
+
+However, I am not asking for a static UI or frontend-only demonstration.
+
+I want a complete, professional, production-oriented, fully dynamic Product Details System.
+
+The same Product Details Page must work for every product in my application.
+
+Whenever a customer clicks any product from the Homepage, Category Page, Search Results, or another product listing, the application must open the correct product-specific details page.
+
+That page must dynamically retrieve and display the correct product information from the actual backend and database.
+
+The product gallery, pricing, variants, stock availability, quantity selection, cart, wishlist, reviews, ratings, and related products must work according to the existing business logic.
+
+The Reference Image determines HOW THE PAGE SHOULD LOOK.
+
+The Existing Project and Its Database determine WHAT THE PAGE SHOULD DISPLAY AND HOW IT SHOULD WORK.
+
+Neither side can be neglected.
+
+Do not prioritize visual design at the expense of functionality.
+
+Do not prioritize backend functionality at the expense of visual accuracy.
+
+Deliver BOTH together.
+
+Start by inspecting the existing project and analyzing the supplied Reference Image. Then implement the complete solution directly inside the existing application.
+
+DO NOT STOP AFTER CREATING A PLAN OR A DESIGN MOCKUP.
+
+Proceed with the actual implementation, integration, testing, and verification.
